@@ -37,6 +37,7 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).BeginInit();
@@ -151,12 +152,22 @@
             this.txtUsuario.Size = new System.Drawing.Size(122, 20);
             this.txtUsuario.TabIndex = 20;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(202, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
             this.ClientSize = new System.Drawing.Size(362, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox1);
             this.Controls.Add(this.mostrar);
@@ -181,6 +192,7 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Button button1;
     }
 }
 
