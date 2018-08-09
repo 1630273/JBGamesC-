@@ -37,6 +37,7 @@
             this.btnIncio = new MaterialSkin.Controls.MaterialRaisedButton();
             this.linkRC = new System.Windows.Forms.LinkLabel();
             this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).BeginInit();
@@ -117,6 +118,7 @@
             // btnIncio
             // 
             this.btnIncio.BackColor = System.Drawing.Color.Transparent;
+            this.btnIncio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIncio.Depth = 0;
             this.btnIncio.FlatAppearance.BorderSize = 0;
             this.btnIncio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
@@ -159,12 +161,29 @@
             this.btnRegistrarse.UseVisualStyleBackColor = false;
             this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(357, 34);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(28, 21);
+            this.btnSalir.TabIndex = 34;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(397, 450);
+            this.ClientSize = new System.Drawing.Size(397, 362);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.linkRC);
             this.Controls.Add(this.btnIncio);
@@ -190,6 +209,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnIncio;
         private System.Windows.Forms.LinkLabel linkRC;
         private System.Windows.Forms.Button btnRegistrarse;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

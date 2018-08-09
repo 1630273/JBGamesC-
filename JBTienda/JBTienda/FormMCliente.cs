@@ -55,5 +55,53 @@ namespace JBTienda
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnmenubar_Click(object sender, EventArgs e)
+        {
+        
+
+            if (sidemenu.Width == 55)
+            {
+                //EXPAND
+                sidemenu.Visible = false;
+                sidemenu.Width = 260;
+                PanelAnimation.ShowSync(sidemenu);
+                LogoAnimation.ShowSync(logo);
+
+            }
+            else
+            {
+                //Minimize
+                LogoAnimation.ShowSync(logo);
+                sidemenu.Visible = false;
+                sidemenu.Width = 55;
+                PanelAnimation.ShowSync(sidemenu);
+
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void sidemenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+       
+        
     }
 }
