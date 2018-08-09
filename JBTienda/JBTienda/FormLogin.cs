@@ -41,6 +41,10 @@ namespace JBTienda
 
         private void btnIncio_Click(object sender, EventArgs e)
         {
+
+            Form Menu = new FormMCliente();
+            Menu.Show();
+            this.Hide();
         }
     }
 }
