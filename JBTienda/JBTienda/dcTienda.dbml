@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Tienda" Class="dcTiendaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-LN2ROB9J\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True" SettingsObjectName="JBTienda.Properties.Settings" SettingsPropertyName="TiendaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.cargarCiudades" Method="cargarCiudades">
+    <Parameter Name="idEstado" Type="System.Byte" DbType="TinyInt" />
+    <ElementType Name="cargarCiudadesResult">
+      <Column Name="idCiudad" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="desCiudad" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="idEstado" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cargarEstados" Method="cargarEstados">
+    <ElementType Name="cargarEstadosResult">
+      <Column Name="idEstado" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="desEstado" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.agregarUsuarios" Method="agregarUsuarios">
+    <Parameter Name="nombreUsuario" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="contraseña" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="contraseña2" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="apellidoPaterno" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="apellidoMaterno" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="idSexo" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="telefono" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="correo" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="direccion" Type="System.String" DbType="VarChar(35)" />
+    <Parameter Name="cp" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="idCiudad" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="idTipoUsuario" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

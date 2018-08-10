@@ -34,7 +34,7 @@ namespace JBTienda
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-            Form Registro = new FormRegistro();
+            FormRegistro Registro = new FormRegistro();
             Registro.Show();
             this.Hide();
         }
