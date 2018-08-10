@@ -53,6 +53,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ac.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ac.Designer.cs">
+      <DependentUpon>Ac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Acom.Designer.cs">
+      <DependentUpon>Acom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aej.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aej.Designer.cs">
+      <DependentUpon>Aej.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ael.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ael.Designer.cs">
+      <DependentUpon>Ael.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ainicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ainicio.Designer.cs">
+      <DependentUpon>Ainicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajuegos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ajuegos.Designer.cs">
+      <DependentUpon>Ajuegos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cucom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +145,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ac.resx">
+      <DependentUpon>Ac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acom.resx">
+      <DependentUpon>Acom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aej.resx">
+      <DependentUpon>Aej.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ael.resx">
+      <DependentUpon>Ael.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ainicio.resx">
+      <DependentUpon>Ainicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajuegos.resx">
+      <DependentUpon>Ajuegos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cucom.resx">
       <DependentUpon>Cucom.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMCliente.resx">
       <DependentUpon>FormMCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuAdmin.resx">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPortada.resx">
       <DependentUpon>FormPortada.cs</DependentUpon>

@@ -295,16 +295,16 @@
             this.btnRegistrarse.CausesValidation = false;
             this.btnRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrarse.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarse.ForeColor = System.Drawing.Color.Purple;
             this.btnRegistrarse.Location = new System.Drawing.Point(52, 640);
-            this.btnRegistrarse.Name = "btnCancelar";
+            this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(137, 28);
             this.btnRegistrarse.TabIndex = 47;
             this.btnRegistrarse.Text = "Cancelar";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
-         
             // 
             // btnIncio
             // 
@@ -316,13 +316,12 @@
             this.btnIncio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnIncio.Location = new System.Drawing.Point(218, 640);
             this.btnIncio.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnIncio.Name = "btnRegistrarse";
+            this.btnIncio.Name = "btnIncio";
             this.btnIncio.Primary = true;
             this.btnIncio.Size = new System.Drawing.Size(141, 28);
             this.btnIncio.TabIndex = 46;
             this.btnIncio.Text = "Registrarse";
             this.btnIncio.UseVisualStyleBackColor = false;
-
             // 
             // FormRegistro
             // 
@@ -348,6 +347,7 @@
             this.Controls.Add(this.materialSingleLineTextField2);
             this.Controls.Add(this.materialSingleLineTextField1);
             this.Name = "FormRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegistro";
             this.Load += new System.EventHandler(this.FormRegistro_Load);
             this.ResumeLayout(false);

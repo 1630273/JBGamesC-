@@ -58,7 +58,9 @@ namespace JBTienda
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Form p = new FormLogin();
+            p.Show();
+            this.Hide();
         }
 
         private void btnmenubar_Click(object sender, EventArgs e)

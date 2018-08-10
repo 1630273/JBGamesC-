@@ -79,6 +79,7 @@
             this.Controls.Add(this.btnClliente);
             this.Controls.Add(this.btnAdmin);
             this.Name = "FormPortada";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido";
             this.Load += new System.EventHandler(this.FormPortada_Load);
             this.ResumeLayout(false);

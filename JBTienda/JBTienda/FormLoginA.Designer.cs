@@ -43,6 +43,28 @@
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            pictureBox2.Location = new System.Drawing.Point(33, 189);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new System.Drawing.Size(24, 24);
+            pictureBox2.TabIndex = 34;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            pictureBox1.Location = new System.Drawing.Point(33, 135);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(24, 24);
+            pictureBox1.TabIndex = 33;
+            pictureBox1.TabStop = false;
+            // 
             // linkRC
             // 
             this.linkRC.ActiveLinkColor = System.Drawing.Color.DarkBlue;
@@ -123,28 +145,6 @@
             this.lblUsuario.TabIndex = 35;
             this.lblUsuario.UseSystemPasswordChar = false;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            pictureBox2.Location = new System.Drawing.Point(33, 189);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(24, 24);
-            pictureBox2.TabIndex = 34;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            pictureBox1.Location = new System.Drawing.Point(33, 135);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(24, 24);
-            pictureBox1.TabIndex = 33;
-            pictureBox1.TabStop = false;
-            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
@@ -175,6 +175,7 @@
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox1);
             this.Name = "FormLoginA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.FormLoginA_Load);
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).EndInit();

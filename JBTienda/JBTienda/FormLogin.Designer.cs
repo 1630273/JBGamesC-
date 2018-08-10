@@ -193,6 +193,7 @@
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox1);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicias sesión";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).EndInit();

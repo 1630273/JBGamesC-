@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMCliente));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             this.sidemenu = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
@@ -46,10 +46,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
             this.LogoAnimation = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.PanelAnimation = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.cujuegos1 = new JBTienda.Cujuegos();
             this.cuinicio1 = new JBTienda.Cuinicio();
             this.cucom1 = new JBTienda.Cucom();
+            this.PanelAnimation = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.sidemenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,8 +65,8 @@
             this.sidemenu.Controls.Add(this.btnJuego);
             this.sidemenu.Controls.Add(this.btnCom);
             this.sidemenu.Controls.Add(this.btnInicio);
-            this.PanelAnimation.SetDecoration(this.sidemenu, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimation.SetDecoration(this.sidemenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimation.SetDecoration(this.sidemenu, BunifuAnimatorNS.DecorationType.Custom);
+            this.LogoAnimation.SetDecoration(this.sidemenu, BunifuAnimatorNS.DecorationType.Custom);
             this.sidemenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidemenu.Location = new System.Drawing.Point(0, 37);
             this.sidemenu.Name = "sidemenu";
@@ -221,7 +221,7 @@
             this.label2.AutoSize = true;
             this.LogoAnimation.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimation.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Location = new System.Drawing.Point(700, 36);
+            this.label2.Location = new System.Drawing.Point(602, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 5;
@@ -232,6 +232,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnmenubar);
+            this.panel2.Controls.Add(this.label2);
             this.PanelAnimation.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.LogoAnimation.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -274,43 +275,22 @@
             // 
             this.LogoAnimation.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
             this.LogoAnimation.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(50);
-            animation2.RotateCoeff = 0.3F;
-            animation2.RotateLimit = 0.2F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.LogoAnimation.DefaultAnimation = animation2;
-            // 
-            // PanelAnimation
-            // 
-            this.PanelAnimation.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
-            this.PanelAnimation.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 1;
-            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 2F;
-            animation1.TransparencyCoeff = 0F;
-            this.PanelAnimation.DefaultAnimation = animation1;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(50);
+            animation6.RotateCoeff = 0.3F;
+            animation6.RotateLimit = 0.2F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.LogoAnimation.DefaultAnimation = animation6;
             // 
             // cujuegos1
             // 
@@ -342,6 +322,27 @@
             this.cucom1.Size = new System.Drawing.Size(800, 450);
             this.cucom1.TabIndex = 8;
             // 
+            // PanelAnimation
+            // 
+            this.PanelAnimation.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
+            this.PanelAnimation.Cursor = null;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 1;
+            animation5.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 2F;
+            animation5.TransparencyCoeff = 0F;
+            this.PanelAnimation.DefaultAnimation = animation5;
+            // 
             // FormMCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,7 +350,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.cujuegos1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cuinicio1);
             this.Controls.Add(this.cucom1);
@@ -357,11 +357,12 @@
             this.PanelAnimation.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMCliente";
             this.sidemenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
