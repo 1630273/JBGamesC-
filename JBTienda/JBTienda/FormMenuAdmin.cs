@@ -27,19 +27,18 @@ namespace JBTienda
             if (sidemenu.Width == 55)
             {
                 //EXPAND
-                sidemenu.Visible = false;
+                sidemenu.Visible = true;
                 sidemenu.Width = 260;
-                PanelAnimation.ShowSync(sidemenu);
-                LogoAnimation.ShowSync(logo);
+               
 
             }
             else
             {
                 //Minimize
-                LogoAnimation.ShowSync(logo);
-                sidemenu.Visible = false;
+              
+                sidemenu.Visible = true;
                 sidemenu.Width = 55;
-                PanelAnimation.ShowSync(sidemenu);
+                
 
             }
         }

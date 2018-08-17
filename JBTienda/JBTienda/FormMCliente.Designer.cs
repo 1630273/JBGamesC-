@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMCliente));
-            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             this.sidemenu = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
@@ -45,11 +42,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
-            this.LogoAnimation = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.cujuegos1 = new JBTienda.Cujuegos();
             this.cuinicio1 = new JBTienda.Cuinicio();
             this.cucom1 = new JBTienda.Cucom();
-            this.PanelAnimation = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.sidemenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,8 +60,6 @@
             this.sidemenu.Controls.Add(this.btnJuego);
             this.sidemenu.Controls.Add(this.btnCom);
             this.sidemenu.Controls.Add(this.btnInicio);
-            this.PanelAnimation.SetDecoration(this.sidemenu, BunifuAnimatorNS.DecorationType.Custom);
-            this.LogoAnimation.SetDecoration(this.sidemenu, BunifuAnimatorNS.DecorationType.Custom);
             this.sidemenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidemenu.Location = new System.Drawing.Point(0, 37);
             this.sidemenu.Name = "sidemenu";
@@ -78,8 +71,6 @@
             // logo
             // 
             this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            this.PanelAnimation.SetDecoration(this.logo, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimation.SetDecoration(this.logo, BunifuAnimatorNS.DecorationType.None);
             this.logo.Location = new System.Drawing.Point(3, 11);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(159, 46);
@@ -89,8 +80,6 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.PanelAnimation.SetDecoration(this.SidePanel, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimation.SetDecoration(this.SidePanel, BunifuAnimatorNS.DecorationType.None);
             this.SidePanel.Location = new System.Drawing.Point(2, 63);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 51);
@@ -98,8 +87,6 @@
             // 
             // btnSalud
             // 
-            this.LogoAnimation.SetDecoration(this.btnSalud, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.btnSalud, BunifuAnimatorNS.DecorationType.None);
             this.btnSalud.FlatAppearance.BorderSize = 0;
             this.btnSalud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -118,8 +105,6 @@
             // 
             // btnEle
             // 
-            this.LogoAnimation.SetDecoration(this.btnEle, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.btnEle, BunifuAnimatorNS.DecorationType.None);
             this.btnEle.FlatAppearance.BorderSize = 0;
             this.btnEle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnEle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -138,8 +123,6 @@
             // 
             // btnCel
             // 
-            this.LogoAnimation.SetDecoration(this.btnCel, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.btnCel, BunifuAnimatorNS.DecorationType.None);
             this.btnCel.FlatAppearance.BorderSize = 0;
             this.btnCel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnCel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,8 +141,6 @@
             // 
             // btnJuego
             // 
-            this.LogoAnimation.SetDecoration(this.btnJuego, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.btnJuego, BunifuAnimatorNS.DecorationType.None);
             this.btnJuego.FlatAppearance.BorderSize = 0;
             this.btnJuego.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnJuego.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,8 +159,6 @@
             // 
             // btnCom
             // 
-            this.LogoAnimation.SetDecoration(this.btnCom, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.btnCom, BunifuAnimatorNS.DecorationType.None);
             this.btnCom.FlatAppearance.BorderSize = 0;
             this.btnCom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnCom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -198,8 +177,6 @@
             // 
             // btnInicio
             // 
-            this.LogoAnimation.SetDecoration(this.btnInicio, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.btnInicio, BunifuAnimatorNS.DecorationType.None);
             this.btnInicio.FlatAppearance.BorderSize = 0;
             this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -219,8 +196,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.LogoAnimation.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.label2.Location = new System.Drawing.Point(602, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
@@ -233,8 +208,6 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnmenubar);
             this.panel2.Controls.Add(this.label2);
-            this.PanelAnimation.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.LogoAnimation.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -243,8 +216,6 @@
             // 
             // button2
             // 
-            this.LogoAnimation.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -258,8 +229,6 @@
             // btnmenubar
             // 
             this.btnmenubar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoAnimation.SetDecoration(this.btnmenubar, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.btnmenubar, BunifuAnimatorNS.DecorationType.None);
             this.btnmenubar.FlatAppearance.BorderSize = 0;
             this.btnmenubar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmenubar.Image = ((System.Drawing.Image)(resources.GetObject("btnmenubar.Image")));
@@ -271,41 +240,17 @@
             this.btnmenubar.UseVisualStyleBackColor = true;
             this.btnmenubar.Click += new System.EventHandler(this.btnmenubar_Click);
             // 
-            // LogoAnimation
-            // 
-            this.LogoAnimation.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
-            this.LogoAnimation.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 0F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(50);
-            animation6.RotateCoeff = 0.3F;
-            animation6.RotateLimit = 0.2F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 0F;
-            this.LogoAnimation.DefaultAnimation = animation6;
-            // 
             // cujuegos1
             // 
-            this.LogoAnimation.SetDecoration(this.cujuegos1, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.cujuegos1, BunifuAnimatorNS.DecorationType.None);
             this.cujuegos1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cujuegos1.Location = new System.Drawing.Point(0, 37);
             this.cujuegos1.Name = "cujuegos1";
             this.cujuegos1.Size = new System.Drawing.Size(800, 413);
             this.cujuegos1.TabIndex = 7;
+            this.cujuegos1.Load += new System.EventHandler(this.cujuegos1_Load);
             // 
             // cuinicio1
             // 
-            this.LogoAnimation.SetDecoration(this.cuinicio1, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.cuinicio1, BunifuAnimatorNS.DecorationType.None);
             this.cuinicio1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cuinicio1.Location = new System.Drawing.Point(0, 0);
             this.cuinicio1.Name = "cuinicio1";
@@ -314,34 +259,11 @@
             // 
             // cucom1
             // 
-            this.LogoAnimation.SetDecoration(this.cucom1, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this.cucom1, BunifuAnimatorNS.DecorationType.None);
             this.cucom1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cucom1.Location = new System.Drawing.Point(0, 0);
             this.cucom1.Name = "cucom1";
             this.cucom1.Size = new System.Drawing.Size(800, 450);
             this.cucom1.TabIndex = 8;
-            // 
-            // PanelAnimation
-            // 
-            this.PanelAnimation.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
-            this.PanelAnimation.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 1;
-            animation5.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 2F;
-            animation5.TransparencyCoeff = 0F;
-            this.PanelAnimation.DefaultAnimation = animation5;
             // 
             // FormMCliente
             // 
@@ -353,8 +275,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cuinicio1);
             this.Controls.Add(this.cucom1);
-            this.LogoAnimation.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimation.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -383,8 +303,6 @@
         private Cuinicio cuinicio1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel logo;
-        private BunifuAnimatorNS.BunifuTransition LogoAnimation;
-        private BunifuAnimatorNS.BunifuTransition PanelAnimation;
         private System.Windows.Forms.Button btnmenubar;
     }
 }
