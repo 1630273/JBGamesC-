@@ -27,8 +27,8 @@ namespace JBTienda
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            Form A = new FormLoginA();
-            A.Show();
+            Form B = new FormMenuM();
+            B.Show();
             this.Hide();
         }
 
