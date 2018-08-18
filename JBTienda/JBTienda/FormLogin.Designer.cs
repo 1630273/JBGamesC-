@@ -31,10 +31,10 @@
             System.Windows.Forms.PictureBox pictureBox2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             System.Windows.Forms.PictureBox pictureBox1;
-            this.lblUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblcontraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.btnIncio = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
             this.linkRC = new System.Windows.Forms.LinkLabel();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -66,37 +66,37 @@
             pictureBox1.TabIndex = 26;
             pictureBox1.TabStop = false;
             // 
-            // lblUsuario
+            // txtUsuario
             // 
-            this.lblUsuario.BackColor = System.Drawing.Color.White;
-            this.lblUsuario.Depth = 0;
-            this.lblUsuario.Hint = "Usuario";
-            this.lblUsuario.Location = new System.Drawing.Point(96, 167);
-            this.lblUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.PasswordChar = '\0';
-            this.lblUsuario.SelectedText = "";
-            this.lblUsuario.SelectionLength = 0;
-            this.lblUsuario.SelectionStart = 0;
-            this.lblUsuario.Size = new System.Drawing.Size(277, 23);
-            this.lblUsuario.TabIndex = 28;
-            this.lblUsuario.UseSystemPasswordChar = false;
+            this.txtUsuario.BackColor = System.Drawing.Color.White;
+            this.txtUsuario.Depth = 0;
+            this.txtUsuario.Hint = "Usuario";
+            this.txtUsuario.Location = new System.Drawing.Point(96, 167);
+            this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '\0';
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.SelectionLength = 0;
+            this.txtUsuario.SelectionStart = 0;
+            this.txtUsuario.Size = new System.Drawing.Size(277, 23);
+            this.txtUsuario.TabIndex = 28;
+            this.txtUsuario.UseSystemPasswordChar = false;
             // 
-            // lblcontraseña
+            // txtContraseña
             // 
-            this.lblcontraseña.BackColor = System.Drawing.Color.White;
-            this.lblcontraseña.Depth = 0;
-            this.lblcontraseña.Hint = "Contraseña";
-            this.lblcontraseña.Location = new System.Drawing.Point(96, 221);
-            this.lblcontraseña.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblcontraseña.Name = "lblcontraseña";
-            this.lblcontraseña.PasswordChar = '*';
-            this.lblcontraseña.SelectedText = "";
-            this.lblcontraseña.SelectionLength = 0;
-            this.lblcontraseña.SelectionStart = 0;
-            this.lblcontraseña.Size = new System.Drawing.Size(277, 23);
-            this.lblcontraseña.TabIndex = 29;
-            this.lblcontraseña.UseSystemPasswordChar = false;
+            this.txtContraseña.BackColor = System.Drawing.Color.White;
+            this.txtContraseña.Depth = 0;
+            this.txtContraseña.Hint = "Contraseña";
+            this.txtContraseña.Location = new System.Drawing.Point(96, 221);
+            this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.SelectedText = "";
+            this.txtContraseña.SelectionLength = 0;
+            this.txtContraseña.SelectionStart = 0;
+            this.txtContraseña.Size = new System.Drawing.Size(277, 23);
+            this.txtContraseña.TabIndex = 29;
+            this.txtContraseña.UseSystemPasswordChar = false;
             // 
             // materialCheckBox1
             // 
@@ -115,23 +115,23 @@
             this.materialCheckBox1.Text = "Mostrar Contraseña";
             this.materialCheckBox1.UseVisualStyleBackColor = false;
             // 
-            // btnIncio
+            // btnInicio
             // 
-            this.btnIncio.BackColor = System.Drawing.Color.Transparent;
-            this.btnIncio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIncio.Depth = 0;
-            this.btnIncio.FlatAppearance.BorderSize = 0;
-            this.btnIncio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
-            this.btnIncio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIncio.Location = new System.Drawing.Point(212, 319);
-            this.btnIncio.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnIncio.Name = "btnIncio";
-            this.btnIncio.Primary = true;
-            this.btnIncio.Size = new System.Drawing.Size(152, 28);
-            this.btnIncio.TabIndex = 31;
-            this.btnIncio.Text = "Inicio";
-            this.btnIncio.UseVisualStyleBackColor = false;
-            this.btnIncio.Click += new System.EventHandler(this.btnIncio_Click);
+            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicio.Depth = 0;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnInicio.Location = new System.Drawing.Point(212, 319);
+            this.btnInicio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Primary = true;
+            this.btnInicio.Size = new System.Drawing.Size(152, 28);
+            this.btnInicio.TabIndex = 31;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnIncio_Click);
             // 
             // linkRC
             // 
@@ -186,15 +186,15 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.linkRC);
-            this.Controls.Add(this.btnIncio);
+            this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.materialCheckBox1);
-            this.Controls.Add(this.lblcontraseña);
-            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox1);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inicias sesión";
+            this.Text = "Iniciar sesión";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
@@ -204,10 +204,10 @@
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialSingleLineTextField lblUsuario;
-        private MaterialSkin.Controls.MaterialSingleLineTextField lblcontraseña;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtContraseña;
         private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
-        private MaterialSkin.Controls.MaterialRaisedButton btnIncio;
+        private MaterialSkin.Controls.MaterialRaisedButton btnInicio;
         private System.Windows.Forms.LinkLabel linkRC;
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Button btnSalir;

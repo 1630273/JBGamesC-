@@ -368,7 +368,7 @@
             this.Controls.Add(this.txtNombreUsuario);
             this.Name = "FormRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormRegistro";
+            this.Text = "Registro Usuario";
             this.Load += new System.EventHandler(this.FormRegistro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -42,10 +42,7 @@ namespace JBTienda
 
         }
 
-        private void materialSingleLineTextField4_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void materialSingleLineTextField1_Click(object sender, EventArgs e)
         {
@@ -54,6 +51,39 @@ namespace JBTienda
 
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+
+            char idSexo = ' ';
+            int idTipoUsuario = 3;
+            int idDepartmaneto = 1;
+
+            if (rdoHombre.Checked == true)
+            {
+                idSexo = 'H';
+            }
+            else if (rdoMujer.Checked == true)
+            {
+                idSexo = 'M';
+            }
+
+            dcTiendaDataContext dc = new dcTiendaDataContext();
+            dc.agregarGerente(
+                txtUsuario.Text,
+                txtContraseña.Text,
+                txtNombre.Text,
+                txtApellidoPaterno.Text,
+                txtApellidoMaterno.Text,
+                idSexo,
+                byte.Parse(idTipoUsuario.ToString()),
+                byte.Parse(idDepartmaneto.ToString())
+
+         );
+            MessageBox.Show("Gerente Agregado");
 
         }
     }

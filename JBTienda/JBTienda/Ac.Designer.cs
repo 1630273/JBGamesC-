@@ -30,13 +30,13 @@
         {
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField6 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.rdoMujer = new MaterialSkin.Controls.MaterialRadioButton();
+            this.rdoHombre = new MaterialSkin.Controls.MaterialRadioButton();
+            this.txtApellidoMaterno = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtApellidoPaterno = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.SuspendLayout();
             // 
             // btnRegistrar
@@ -55,6 +55,7 @@
             this.btnRegistrar.TabIndex = 65;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // label1
             // 
@@ -68,119 +69,119 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "Departamento Celulares";
             // 
-            // materialSingleLineTextField2
+            // txtContraseña
             // 
-            this.materialSingleLineTextField2.BackColor = System.Drawing.Color.White;
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "Contraseña";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(169, 121);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '*';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(236, 23);
-            this.materialSingleLineTextField2.TabIndex = 63;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.txtContraseña.BackColor = System.Drawing.Color.White;
+            this.txtContraseña.Depth = 0;
+            this.txtContraseña.Hint = "Contraseña";
+            this.txtContraseña.Location = new System.Drawing.Point(169, 121);
+            this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.SelectedText = "";
+            this.txtContraseña.SelectionLength = 0;
+            this.txtContraseña.SelectionStart = 0;
+            this.txtContraseña.Size = new System.Drawing.Size(236, 23);
+            this.txtContraseña.TabIndex = 63;
+            this.txtContraseña.UseSystemPasswordChar = false;
             // 
-            // materialRadioButton2
+            // rdoMujer
             // 
-            this.materialRadioButton2.AutoSize = true;
-            this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton2.Location = new System.Drawing.Point(325, 284);
-            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton2.Name = "materialRadioButton2";
-            this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(64, 30);
-            this.materialRadioButton2.TabIndex = 62;
-            this.materialRadioButton2.TabStop = true;
-            this.materialRadioButton2.Text = "Mujer";
-            this.materialRadioButton2.UseVisualStyleBackColor = true;
+            this.rdoMujer.AutoSize = true;
+            this.rdoMujer.Depth = 0;
+            this.rdoMujer.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rdoMujer.Location = new System.Drawing.Point(325, 284);
+            this.rdoMujer.Margin = new System.Windows.Forms.Padding(0);
+            this.rdoMujer.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rdoMujer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rdoMujer.Name = "rdoMujer";
+            this.rdoMujer.Ripple = true;
+            this.rdoMujer.Size = new System.Drawing.Size(64, 30);
+            this.rdoMujer.TabIndex = 62;
+            this.rdoMujer.TabStop = true;
+            this.rdoMujer.Text = "Mujer";
+            this.rdoMujer.UseVisualStyleBackColor = true;
             // 
-            // materialRadioButton1
+            // rdoHombre
             // 
-            this.materialRadioButton1.AutoSize = true;
-            this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton1.Location = new System.Drawing.Point(169, 284);
-            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton1.Name = "materialRadioButton1";
-            this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(78, 30);
-            this.materialRadioButton1.TabIndex = 61;
-            this.materialRadioButton1.TabStop = true;
-            this.materialRadioButton1.Text = "Hombre";
-            this.materialRadioButton1.UseVisualStyleBackColor = true;
+            this.rdoHombre.AutoSize = true;
+            this.rdoHombre.Depth = 0;
+            this.rdoHombre.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rdoHombre.Location = new System.Drawing.Point(169, 284);
+            this.rdoHombre.Margin = new System.Windows.Forms.Padding(0);
+            this.rdoHombre.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rdoHombre.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rdoHombre.Name = "rdoHombre";
+            this.rdoHombre.Ripple = true;
+            this.rdoHombre.Size = new System.Drawing.Size(78, 30);
+            this.rdoHombre.TabIndex = 61;
+            this.rdoHombre.TabStop = true;
+            this.rdoHombre.Text = "Hombre";
+            this.rdoHombre.UseVisualStyleBackColor = true;
             // 
-            // materialSingleLineTextField5
+            // txtApellidoMaterno
             // 
-            this.materialSingleLineTextField5.BackColor = System.Drawing.Color.White;
-            this.materialSingleLineTextField5.Depth = 0;
-            this.materialSingleLineTextField5.Hint = "Apellido Materno";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(169, 240);
-            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.PasswordChar = '\0';
-            this.materialSingleLineTextField5.SelectedText = "";
-            this.materialSingleLineTextField5.SelectionLength = 0;
-            this.materialSingleLineTextField5.SelectionStart = 0;
-            this.materialSingleLineTextField5.Size = new System.Drawing.Size(236, 23);
-            this.materialSingleLineTextField5.TabIndex = 60;
-            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            this.txtApellidoMaterno.BackColor = System.Drawing.Color.White;
+            this.txtApellidoMaterno.Depth = 0;
+            this.txtApellidoMaterno.Hint = "Apellido Materno";
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(169, 240);
+            this.txtApellidoMaterno.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtApellidoMaterno.Name = "txtApellidoMaterno";
+            this.txtApellidoMaterno.PasswordChar = '\0';
+            this.txtApellidoMaterno.SelectedText = "";
+            this.txtApellidoMaterno.SelectionLength = 0;
+            this.txtApellidoMaterno.SelectionStart = 0;
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(236, 23);
+            this.txtApellidoMaterno.TabIndex = 60;
+            this.txtApellidoMaterno.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField6
+            // txtApellidoPaterno
             // 
-            this.materialSingleLineTextField6.BackColor = System.Drawing.Color.White;
-            this.materialSingleLineTextField6.Depth = 0;
-            this.materialSingleLineTextField6.Hint = "Apellido Paterno";
-            this.materialSingleLineTextField6.Location = new System.Drawing.Point(169, 200);
-            this.materialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField6.Name = "materialSingleLineTextField6";
-            this.materialSingleLineTextField6.PasswordChar = '\0';
-            this.materialSingleLineTextField6.SelectedText = "";
-            this.materialSingleLineTextField6.SelectionLength = 0;
-            this.materialSingleLineTextField6.SelectionStart = 0;
-            this.materialSingleLineTextField6.Size = new System.Drawing.Size(236, 23);
-            this.materialSingleLineTextField6.TabIndex = 59;
-            this.materialSingleLineTextField6.UseSystemPasswordChar = false;
+            this.txtApellidoPaterno.BackColor = System.Drawing.Color.White;
+            this.txtApellidoPaterno.Depth = 0;
+            this.txtApellidoPaterno.Hint = "Apellido Paterno";
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(169, 200);
+            this.txtApellidoPaterno.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtApellidoPaterno.Name = "txtApellidoPaterno";
+            this.txtApellidoPaterno.PasswordChar = '\0';
+            this.txtApellidoPaterno.SelectedText = "";
+            this.txtApellidoPaterno.SelectionLength = 0;
+            this.txtApellidoPaterno.SelectionStart = 0;
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(236, 23);
+            this.txtApellidoPaterno.TabIndex = 59;
+            this.txtApellidoPaterno.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField3
+            // txtNombre
             // 
-            this.materialSingleLineTextField3.BackColor = System.Drawing.Color.White;
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Hint = "Nombre";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(169, 161);
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '*';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(236, 23);
-            this.materialSingleLineTextField3.TabIndex = 58;
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.Depth = 0;
+            this.txtNombre.Hint = "Nombre";
+            this.txtNombre.Location = new System.Drawing.Point(169, 161);
+            this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PasswordChar = '*';
+            this.txtNombre.SelectedText = "";
+            this.txtNombre.SelectionLength = 0;
+            this.txtNombre.SelectionStart = 0;
+            this.txtNombre.Size = new System.Drawing.Size(236, 23);
+            this.txtNombre.TabIndex = 58;
+            this.txtNombre.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField1
+            // txtUsuario
             // 
-            this.materialSingleLineTextField1.BackColor = System.Drawing.Color.White;
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "Usuario";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(169, 83);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(236, 23);
-            this.materialSingleLineTextField1.TabIndex = 57;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.txtUsuario.BackColor = System.Drawing.Color.White;
+            this.txtUsuario.Depth = 0;
+            this.txtUsuario.Hint = "Usuario";
+            this.txtUsuario.Location = new System.Drawing.Point(169, 83);
+            this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '\0';
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.SelectionLength = 0;
+            this.txtUsuario.SelectionStart = 0;
+            this.txtUsuario.Size = new System.Drawing.Size(236, 23);
+            this.txtUsuario.TabIndex = 57;
+            this.txtUsuario.UseSystemPasswordChar = false;
             // 
             // Ac
             // 
@@ -189,13 +190,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.materialSingleLineTextField2);
-            this.Controls.Add(this.materialRadioButton2);
-            this.Controls.Add(this.materialRadioButton1);
-            this.Controls.Add(this.materialSingleLineTextField5);
-            this.Controls.Add(this.materialSingleLineTextField6);
-            this.Controls.Add(this.materialSingleLineTextField3);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.rdoMujer);
+            this.Controls.Add(this.rdoHombre);
+            this.Controls.Add(this.txtApellidoMaterno);
+            this.Controls.Add(this.txtApellidoPaterno);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtUsuario);
             this.Name = "Ac";
             this.Size = new System.Drawing.Size(537, 417);
             this.ResumeLayout(false);
@@ -207,12 +208,12 @@
 
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField6;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtContraseña;
+        private MaterialSkin.Controls.MaterialRadioButton rdoMujer;
+        private MaterialSkin.Controls.MaterialRadioButton rdoHombre;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidoMaterno;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidoPaterno;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombre;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
     }
 }

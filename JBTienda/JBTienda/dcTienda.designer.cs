@@ -82,6 +82,20 @@ namespace JBTienda
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombreUsuario, contraseña, contraseña2, nombre, apellidoPaterno, apellidoMaterno, idSexo, telefono, correo, direccion, cp, idCiudad, idTipoUsuario);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Logear")]
+		public ISingleResult<LogearResult> Logear([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(25)")] string nombreUsuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(25)")] string contraseña)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombreUsuario, contraseña);
+			return ((ISingleResult<LogearResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.agregarGerente")]
+		public int agregarGerente([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(25)")] string usuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string contraseña, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(25)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string apellidoPaterno, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string apellidoMaterno, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(1)")] System.Nullable<char> idSexo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> idTipoUsuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> idDepartamento)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuario, contraseña, nombre, apellidoPaterno, apellidoMaterno, idSexo, idTipoUsuario, idDepartamento);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	public partial class cargarCiudadesResult
@@ -185,6 +199,68 @@ namespace JBTienda
 				if ((this._desEstado != value))
 				{
 					this._desEstado = value;
+				}
+			}
+		}
+	}
+	
+	public partial class LogearResult
+	{
+		
+		private byte _idUsuario;
+		
+		private string _nombre;
+		
+		private System.Nullable<byte> _idTipoUSuario;
+		
+		public LogearResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idUsuario", DbType="TinyInt NOT NULL")]
+		public byte idUsuario
+		{
+			get
+			{
+				return this._idUsuario;
+			}
+			set
+			{
+				if ((this._idUsuario != value))
+				{
+					this._idUsuario = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="VarChar(25) NOT NULL", CanBeNull=false)]
+		public string nombre
+		{
+			get
+			{
+				return this._nombre;
+			}
+			set
+			{
+				if ((this._nombre != value))
+				{
+					this._nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTipoUSuario", DbType="TinyInt")]
+		public System.Nullable<byte> idTipoUSuario
+		{
+			get
+			{
+				return this._idTipoUSuario;
+			}
+			set
+			{
+				if ((this._idTipoUSuario != value))
+				{
+					this._idTipoUSuario = value;
 				}
 			}
 		}

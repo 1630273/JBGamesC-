@@ -104,7 +104,7 @@ namespace JBTienda
                     byte.Parse(idTipoUsuario.ToString())
 
              );
-                MessageBox.Show("Contacto Agregado");
+                MessageBox.Show("Usuario Agregado");
             
         }
     }
