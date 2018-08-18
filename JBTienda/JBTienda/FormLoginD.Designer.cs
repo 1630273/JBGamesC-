@@ -1,6 +1,6 @@
 ﻿namespace JBTienda
 {
-    partial class FormLoginA
+    partial class FormLoginD
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoginA));
             System.Windows.Forms.PictureBox pictureBox2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoginD));
             System.Windows.Forms.PictureBox pictureBox1;
-            this.btnSalir = new System.Windows.Forms.Button();
             this.linkRC = new System.Windows.Forms.LinkLabel();
             this.btnIncio = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
             this.lblcontraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -43,21 +43,27 @@
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSalir
+            // pictureBox2
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(357, 32);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(28, 21);
-            this.btnSalir.TabIndex = 40;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            pictureBox2.Location = new System.Drawing.Point(25, 159);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new System.Drawing.Size(24, 24);
+            pictureBox2.TabIndex = 41;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            pictureBox1.Location = new System.Drawing.Point(25, 105);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(24, 24);
+            pictureBox1.TabIndex = 40;
+            pictureBox1.TabStop = false;
             // 
             // linkRC
             // 
@@ -65,10 +71,10 @@
             this.linkRC.AutoSize = true;
             this.linkRC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkRC.LinkColor = System.Drawing.Color.Purple;
-            this.linkRC.Location = new System.Drawing.Point(200, 206);
+            this.linkRC.Location = new System.Drawing.Point(192, 204);
             this.linkRC.Name = "linkRC";
             this.linkRC.Size = new System.Drawing.Size(164, 16);
-            this.linkRC.TabIndex = 53;
+            this.linkRC.TabIndex = 46;
             this.linkRC.TabStop = true;
             this.linkRC.Text = "Recuperar Contraseña";
             // 
@@ -80,37 +86,31 @@
             this.btnIncio.FlatAppearance.BorderSize = 0;
             this.btnIncio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
             this.btnIncio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIncio.Location = new System.Drawing.Point(33, 259);
+            this.btnIncio.Location = new System.Drawing.Point(25, 257);
             this.btnIncio.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnIncio.Name = "btnIncio";
             this.btnIncio.Primary = true;
             this.btnIncio.Size = new System.Drawing.Size(322, 28);
-            this.btnIncio.TabIndex = 52;
+            this.btnIncio.TabIndex = 45;
             this.btnIncio.Text = "Inicio";
             this.btnIncio.UseVisualStyleBackColor = false;
-            this.btnIncio.Click += new System.EventHandler(this.btnIncio_Click_1);
+            this.btnIncio.Click += new System.EventHandler(this.btnIncio_Click);
             // 
-            // pictureBox2
+            // btnSalir
             // 
-            pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            pictureBox2.Location = new System.Drawing.Point(33, 161);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new System.Drawing.Size(24, 24);
-            pictureBox2.TabIndex = 48;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            pictureBox1.Location = new System.Drawing.Point(33, 107);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(24, 24);
-            pictureBox1.TabIndex = 47;
-            pictureBox1.TabStop = false;
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(341, 34);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(28, 21);
+            this.btnSalir.TabIndex = 47;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // materialCheckBox1
             // 
@@ -118,23 +118,23 @@
             this.materialCheckBox1.BackColor = System.Drawing.Color.White;
             this.materialCheckBox1.Depth = 0;
             this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(33, 199);
+            this.materialCheckBox1.Location = new System.Drawing.Point(25, 200);
             this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCheckBox1.Name = "materialCheckBox1";
             this.materialCheckBox1.Ripple = true;
             this.materialCheckBox1.Size = new System.Drawing.Size(153, 30);
-            this.materialCheckBox1.TabIndex = 56;
+            this.materialCheckBox1.TabIndex = 50;
             this.materialCheckBox1.Text = "Mostrar Contraseña";
             this.materialCheckBox1.UseVisualStyleBackColor = false;
             // 
             // lblcontraseña
             // 
-            this.lblcontraseña.BackColor = System.Drawing.SystemColors.Control;
+            this.lblcontraseña.BackColor = System.Drawing.Color.White;
             this.lblcontraseña.Depth = 0;
             this.lblcontraseña.Hint = "Contraseña";
-            this.lblcontraseña.Location = new System.Drawing.Point(87, 160);
+            this.lblcontraseña.Location = new System.Drawing.Point(79, 161);
             this.lblcontraseña.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.PasswordChar = '*';
@@ -142,7 +142,7 @@
             this.lblcontraseña.SelectionLength = 0;
             this.lblcontraseña.SelectionStart = 0;
             this.lblcontraseña.Size = new System.Drawing.Size(277, 23);
-            this.lblcontraseña.TabIndex = 55;
+            this.lblcontraseña.TabIndex = 49;
             this.lblcontraseña.UseSystemPasswordChar = false;
             // 
             // lblUsuario
@@ -150,7 +150,7 @@
             this.lblUsuario.BackColor = System.Drawing.Color.White;
             this.lblUsuario.Depth = 0;
             this.lblUsuario.Hint = "Usuario";
-            this.lblUsuario.Location = new System.Drawing.Point(87, 106);
+            this.lblUsuario.Location = new System.Drawing.Point(79, 107);
             this.lblUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.PasswordChar = '\0';
@@ -158,26 +158,26 @@
             this.lblUsuario.SelectionLength = 0;
             this.lblUsuario.SelectionStart = 0;
             this.lblUsuario.Size = new System.Drawing.Size(277, 23);
-            this.lblUsuario.TabIndex = 54;
+            this.lblUsuario.TabIndex = 48;
             this.lblUsuario.UseSystemPasswordChar = false;
             // 
-            // FormLoginA
+            // FormLoginD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 363);
+            this.ClientSize = new System.Drawing.Size(381, 324);
             this.Controls.Add(this.materialCheckBox1);
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.linkRC);
             this.Controls.Add(this.btnIncio);
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox1);
-            this.Controls.Add(this.btnSalir);
-            this.Name = "FormLoginA";
+            this.Name = "FormLoginD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Administrador";
-            this.Load += new System.EventHandler(this.FormLoginA_Load);
+            this.Text = "Jefe de Departamento";
+            this.Load += new System.EventHandler(this.FormLoginD_Load);
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -186,9 +186,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSalir;
+
         private System.Windows.Forms.LinkLabel linkRC;
         private MaterialSkin.Controls.MaterialRaisedButton btnIncio;
+        private System.Windows.Forms.Button btnSalir;
         private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
         private MaterialSkin.Controls.MaterialSingleLineTextField lblcontraseña;
         private MaterialSkin.Controls.MaterialSingleLineTextField lblUsuario;

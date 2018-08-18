@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace JBTienda
 {
-    public partial class FormLoginA : MaterialSkin.Controls.MaterialForm
+    public partial class FormLoginD : MaterialSkin.Controls.MaterialForm
     {
-        public FormLoginA()
+        public FormLoginD()
         {
             InitializeComponent();
         }
 
-        private void FormLoginA_Load(object sender, EventArgs e)
+        private void FormLoginD_Load(object sender, EventArgs e)
         {
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
@@ -25,18 +25,18 @@ namespace JBTienda
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Purple800, MaterialSkin.Primary.Grey900, MaterialSkin.Primary.Purple800, MaterialSkin.Accent.Purple700, MaterialSkin.TextShade.WHITE);
         }
 
-       
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Form p = new FormMenuM();
-            p.Show();
+
+            Form Menu = new FormMenuM();
+            Menu.Show();
             this.Hide();
         }
 
-        private void btnIncio_Click_1(object sender, EventArgs e)
+        private void btnIncio_Click(object sender, EventArgs e)
         {
-            Form Menu = new FormMenuAdmin();
-            Menu.Show();
+            Form p = new FormMenuJ();
+            p.Show();
             this.Hide();
         }
     }

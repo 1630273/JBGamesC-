@@ -10,34 +10,42 @@ using System.Windows.Forms;
 
 namespace JBTienda
 {
-    public partial class FormLoginA : MaterialSkin.Controls.MaterialForm
+    public partial class FormMenuM : MaterialSkin.Controls.MaterialForm
     {
-        public FormLoginA()
+        public FormMenuM()
         {
             InitializeComponent();
-        }
-
-        private void FormLoginA_Load(object sender, EventArgs e)
-        {
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Purple800, MaterialSkin.Primary.Grey900, MaterialSkin.Primary.Purple800, MaterialSkin.Accent.Purple700, MaterialSkin.TextShade.WHITE);
         }
 
-       
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void FormMenuM_Load(object sender, EventArgs e)
         {
-            Form p = new FormMenuM();
-            p.Show();
+
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Form A = new FormLoginA();
+            A.Show();
             this.Hide();
         }
 
-        private void btnIncio_Click_1(object sender, EventArgs e)
+        private void btnDep_Click(object sender, EventArgs e)
         {
-            Form Menu = new FormMenuAdmin();
-            Menu.Show();
+            Form D = new FormLoginD();
+            D.Show();
             this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Form A = new FormPortada();
+            A.Show();
+            this.Hide();
+
         }
     }
 }

@@ -66,7 +66,7 @@
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(250, 200);
             this.btnAdmin.TabIndex = 2;
-            this.btnAdmin.Text = "Administrador";
+            this.btnAdmin.Text = "Mantenimiento";
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
