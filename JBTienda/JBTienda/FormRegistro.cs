@@ -107,5 +107,12 @@ namespace JBTienda
                 MessageBox.Show("Usuario Agregado");
             
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            FormLogin volver = new FormLogin();
+            volver.Show();
+            this.Hide();
+        }
     }
 }

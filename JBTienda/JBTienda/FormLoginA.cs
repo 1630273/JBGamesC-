@@ -17,6 +17,51 @@ namespace JBTienda
             InitializeComponent();
         }
 
+        public void login(String v_Usuario, String v_Contraseña)
+        {
+
+            bool bandera = false;
+            dcTiendaDataContext dc = new dcTiendaDataContext();
+
+            var log = from l in dc.Logear(v_Usuario, v_Contraseña)
+                      select new { l.nombre, l.idTipoUSuario, l.idUsuario };
+
+
+
+            foreach (var u in log)
+            {
+                bandera = true;
+
+
+
+                switch (int.Parse(u.idTipoUSuario.ToString()))
+                {
+                    case 1:
+                        MessageBox.Show("Bienvenido,Usted es Administrador.");
+
+                        // Variables.usuario = txtUsuario.Text; 
+
+                        Form Menu = new FormMenuAdmin();
+                        Menu.Show();
+                        this.Hide();
+
+                        break;
+
+
+
+                }
+
+            }
+
+            if (bandera == false)
+            {
+                MessageBox.Show("Usuario y contraseña incorrectos.");
+            }
+
+
+
+        }
+
         private void FormLoginA_Load(object sender, EventArgs e)
         {
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
@@ -35,9 +80,7 @@ namespace JBTienda
 
         private void btnIncio_Click_1(object sender, EventArgs e)
         {
-            Form Menu = new FormMenuAdmin();
-            Menu.Show();
-            this.Hide();
+            login(txtUsuario.Text,txtContraseña.Text);
         }
     }
 }
