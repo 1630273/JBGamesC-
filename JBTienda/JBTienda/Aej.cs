@@ -47,5 +47,10 @@ namespace JBTienda
             MessageBox.Show("Gerente Agregado");
 
         }
+
+        private void txtUsuario_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

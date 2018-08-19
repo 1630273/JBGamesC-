@@ -47,5 +47,65 @@ namespace JBTienda
             MessageBox.Show("Gerente Agregado");
 
         }
+
+        private void txtContraseña_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtContraseña.Text.Trim().Length <= 0)
+            {
+                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                btnRegistrar .Focus();
+            }
+        }
+
+        
+
+        private void Ael_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtUsuario.Text.Trim().Length <= 0)
+            {
+                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                txtContraseña.Focus();
+            }
+
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtApellidoPaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtApellidoMaterno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellidoMaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

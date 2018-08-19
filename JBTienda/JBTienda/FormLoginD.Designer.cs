@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.PictureBox pictureBox2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoginD));
             System.Windows.Forms.PictureBox pictureBox1;
@@ -37,10 +38,12 @@
             this.Mostrar = new MaterialSkin.Controls.MaterialCheckBox();
             this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             pictureBox2 = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -145,6 +148,8 @@
             this.txtContraseña.Size = new System.Drawing.Size(277, 23);
             this.txtContraseña.TabIndex = 49;
             this.txtContraseña.UseSystemPasswordChar = true;
+            this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_Click);
+            this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña_Validating);
             // 
             // txtUsuario
             // 
@@ -161,6 +166,11 @@
             this.txtUsuario.Size = new System.Drawing.Size(277, 23);
             this.txtUsuario.TabIndex = 48;
             this.txtUsuario.UseSystemPasswordChar = false;
+            this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FormLoginD
             // 
@@ -181,6 +191,7 @@
             this.Load += new System.EventHandler(this.FormLoginD_Load);
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +205,6 @@
         private MaterialSkin.Controls.MaterialCheckBox Mostrar;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtContraseña;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
