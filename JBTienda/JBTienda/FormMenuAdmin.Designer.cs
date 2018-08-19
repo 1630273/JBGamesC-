@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-           
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuAdmin));
-          
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-       
             this.sidemenu = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
@@ -46,7 +42,6 @@
             this.btnJuego = new System.Windows.Forms.Button();
             this.btnCom = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-          
             this.ainicio1 = new JBTienda.Ainicio();
             this.ajuegos1 = new JBTienda.Ajuegos();
             this.ael1 = new JBTienda.Ael();
@@ -63,7 +58,6 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnmenubar);
             this.panel2.Controls.Add(this.label2);
-          
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -72,7 +66,6 @@
             // 
             // button2
             // 
-       
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -100,16 +93,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-       
             this.label2.Location = new System.Drawing.Point(522, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Carrito";
-            // 
-            // PanelAnimation
-            // 
-       
             // 
             // sidemenu
             // 
@@ -122,7 +110,6 @@
             this.sidemenu.Controls.Add(this.btnJuego);
             this.sidemenu.Controls.Add(this.btnCom);
             this.sidemenu.Controls.Add(this.btnInicio);
-          
             this.sidemenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidemenu.Location = new System.Drawing.Point(0, 37);
             this.sidemenu.Name = "sidemenu";
@@ -133,7 +120,6 @@
             // logo
             // 
             this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            
             this.logo.Location = new System.Drawing.Point(3, 11);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(159, 46);
@@ -142,7 +128,6 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            
             this.SidePanel.Location = new System.Drawing.Point(2, 63);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 51);
@@ -255,6 +240,10 @@
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click_1);
+            // 
+            // ainicio1
+            // 
+            this.ainicio1.BackColor = System.Drawing.Color.White;
             this.ainicio1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ainicio1.Location = new System.Drawing.Point(262, 37);
             this.ainicio1.Name = "ainicio1";
@@ -272,6 +261,7 @@
             // 
             // ael1
             // 
+            this.ael1.BackColor = System.Drawing.Color.White;
             this.ael1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ael1.Location = new System.Drawing.Point(262, 37);
             this.ael1.Name = "ael1";
@@ -280,11 +270,13 @@
             // 
             // aej1
             // 
+            this.aej1.BackColor = System.Drawing.Color.White;
             this.aej1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.aej1.Location = new System.Drawing.Point(262, 37);
             this.aej1.Name = "aej1";
             this.aej1.Size = new System.Drawing.Size(538, 413);
             this.aej1.TabIndex = 15;
+            this.aej1.Load += new System.EventHandler(this.aej1_Load);
             // 
             // acom1
             // 
@@ -297,6 +289,7 @@
             // 
             // ac1
             // 
+            this.ac1.BackColor = System.Drawing.Color.White;
             this.ac1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ac1.Location = new System.Drawing.Point(0, 0);
             this.ac1.Name = "ac1";

@@ -71,7 +71,7 @@
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.Depth = 0;
             this.txtUsuario.Hint = "Usuario";
-            this.txtUsuario.Location = new System.Drawing.Point(73, 109);
+            this.txtUsuario.Location = new System.Drawing.Point(82, 108);
             this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
@@ -87,7 +87,7 @@
             this.txtContraseña.BackColor = System.Drawing.Color.White;
             this.txtContraseña.Depth = 0;
             this.txtContraseña.Hint = "Contraseña";
-            this.txtContraseña.Location = new System.Drawing.Point(73, 163);
+            this.txtContraseña.Location = new System.Drawing.Point(82, 163);
             this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
@@ -182,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(397, 310);
+            this.ClientSize = new System.Drawing.Size(400, 343);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.linkRC);
@@ -194,7 +194,7 @@
             this.Controls.Add(pictureBox1);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Iniciar sesión";
+            this.Text = "Usuario";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();

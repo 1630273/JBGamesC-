@@ -96,5 +96,10 @@ namespace JBTienda
             SidePanel.Top = btnSalud.Top;
             aej1.BringToFront();
         }
+
+        private void aej1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

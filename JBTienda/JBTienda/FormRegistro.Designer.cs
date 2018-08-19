@@ -43,7 +43,7 @@
             this.materialSingleLineTextField9 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtDireccion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtCp = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.btnRegistrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -282,22 +282,23 @@
             this.txtCp.TabIndex = 45;
             this.txtCp.UseSystemPasswordChar = false;
             // 
-            // btnCancelar
+            // btnVolver
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.CausesValidation = false;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Purple;
-            this.btnCancelar.Location = new System.Drawing.Point(52, 671);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(137, 28);
-            this.btnCancelar.TabIndex = 47;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnVolver.BackColor = System.Drawing.Color.White;
+            this.btnVolver.CausesValidation = false;
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.Purple;
+            this.btnVolver.Location = new System.Drawing.Point(52, 671);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(137, 28);
+            this.btnVolver.TabIndex = 47;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnRegistrar
             // 
@@ -349,7 +350,7 @@
             this.ClientSize = new System.Drawing.Size(451, 784);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.cboEstado);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtCp);
             this.Controls.Add(this.txtDireccion);
@@ -392,7 +393,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField9;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtDireccion;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCp;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnVolver;
         private MaterialSkin.Controls.MaterialRaisedButton btnRegistrar;
         private System.Windows.Forms.ComboBox cboEstado;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCorreo;
