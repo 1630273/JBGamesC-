@@ -39,6 +39,10 @@
             this.btnmo = new System.Windows.Forms.Button();
             this.btnAg = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
+            this.di1 = new JBTienda.di();
+            this.de1 = new JBTienda.de();
+            this.dm1 = new JBTienda.dm();
+            this.da1 = new JBTienda.da();
             this.panel2.SuspendLayout();
             this.sidemenu.SuspendLayout();
             this.SuspendLayout();
@@ -128,6 +132,7 @@
             this.btnel.Text = "   Eliminar";
             this.btnel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnel.UseVisualStyleBackColor = true;
+            this.btnel.Click += new System.EventHandler(this.btnel_Click);
             // 
             // btnmo
             // 
@@ -145,6 +150,7 @@
             this.btnmo.Text = "  Modificar";
             this.btnmo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnmo.UseVisualStyleBackColor = true;
+            this.btnmo.Click += new System.EventHandler(this.btnmo_Click);
             // 
             // btnAg
             // 
@@ -162,6 +168,7 @@
             this.btnAg.Text = "  Agregar";
             this.btnAg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAg.UseVisualStyleBackColor = true;
+            this.btnAg.Click += new System.EventHandler(this.btnAg_Click);
             // 
             // btnInicio
             // 
@@ -179,14 +186,51 @@
             this.btnInicio.Text = "   Inicio";
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
+            // di1
+            // 
+            this.di1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.di1.Location = new System.Drawing.Point(0, 0);
+            this.di1.Name = "di1";
+            this.di1.Size = new System.Drawing.Size(800, 450);
+            this.di1.TabIndex = 9;
+            // 
+            // de1
+            // 
+            this.de1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.de1.Location = new System.Drawing.Point(0, 0);
+            this.de1.Name = "de1";
+            this.de1.Size = new System.Drawing.Size(800, 450);
+            this.de1.TabIndex = 10;
+            // 
+            // dm1
+            // 
+            this.dm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dm1.Location = new System.Drawing.Point(0, 0);
+            this.dm1.Name = "dm1";
+            this.dm1.Size = new System.Drawing.Size(800, 450);
+            this.dm1.TabIndex = 12;
+            // 
+            // da1
+            // 
+            this.da1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.da1.Location = new System.Drawing.Point(262, 37);
+            this.da1.Name = "da1";
+            this.da1.Size = new System.Drawing.Size(538, 413);
+            this.da1.TabIndex = 13;
             // 
             // FormMenuJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.da1);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.de1);
+            this.Controls.Add(this.di1);
+            this.Controls.Add(this.dm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMenuJ";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -209,5 +253,9 @@
         private System.Windows.Forms.Button btnmo;
         private System.Windows.Forms.Button btnAg;
         private System.Windows.Forms.Button btnInicio;
+        private di di1;
+        private de de1;
+        private dm dm1;
+        private da da1;
     }
 }

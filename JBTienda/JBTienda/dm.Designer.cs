@@ -1,6 +1,6 @@
 ﻿namespace JBTienda
 {
-    partial class Ainicio
+    partial class dm
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -30,26 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
             this.dtai = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.label1.Location = new System.Drawing.Point(90, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Menu de  Inicio Admin";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dtai
             // 
@@ -67,32 +53,25 @@
             this.dtai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtai.ColumnHeadersHeight = 37;
             this.dtai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtai.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtai.EnableHeadersVisualStyles = false;
             this.dtai.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtai.Location = new System.Drawing.Point(60, 114);
+            this.dtai.Location = new System.Drawing.Point(34, 96);
             this.dtai.Name = "dtai";
             this.dtai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtai.RowHeadersVisible = false;
-            this.dtai.Size = new System.Drawing.Size(442, 150);
-            this.dtai.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 53;
+            this.dtai.Size = new System.Drawing.Size(361, 150);
+            this.dtai.TabIndex = 4;
             // 
             // Column2
             // 
@@ -112,26 +91,23 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 106;
             // 
-            // Ainicio
+            // dm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dtai);
-            this.Controls.Add(this.label1);
-            this.Name = "Ainicio";
-            this.Size = new System.Drawing.Size(547, 391);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Name = "dm";
+            this.Size = new System.Drawing.Size(428, 343);
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

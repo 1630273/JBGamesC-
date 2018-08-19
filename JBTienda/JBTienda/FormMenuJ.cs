@@ -15,6 +15,9 @@ namespace JBTienda
         public FormMenuJ()
         {
             InitializeComponent();
+            SidePanel.Height = btnInicio.Height;
+            SidePanel.Top = btnInicio.Top;
+            di1.BringToFront();
         }
 
         private void FormMenuJ_Load(object sender, EventArgs e)
@@ -32,6 +35,34 @@ namespace JBTienda
             Form p = new FormLoginD();
             p.Show();
             this.Hide();
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnInicio.Height;
+            SidePanel.Top = btnInicio.Top;
+            di1.BringToFront();
+        }
+
+        private void btnAg_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnInicio.Height;
+            SidePanel.Top = btnInicio.Top;
+            da1.BringToFront();
+        }
+
+        private void btnmo_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnInicio.Height;
+            SidePanel.Top = btnInicio.Top;
+            dm1.BringToFront();
+        }
+
+        private void btnel_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnInicio.Height;
+            SidePanel.Top = btnInicio.Top;
+            de1.BringToFront();
         }
     }
 }

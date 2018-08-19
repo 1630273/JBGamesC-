@@ -108,10 +108,34 @@
     <Compile Include="Cujuegos.Designer.cs">
       <DependentUpon>Cujuegos.cs</DependentUpon>
     </Compile>
+    <Compile Include="da.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="da.Designer.cs">
+      <DependentUpon>da.cs</DependentUpon>
+    </Compile>
     <Compile Include="dcTienda.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dcTienda.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="de.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="de.Designer.cs">
+      <DependentUpon>de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="di.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="di.Designer.cs">
+      <DependentUpon>di.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dm.Designer.cs">
+      <DependentUpon>dm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -195,6 +219,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cujuegos.resx">
       <DependentUpon>Cujuegos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="da.resx">
+      <DependentUpon>da.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="de.resx">
+      <DependentUpon>de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="di.resx">
+      <DependentUpon>di.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dm.resx">
+      <DependentUpon>dm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
