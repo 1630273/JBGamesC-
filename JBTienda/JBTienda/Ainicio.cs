@@ -21,5 +21,24 @@ namespace JBTienda
         {
 
         }
+
+        void CargarEmpleados()
+        {
+            dcTiendaDataContext st = new dcTiendaDataContext();
+
+            var r = from con in st.consultarGerentes()
+                    select con;
+
+            foreach (var n in r)
+            {
+
+                dtai.Rows.Add(n.nombredepa,  n.NombreCompleto, n.idGerente
+                    );
+            }
+        }
+        private void Ainicio_Load(object sender, EventArgs e)
+        {
+            CargarEmpleados();
+        }
     }
 }

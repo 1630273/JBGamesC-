@@ -32,10 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dtai = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +55,7 @@
             this.dtai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtai.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtai.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtai.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -67,10 +66,9 @@
             this.dtai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtai.ColumnHeadersHeight = 37;
             this.dtai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
             this.Column3,
-            this.Column4});
+            this.Column2,
+            this.Column1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,18 +79,19 @@
             this.dtai.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtai.EnableHeadersVisualStyles = false;
             this.dtai.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtai.Location = new System.Drawing.Point(60, 114);
+            this.dtai.Location = new System.Drawing.Point(97, 129);
             this.dtai.Name = "dtai";
             this.dtai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtai.RowHeadersVisible = false;
-            this.dtai.Size = new System.Drawing.Size(442, 150);
+            this.dtai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtai.Size = new System.Drawing.Size(364, 127);
             this.dtai.TabIndex = 2;
             // 
-            // Column1
+            // Column3
             // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 53;
+            this.Column3.HeaderText = "Departamento";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 149;
             // 
             // Column2
             // 
@@ -100,17 +99,11 @@
             this.Column2.Name = "Column2";
             this.Column2.Width = 96;
             // 
-            // Column3
+            // Column1
             // 
-            this.Column3.HeaderText = "Precio";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 84;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cantidad";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 106;
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 53;
             // 
             // Ainicio
             // 
@@ -121,6 +114,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Ainicio";
             this.Size = new System.Drawing.Size(547, 391);
+            this.Load += new System.EventHandler(this.Ainicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,9 +125,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

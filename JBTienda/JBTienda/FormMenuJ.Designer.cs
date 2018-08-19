@@ -190,6 +190,7 @@
             // 
             // di1
             // 
+            this.di1.BackColor = System.Drawing.Color.White;
             this.di1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.di1.Location = new System.Drawing.Point(0, 0);
             this.di1.Name = "di1";
@@ -198,6 +199,7 @@
             // 
             // de1
             // 
+            this.de1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.de1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.de1.Location = new System.Drawing.Point(0, 0);
             this.de1.Name = "de1";
@@ -206,7 +208,9 @@
             // 
             // dm1
             // 
+            this.dm1.BackColor = System.Drawing.Color.White;
             this.dm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dm1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dm1.Location = new System.Drawing.Point(0, 0);
             this.dm1.Name = "dm1";
             this.dm1.Size = new System.Drawing.Size(800, 450);
@@ -214,11 +218,13 @@
             // 
             // da1
             // 
+            this.da1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.da1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.da1.Location = new System.Drawing.Point(262, 37);
             this.da1.Name = "da1";
             this.da1.Size = new System.Drawing.Size(538, 413);
             this.da1.TabIndex = 13;
+            this.da1.Load += new System.EventHandler(this.da1_Load);
             // 
             // FormMenuJ
             // 

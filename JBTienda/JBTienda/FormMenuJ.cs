@@ -22,7 +22,7 @@ namespace JBTienda
 
         private void FormMenuJ_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show(Variables.idDep.ToString());
         }
 
         private void sidemenu_Paint(object sender, PaintEventArgs e)
@@ -37,6 +37,9 @@ namespace JBTienda
             this.Hide();
         }
 
+
+        
+
         private void btnInicio_Click(object sender, EventArgs e)
         {
             SidePanel.Height = btnInicio.Height;
@@ -49,6 +52,8 @@ namespace JBTienda
             SidePanel.Height = btnInicio.Height;
             SidePanel.Top = btnInicio.Top;
             da1.BringToFront();
+
+          
         }
 
         private void btnmo_Click(object sender, EventArgs e)
@@ -63,6 +68,11 @@ namespace JBTienda
             SidePanel.Height = btnInicio.Height;
             SidePanel.Top = btnInicio.Top;
             de1.BringToFront();
+        }
+
+        private void da1_Load(object sender, EventArgs e)
+        {
+           // ConsultarDep(byte.Parse(Variables.idDep.ToString()));
         }
     }
 }

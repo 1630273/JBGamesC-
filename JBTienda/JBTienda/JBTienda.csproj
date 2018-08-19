@@ -193,6 +193,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variables.cs" />
     <EmbeddedResource Include="Ac.resx">
       <DependentUpon>Ac.cs</DependentUpon>
     </EmbeddedResource>
