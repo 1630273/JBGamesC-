@@ -15,6 +15,11 @@ namespace JBTienda
         public FormLogin()
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Purple800, MaterialSkin.Primary.Grey900, MaterialSkin.Primary.Purple800, MaterialSkin.Accent.Purple700, MaterialSkin.TextShade.WHITE);
+
         }
 
         public void login(String v_usuario, String v_contraseña)
@@ -89,6 +94,20 @@ namespace JBTienda
             Form p = new FormPortada();
             p.Show();
             this.Hide();
+        }
+
+        private void materialCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (Mostrar.Checked == true)
+            {
+                txtContraseña.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtContraseña.UseSystemPasswordChar = true;
+            }
+
         }
     }
 }

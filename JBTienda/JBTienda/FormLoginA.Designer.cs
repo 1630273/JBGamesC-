@@ -34,7 +34,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.linkRC = new System.Windows.Forms.LinkLabel();
             this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.Mostrar = new MaterialSkin.Controls.MaterialCheckBox();
             this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -112,22 +112,23 @@
             this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.btnIncio_Click_1);
             // 
-            // materialCheckBox1
+            // Mostrar
             // 
-            this.materialCheckBox1.AutoSize = true;
-            this.materialCheckBox1.BackColor = System.Drawing.Color.White;
-            this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(33, 199);
-            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox1.Name = "materialCheckBox1";
-            this.materialCheckBox1.Ripple = true;
-            this.materialCheckBox1.Size = new System.Drawing.Size(153, 30);
-            this.materialCheckBox1.TabIndex = 56;
-            this.materialCheckBox1.Text = "Mostrar Contraseña";
-            this.materialCheckBox1.UseVisualStyleBackColor = false;
+            this.Mostrar.AutoSize = true;
+            this.Mostrar.BackColor = System.Drawing.Color.White;
+            this.Mostrar.Depth = 0;
+            this.Mostrar.Font = new System.Drawing.Font("Roboto", 10F);
+            this.Mostrar.Location = new System.Drawing.Point(33, 199);
+            this.Mostrar.Margin = new System.Windows.Forms.Padding(0);
+            this.Mostrar.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.Mostrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Mostrar.Name = "Mostrar";
+            this.Mostrar.Ripple = true;
+            this.Mostrar.Size = new System.Drawing.Size(153, 30);
+            this.Mostrar.TabIndex = 56;
+            this.Mostrar.Text = "Mostrar Contraseña";
+            this.Mostrar.UseVisualStyleBackColor = false;
+            this.Mostrar.CheckedChanged += new System.EventHandler(this.Mostrar_CheckedChanged);
             // 
             // txtContraseña
             // 
@@ -137,13 +138,13 @@
             this.txtContraseña.Location = new System.Drawing.Point(87, 160);
             this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.PasswordChar = '\0';
             this.txtContraseña.SelectedText = "";
             this.txtContraseña.SelectionLength = 0;
             this.txtContraseña.SelectionStart = 0;
             this.txtContraseña.Size = new System.Drawing.Size(277, 23);
             this.txtContraseña.TabIndex = 55;
-            this.txtContraseña.UseSystemPasswordChar = false;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
@@ -166,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 363);
-            this.Controls.Add(this.materialCheckBox1);
+            this.Controls.Add(this.Mostrar);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.linkRC);
@@ -189,7 +190,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.LinkLabel linkRC;
         private MaterialSkin.Controls.MaterialRaisedButton btnInicio;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
+        private MaterialSkin.Controls.MaterialCheckBox Mostrar;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtContraseña;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
     }

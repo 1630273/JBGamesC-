@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoginD));
             System.Windows.Forms.PictureBox pictureBox1;
             this.linkRC = new System.Windows.Forms.LinkLabel();
-            this.btnIncio = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.lblcontraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.Mostrar = new MaterialSkin.Controls.MaterialCheckBox();
+            this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).BeginInit();
@@ -78,23 +78,23 @@
             this.linkRC.TabStop = true;
             this.linkRC.Text = "Recuperar Contraseña";
             // 
-            // btnIncio
+            // btnInicio
             // 
-            this.btnIncio.BackColor = System.Drawing.Color.Transparent;
-            this.btnIncio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIncio.Depth = 0;
-            this.btnIncio.FlatAppearance.BorderSize = 0;
-            this.btnIncio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
-            this.btnIncio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIncio.Location = new System.Drawing.Point(25, 257);
-            this.btnIncio.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnIncio.Name = "btnIncio";
-            this.btnIncio.Primary = true;
-            this.btnIncio.Size = new System.Drawing.Size(322, 28);
-            this.btnIncio.TabIndex = 45;
-            this.btnIncio.Text = "Inicio";
-            this.btnIncio.UseVisualStyleBackColor = false;
-            this.btnIncio.Click += new System.EventHandler(this.btnIncio_Click);
+            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicio.Depth = 0;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnInicio.Location = new System.Drawing.Point(25, 257);
+            this.btnInicio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Primary = true;
+            this.btnInicio.Size = new System.Drawing.Size(322, 28);
+            this.btnInicio.TabIndex = 45;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnIncio_Click);
             // 
             // btnSalir
             // 
@@ -112,66 +112,67 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // materialCheckBox1
+            // Mostrar
             // 
-            this.materialCheckBox1.AutoSize = true;
-            this.materialCheckBox1.BackColor = System.Drawing.Color.White;
-            this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(25, 200);
-            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox1.Name = "materialCheckBox1";
-            this.materialCheckBox1.Ripple = true;
-            this.materialCheckBox1.Size = new System.Drawing.Size(153, 30);
-            this.materialCheckBox1.TabIndex = 50;
-            this.materialCheckBox1.Text = "Mostrar Contraseña";
-            this.materialCheckBox1.UseVisualStyleBackColor = false;
+            this.Mostrar.AutoSize = true;
+            this.Mostrar.BackColor = System.Drawing.Color.White;
+            this.Mostrar.Depth = 0;
+            this.Mostrar.Font = new System.Drawing.Font("Roboto", 10F);
+            this.Mostrar.Location = new System.Drawing.Point(25, 200);
+            this.Mostrar.Margin = new System.Windows.Forms.Padding(0);
+            this.Mostrar.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.Mostrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Mostrar.Name = "Mostrar";
+            this.Mostrar.Ripple = true;
+            this.Mostrar.Size = new System.Drawing.Size(153, 30);
+            this.Mostrar.TabIndex = 50;
+            this.Mostrar.Text = "Mostrar Contraseña";
+            this.Mostrar.UseVisualStyleBackColor = false;
+            this.Mostrar.CheckedChanged += new System.EventHandler(this.Mostrar_CheckedChanged);
             // 
-            // lblcontraseña
+            // txtContraseña
             // 
-            this.lblcontraseña.BackColor = System.Drawing.Color.White;
-            this.lblcontraseña.Depth = 0;
-            this.lblcontraseña.Hint = "Contraseña";
-            this.lblcontraseña.Location = new System.Drawing.Point(79, 161);
-            this.lblcontraseña.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblcontraseña.Name = "lblcontraseña";
-            this.lblcontraseña.PasswordChar = '*';
-            this.lblcontraseña.SelectedText = "";
-            this.lblcontraseña.SelectionLength = 0;
-            this.lblcontraseña.SelectionStart = 0;
-            this.lblcontraseña.Size = new System.Drawing.Size(277, 23);
-            this.lblcontraseña.TabIndex = 49;
-            this.lblcontraseña.UseSystemPasswordChar = false;
+            this.txtContraseña.BackColor = System.Drawing.Color.White;
+            this.txtContraseña.Depth = 0;
+            this.txtContraseña.Hint = "Contraseña";
+            this.txtContraseña.Location = new System.Drawing.Point(79, 161);
+            this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '\0';
+            this.txtContraseña.SelectedText = "";
+            this.txtContraseña.SelectionLength = 0;
+            this.txtContraseña.SelectionStart = 0;
+            this.txtContraseña.Size = new System.Drawing.Size(277, 23);
+            this.txtContraseña.TabIndex = 49;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
-            // lblUsuario
+            // txtUsuario
             // 
-            this.lblUsuario.BackColor = System.Drawing.Color.White;
-            this.lblUsuario.Depth = 0;
-            this.lblUsuario.Hint = "Usuario";
-            this.lblUsuario.Location = new System.Drawing.Point(79, 107);
-            this.lblUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.PasswordChar = '\0';
-            this.lblUsuario.SelectedText = "";
-            this.lblUsuario.SelectionLength = 0;
-            this.lblUsuario.SelectionStart = 0;
-            this.lblUsuario.Size = new System.Drawing.Size(277, 23);
-            this.lblUsuario.TabIndex = 48;
-            this.lblUsuario.UseSystemPasswordChar = false;
+            this.txtUsuario.BackColor = System.Drawing.Color.White;
+            this.txtUsuario.Depth = 0;
+            this.txtUsuario.Hint = "Usuario";
+            this.txtUsuario.Location = new System.Drawing.Point(79, 107);
+            this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '\0';
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.SelectionLength = 0;
+            this.txtUsuario.SelectionStart = 0;
+            this.txtUsuario.Size = new System.Drawing.Size(277, 23);
+            this.txtUsuario.TabIndex = 48;
+            this.txtUsuario.UseSystemPasswordChar = false;
             // 
             // FormLoginD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(381, 324);
-            this.Controls.Add(this.materialCheckBox1);
-            this.Controls.Add(this.lblcontraseña);
-            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.Mostrar);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.linkRC);
-            this.Controls.Add(this.btnIncio);
+            this.Controls.Add(this.btnInicio);
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox1);
             this.Name = "FormLoginD";
@@ -188,10 +189,10 @@
         #endregion
 
         private System.Windows.Forms.LinkLabel linkRC;
-        private MaterialSkin.Controls.MaterialRaisedButton btnIncio;
+        private MaterialSkin.Controls.MaterialRaisedButton btnInicio;
         private System.Windows.Forms.Button btnSalir;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField lblcontraseña;
-        private MaterialSkin.Controls.MaterialSingleLineTextField lblUsuario;
+        private MaterialSkin.Controls.MaterialCheckBox Mostrar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtContraseña;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
     }
 }

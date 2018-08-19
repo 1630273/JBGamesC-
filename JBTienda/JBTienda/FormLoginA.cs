@@ -15,6 +15,10 @@ namespace JBTienda
         public FormLoginA()
         {
             InitializeComponent();
+            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Purple800, MaterialSkin.Primary.Grey900, MaterialSkin.Primary.Purple800, MaterialSkin.Accent.Purple700, MaterialSkin.TextShade.WHITE);
         }
 
         public void login(String v_Usuario, String v_Contraseña)
@@ -64,10 +68,7 @@ namespace JBTienda
 
         private void FormLoginA_Load(object sender, EventArgs e)
         {
-            MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
-            skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Purple800, MaterialSkin.Primary.Grey900, MaterialSkin.Primary.Purple800, MaterialSkin.Accent.Purple700, MaterialSkin.TextShade.WHITE);
+           
         }
 
        
@@ -81,6 +82,19 @@ namespace JBTienda
         private void btnIncio_Click_1(object sender, EventArgs e)
         {
             login(txtUsuario.Text,txtContraseña.Text);
+        }
+
+        private void Mostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Mostrar.Checked == true)
+            {
+                txtContraseña.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtContraseña.UseSystemPasswordChar = true;
+            }
+
         }
     }
 }
