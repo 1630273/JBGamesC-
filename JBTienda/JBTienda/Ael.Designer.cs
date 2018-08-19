@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -37,6 +38,8 @@
             this.txtApellidoPaterno = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistrar
@@ -84,6 +87,7 @@
             this.txtContraseña.Size = new System.Drawing.Size(236, 23);
             this.txtContraseña.TabIndex = 63;
             this.txtContraseña.UseSystemPasswordChar = false;
+            this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña_Validating);
             // 
             // rdoMujer
             // 
@@ -134,6 +138,8 @@
             this.txtApellidoMaterno.Size = new System.Drawing.Size(236, 23);
             this.txtApellidoMaterno.TabIndex = 60;
             this.txtApellidoMaterno.UseSystemPasswordChar = false;
+            this.txtApellidoMaterno.Click += new System.EventHandler(this.txtApellidoMaterno_Click);
+            this.txtApellidoMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoMaterno_KeyPress);
             // 
             // txtApellidoPaterno
             // 
@@ -150,6 +156,7 @@
             this.txtApellidoPaterno.Size = new System.Drawing.Size(236, 23);
             this.txtApellidoPaterno.TabIndex = 59;
             this.txtApellidoPaterno.UseSystemPasswordChar = false;
+            this.txtApellidoPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoPaterno_KeyPress);
             // 
             // txtNombre
             // 
@@ -166,6 +173,7 @@
             this.txtNombre.Size = new System.Drawing.Size(236, 23);
             this.txtNombre.TabIndex = 58;
             this.txtNombre.UseSystemPasswordChar = false;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtUsuario
             // 
@@ -182,6 +190,11 @@
             this.txtUsuario.Size = new System.Drawing.Size(236, 23);
             this.txtUsuario.TabIndex = 57;
             this.txtUsuario.UseSystemPasswordChar = false;
+            this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Ael
             // 
@@ -199,6 +212,8 @@
             this.Controls.Add(this.txtUsuario);
             this.Name = "Ael";
             this.Size = new System.Drawing.Size(537, 417);
+            this.Load += new System.EventHandler(this.Ael_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +230,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidoPaterno;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNombre;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

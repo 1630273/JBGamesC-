@@ -182,6 +182,7 @@
             this.txtUsuario.Size = new System.Drawing.Size(236, 23);
             this.txtUsuario.TabIndex = 57;
             this.txtUsuario.UseSystemPasswordChar = false;
+            this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);
             // 
             // Aej
             // 

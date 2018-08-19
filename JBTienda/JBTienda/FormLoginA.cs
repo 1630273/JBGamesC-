@@ -96,5 +96,37 @@ namespace JBTienda
             }
 
         }
+
+        private void txtUsuario_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtUsuario.Text.Trim().Length <= 0)
+            {
+                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                txtContraseña.Focus();
+            }
+        }
+
+        private void txtContraseña_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtContraseña.Text.Trim().Length <= 0)
+            {
+                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                btnInicio.Focus();
+            }
+        }
     }
 }
