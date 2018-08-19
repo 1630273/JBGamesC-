@@ -47,7 +47,7 @@
             this.txtContraseña.Location = new System.Drawing.Point(138, 120);
             this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.PasswordChar = '\0';
             this.txtContraseña.SelectedText = "";
             this.txtContraseña.SelectionLength = 0;
             this.txtContraseña.SelectionStart = 0;
@@ -129,7 +129,7 @@
             this.txtNombre.Location = new System.Drawing.Point(138, 160);
             this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '*';
+            this.txtNombre.PasswordChar = '\0';
             this.txtNombre.SelectedText = "";
             this.txtNombre.SelectionLength = 0;
             this.txtNombre.SelectionStart = 0;
