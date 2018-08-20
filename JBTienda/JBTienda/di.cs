@@ -38,6 +38,7 @@ namespace JBTienda
             data.Columns[4].Width = 50;
             data.Columns[5].Width = 165;
             data.Columns[6].Width = 100;
+            
             //data.Columns[7].Width = 125;
 
             conn.Close();
@@ -71,7 +72,7 @@ namespace JBTienda
         private void di_Load(object sender, EventArgs e)
         {
             //cargarProductos(Variables.idDep);
-            listarProductos(dataprod);
+            listarProductos(dtai);
         }
     }
 }

@@ -45,29 +45,6 @@ namespace JBTienda
         }
 
 
-        void agregarProductos()
-        {
-
-           
-            //int idDepartamento = 1;
-            //////System.IO.MemoryStream ms = new System.IO.MemoryStream();
-           
-
-            //dcTiendaDataContext dc = new dcTiendaDataContext();
-            //dc.agregarProducto(
-            //    txtNombre.Text,
-            //  txtDescripcion.Text,
-            //    txtPrecio.Text,
-            //   txtCantidad.Text,
-            //   pic1.Image.ToString(),
-               
-            // byte.Parse(idDepartamento.ToString())
-
-        //);
-
-        //  MessageBox.Show("Capitán Agregado");
-
-        }
 
         private void txtRegistrar_Click(object sender, EventArgs e)
         {
@@ -78,7 +55,7 @@ namespace JBTienda
                 SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda; Integrated Security=True");
                 SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
-                int idDepartamento = 1;
+                //int idDepartamento = 1;
                 
                 //FileStream stream = new FileStream(btnExaminar.Text, FileMode.Open, FileAccess.Read);
                 ////Se inicailiza un flujo de archivo con la imagen seleccionada desde el disco.
@@ -111,7 +88,7 @@ namespace JBTienda
                 cmd.Parameters["@descripcion"].Value = txtDescripcion.Text;
                 cmd.Parameters["@precio"].Value = int.Parse(txtPrecio.Text);
                 cmd.Parameters["@cantidad"].Value = int.Parse(txtCantidad.Text);
-                cmd.Parameters["@idDepartamento"].Value = byte.Parse(idDepartamento.ToString());
+                cmd.Parameters["@idDepartamento"].Value = Variables.idDep;
 
                 // Asignando el valor de la imagen
 
