@@ -12,6 +12,9 @@ namespace JBTienda
 {
     public partial class FormLoginD : MaterialSkin.Controls.MaterialForm
     {
+
+        public byte idDepa;
+
         public FormLoginD()
         {
             InitializeComponent();
@@ -31,6 +34,8 @@ namespace JBTienda
 
 
                 Variables.idDep = byte.Parse(n.idDepartamento.ToString());
+
+                
                     
             }
         }
@@ -55,16 +60,51 @@ namespace JBTienda
                 switch (int.Parse(u.idTipoUsuario.ToString()))
                 {
                     case 3:
-                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento.");
+                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Computación.");
 
-
+                        Variables.idDep = idDepa;
                         ConsultarDep(txtUsuario.Text);
                         Form p = new FormMenuJ();
                         p.Show();
                         this.Hide();
 
                         break;
+                    case 4:
+                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De VideoJuegos.");
 
+                        Variables.idDep = idDepa;
+                        ConsultarDep(txtUsuario.Text);
+                        Form p1 = new FormMenuJ();
+                        p1.Show();
+                        this.Hide();
+                        break;
+                    case 5:
+                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Celulares.");
+
+                        Variables.idDep = idDepa;
+                        ConsultarDep(txtUsuario.Text);
+                        Form p2 = new FormMenuJ();
+                        p2.Show();
+                        this.Hide();
+                        break;
+                    case 6:
+                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Electrodomesticos.");
+
+                        Variables.idDep = idDepa;
+                        ConsultarDep(txtUsuario.Text);
+                        Form p3 = new FormMenuJ();
+                        p3.Show();
+                        this.Hide();
+                        break;
+                    case 7:
+                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Gimnasio.");
+
+                        Variables.idDep = idDepa;
+                        ConsultarDep(txtUsuario.Text);
+                        Form p4 = new FormMenuJ();
+                        p4.Show();
+                        this.Hide();
+                        break;
 
 
                 }

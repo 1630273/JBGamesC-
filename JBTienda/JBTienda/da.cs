@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace JBTienda
 {
@@ -54,7 +55,21 @@ namespace JBTienda
                 SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda; Integrated Security=True");
                 SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
-                int idDepartamento = 1;
+                //int idDepartamento = 1;
+                
+                //FileStream stream = new FileStream(btnExaminar.Text, FileMode.Open, FileAccess.Read);
+                ////Se inicailiza un flujo de archivo con la imagen seleccionada desde el disco.
+                //BinaryReader br = new BinaryReader(stream);
+                //FileInfo fi = new FileInfo(btnExaminar.Text);
+
+                ////Se inicializa un arreglo de Bytes del tamaño de la imagen
+                //byte[] binData = new byte[stream.Length];
+                ////Se almacena en el arreglo de bytes la informacion que se obtiene del flujo de archivos(foto)
+                ////Lee el bloque de bytes del flujo y escribe los datos en un búfer dado.
+                //stream.Read(binData, 0, Convert.ToInt32(stream.Length));
+
+                //////Se muetra la imagen obtenida desde el flujo de datos
+                //pic1.Image = Image.FromStream(stream);
 
                 // Estableciento propiedades
                 cmd.Connection = conn;
@@ -73,7 +88,7 @@ namespace JBTienda
                 cmd.Parameters["@descripcion"].Value = txtDescripcion.Text;
                 cmd.Parameters["@precio"].Value = int.Parse(txtPrecio.Text);
                 cmd.Parameters["@cantidad"].Value = int.Parse(txtCantidad.Text);
-                cmd.Parameters["@idDepartamento"].Value = byte.Parse(idDepartamento.ToString()); 
+                cmd.Parameters["@idDepartamento"].Value = Variables.idDep;
 
                 // Asignando el valor de la imagen
 
