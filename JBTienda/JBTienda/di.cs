@@ -75,5 +75,12 @@ namespace JBTienda
             //cargarProductos(Variables.idDep);
             listarProductos(dtai);
         }
+
+        private void dtai_DoubleClick(object sender, EventArgs e)
+        {
+            Form p = new FormModificarP();
+            p.Show();
+            this.Hide();
+        }
     }
 }

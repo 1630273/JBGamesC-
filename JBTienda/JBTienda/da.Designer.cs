@@ -191,7 +191,7 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Name = "da";
-            this.Size = new System.Drawing.Size(387, 475);
+            this.Size = new System.Drawing.Size(370, 475);
             this.Load += new System.EventHandler(this.da_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
