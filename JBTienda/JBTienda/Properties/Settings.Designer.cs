@@ -33,5 +33,16 @@ namespace JBTienda.Properties {
                 return ((string)(this["TiendaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4UDBD8N\\SQLEXPRESS;Initial Catalog=Tienda;Integrated Security" +
+            "=True")]
+        public string TiendaConnectionString1 {
+            get {
+                return ((string)(this["TiendaConnectionString1"]));
+            }
+        }
     }
 }

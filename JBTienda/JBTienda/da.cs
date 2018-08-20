@@ -23,7 +23,7 @@ namespace JBTienda
 
         private void da_Load(object sender, EventArgs e)
         {
-
+            cargarCarreras();
         }
 
       
@@ -44,29 +44,6 @@ namespace JBTienda
         }
 
 
-        void agregarProductos()
-        {
-
-           
-            //int idDepartamento = 1;
-            //////System.IO.MemoryStream ms = new System.IO.MemoryStream();
-           
-
-            //dcTiendaDataContext dc = new dcTiendaDataContext();
-            //dc.agregarProducto(
-            //    txtNombre.Text,
-            //  txtDescripcion.Text,
-            //    txtPrecio.Text,
-            //   txtCantidad.Text,
-            //   pic1.Image.ToString(),
-               
-            // byte.Parse(idDepartamento.ToString())
-
-        //);
-
-        //  MessageBox.Show("Capitán Agregado");
-
-        }
 
         private void txtRegistrar_Click(object sender, EventArgs e)
         {
@@ -119,6 +96,23 @@ namespace JBTienda
                 MessageBox.Show(ex.Message);
             }
 
+
+        }
+
+        void cargarCarreras()
+        {
+
+            dcTiendaDataContext dc = new dcTiendaDataContext();
+            var carreras = from c in dc.CargarDescuentos()
+                           select new { c.idDescuento, c.descuento };
+
+            cboDesc.DataSource = carreras.ToList();
+            cboDesc.ValueMember = "idDescuento";
+            cboDesc.DisplayMember = "Descuento";
+        }
+
+        private void cboDesc_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

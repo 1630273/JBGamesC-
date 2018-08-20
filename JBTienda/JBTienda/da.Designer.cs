@@ -37,6 +37,8 @@
             this.btnBuscar = new System.Windows.Forms.OpenFileDialog();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.btnExaminar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.cboDesc = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +79,7 @@
             this.txtCantidad.BackColor = System.Drawing.Color.White;
             this.txtCantidad.Depth = 0;
             this.txtCantidad.Hint = "Cantidad";
-            this.txtCantidad.Location = new System.Drawing.Point(43, 213);
+            this.txtCantidad.Location = new System.Drawing.Point(43, 166);
             this.txtCantidad.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.PasswordChar = '\0';
@@ -93,7 +95,7 @@
             this.txtPrecio.BackColor = System.Drawing.Color.White;
             this.txtPrecio.Depth = 0;
             this.txtPrecio.Hint = "Precio";
-            this.txtPrecio.Location = new System.Drawing.Point(43, 184);
+            this.txtPrecio.Location = new System.Drawing.Point(43, 137);
             this.txtPrecio.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.PasswordChar = '\0';
@@ -118,11 +120,11 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Depth = 0;
-            this.btnRegistrar.Location = new System.Drawing.Point(296, 213);
+            this.btnRegistrar.Location = new System.Drawing.Point(43, 439);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Primary = true;
-            this.btnRegistrar.Size = new System.Drawing.Size(88, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(286, 23);
             this.btnRegistrar.TabIndex = 40;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -134,16 +136,16 @@
             // 
             // pic1
             // 
-            this.pic1.Location = new System.Drawing.Point(43, 242);
+            this.pic1.Location = new System.Drawing.Point(44, 236);
             this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(155, 165);
+            this.pic1.Size = new System.Drawing.Size(204, 182);
             this.pic1.TabIndex = 41;
             this.pic1.TabStop = false;
             // 
             // btnExaminar
             // 
             this.btnExaminar.Depth = 0;
-            this.btnExaminar.Location = new System.Drawing.Point(204, 384);
+            this.btnExaminar.Location = new System.Drawing.Point(254, 236);
             this.btnExaminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Primary = true;
@@ -153,11 +155,33 @@
             this.btnExaminar.UseVisualStyleBackColor = true;
             this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
             // 
+            // cboDesc
+            // 
+            this.cboDesc.FormattingEnabled = true;
+            this.cboDesc.Location = new System.Drawing.Point(141, 196);
+            this.cboDesc.Name = "cboDesc";
+            this.cboDesc.Size = new System.Drawing.Size(179, 21);
+            this.cboDesc.TabIndex = 43;
+            this.cboDesc.SelectedIndexChanged += new System.EventHandler(this.cboDesc_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(40, 197);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Descuento";
+            // 
             // da
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cboDesc);
             this.Controls.Add(this.btnExaminar);
             this.Controls.Add(this.pic1);
             this.Controls.Add(this.btnRegistrar);
@@ -167,7 +191,7 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Name = "da";
-            this.Size = new System.Drawing.Size(387, 482);
+            this.Size = new System.Drawing.Size(387, 475);
             this.Load += new System.EventHandler(this.da_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
@@ -186,5 +210,7 @@
         private System.Windows.Forms.OpenFileDialog btnBuscar;
         private System.Windows.Forms.PictureBox pic1;
         private MaterialSkin.Controls.MaterialRaisedButton btnExaminar;
+        private System.Windows.Forms.ComboBox cboDesc;
+        private System.Windows.Forms.Label label2;
     }
 }
