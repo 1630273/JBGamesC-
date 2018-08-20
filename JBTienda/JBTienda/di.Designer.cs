@@ -37,8 +37,10 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataprod = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataprod)).BeginInit();
             this.SuspendLayout();
             // 
             // dtai
@@ -122,20 +124,28 @@
             // 
             this.Column7.HeaderText = "Imagen";
             this.Column7.Name = "Column7";
-            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column7.Width = 94;
+            this.Column7.Width = 75;
+            // 
+            // dataprod
+            // 
+            this.dataprod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataprod.Location = new System.Drawing.Point(27, 200);
+            this.dataprod.Name = "dataprod";
+            this.dataprod.Size = new System.Drawing.Size(621, 150);
+            this.dataprod.TabIndex = 4;
             // 
             // di
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dataprod);
             this.Controls.Add(this.dtai);
             this.Name = "di";
             this.Size = new System.Drawing.Size(660, 350);
             this.Load += new System.EventHandler(this.di_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataprod)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,6 +159,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewButtonColumn Column7;
+        private System.Windows.Forms.DataGridViewImageColumn Column7;
+        private System.Windows.Forms.DataGridView dataprod;
     }
 }
