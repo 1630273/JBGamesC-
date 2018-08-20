@@ -24,7 +24,9 @@ namespace JBTienda
         {
             SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda; Integrated Security=True");
             conn.Open();
-            SqlCommand comando = new SqlCommand("SELECT * FROM Producto", conn);
+            SqlCommand comando = new SqlCommand("consultarProductos", conn);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.Add("@idDepartamento", SqlDbType.Int).Value =  Variables.idDep;
             comando.Connection = conn;
             comando.ExecuteNonQuery();
             DataTable dt = new DataTable();
@@ -55,12 +57,11 @@ namespace JBTienda
             foreach (var n in r)
             {
 
-             
-
-                dtai.Rows.Add(n.idProducto, n.nombreDepa, n.nombreProducto,n.descripcion,n.precio,n.cantidad               );
-              
                 
-            
+                //dtai.Rows.Add(n.idProducto, n.nombreDepa, n.nombreProducto,n.descripcion,n.precio,n.cantidad               );
+
+
+
             }
         }
 
