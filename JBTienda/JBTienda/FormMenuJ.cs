@@ -15,6 +15,7 @@ namespace JBTienda
         public FormMenuJ()
         {
             InitializeComponent();
+
             SidePanel.Height = btnInicio.Height;
             SidePanel.Top = btnInicio.Top;
             di1.BringToFront();
@@ -22,13 +23,12 @@ namespace JBTienda
 
         private void FormMenuJ_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(Variables.idDep.ToString());
-        }
 
-        private void sidemenu_Paint(object sender, PaintEventArgs e)
-        {
+            ConsultarNombre(Variables.usuario) ;
 
         }
+
+       
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
@@ -37,8 +37,40 @@ namespace JBTienda
             this.Hide();
         }
 
+        void ConsultarNombre(string usu)
+        {
 
-        
+            dcTiendaDataContext dc = new dcTiendaDataContext();
+            var nom = from con in dc.consultarGerente(usu)
+                      select con;
+
+            foreach (var n in nom)
+            {
+                lblNombre.Text = n.NombreCompleto;
+
+            }
+        }
+
+        private void btnmenubar_Click(object sender, EventArgs e)
+        {
+            if (sidemenu.Width == 55)
+            {
+                //EXPAND
+                sidemenu.Visible = true;
+                sidemenu.Width = 260;
+
+
+            }
+            else
+            {
+                //Minimize
+
+                sidemenu.Visible = true;
+                sidemenu.Width = 55;
+
+
+            }
+        }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
@@ -49,30 +81,24 @@ namespace JBTienda
 
         private void btnAg_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = btnInicio.Height;
-            SidePanel.Top = btnInicio.Top;
+            SidePanel.Height = btnAg.Height;
+            SidePanel.Top = btnAg.Top;
             da1.BringToFront();
-
-          
         }
 
         private void btnmo_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = btnInicio.Height;
-            SidePanel.Top = btnInicio.Top;
+
+            SidePanel.Height = btnmo.Height;
+            SidePanel.Top = btnmo.Top;
             dm1.BringToFront();
         }
 
         private void btnel_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = btnInicio.Height;
-            SidePanel.Top = btnInicio.Top;
+            SidePanel.Height = btnel.Height;
+            SidePanel.Top = btnel.Top;
             de1.BringToFront();
-        }
-
-        private void da1_Load(object sender, EventArgs e)
-        {
-           // ConsultarDep(byte.Parse(Variables.idDep.ToString()));
         }
     }
 }

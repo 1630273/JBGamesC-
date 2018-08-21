@@ -145,6 +145,13 @@ namespace JBTienda
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<CargarDescuentosResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.consultarGerente")]
+		public ISingleResult<consultarGerenteResult> consultarGerente([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string usuario)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuario);
+			return ((ISingleResult<consultarGerenteResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class cargarCiudadesResult
@@ -898,6 +905,32 @@ namespace JBTienda
 				if ((this._descuento != value))
 				{
 					this._descuento = value;
+				}
+			}
+		}
+	}
+	
+	public partial class consultarGerenteResult
+	{
+		
+		private string _NombreCompleto;
+		
+		public consultarGerenteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreCompleto", DbType="VarChar(67)")]
+		public string NombreCompleto
+		{
+			get
+			{
+				return this._NombreCompleto;
+			}
+			set
+			{
+				if ((this._NombreCompleto != value))
+				{
+					this._NombreCompleto = value;
 				}
 			}
 		}

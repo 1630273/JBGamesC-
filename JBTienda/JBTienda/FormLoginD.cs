@@ -61,7 +61,7 @@ namespace JBTienda
                 {
                     case 3:
                         MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Computación.");
-
+                        Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
                         ConsultarDep(txtUsuario.Text);
                         Form p = new FormMenuJ();
@@ -72,6 +72,7 @@ namespace JBTienda
                     case 4:
                         MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De VideoJuegos.");
 
+                        Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
                         ConsultarDep(txtUsuario.Text);
                         Form p1 = new FormMenuJ();
@@ -81,6 +82,7 @@ namespace JBTienda
                     case 5:
                         MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Celulares.");
 
+                        Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
                         ConsultarDep(txtUsuario.Text);
                         Form p2 = new FormMenuJ();
@@ -90,6 +92,7 @@ namespace JBTienda
                     case 6:
                         MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Electrodomesticos.");
 
+                        Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
                         ConsultarDep(txtUsuario.Text);
                         Form p3 = new FormMenuJ();
@@ -98,7 +101,7 @@ namespace JBTienda
                         break;
                     case 7:
                         MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Gimnasio.");
-
+                        Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
                         ConsultarDep(txtUsuario.Text);
                         Form p4 = new FormMenuJ();

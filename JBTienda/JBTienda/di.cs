@@ -22,7 +22,7 @@ namespace JBTienda
 
         public void listarProductos(DataGridView data)
         {
-            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda; Integrated Security=True");
+            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-4UDBD8N\\SQLEXPRESS;Initial Catalog=Tienda;Integrated Security=True");
             conn.Open();
             SqlCommand comando = new SqlCommand("consultarProductos", conn);
             comando.CommandType = CommandType.StoredProcedure;
@@ -47,28 +47,7 @@ namespace JBTienda
         }
 
 
-        void cargarProductos(byte id)
-        {
-            dcTiendaDataContext st = new dcTiendaDataContext();
 
-            var r = from con in st.consultarProductos(id)
-                    select con;
-
-            foreach (var n in r)
-            {
-
-                
-                //dtai.Rows.Add(n.idProducto, n.nombreDepa, n.nombreProducto,n.descripcion,n.precio,n.cantidad               );
-
-
-
-            }
-        }
-
-        private void dtai_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void di_Load(object sender, EventArgs e)
         {

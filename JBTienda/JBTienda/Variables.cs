@@ -10,6 +10,7 @@ namespace JBTienda
     {
         public static String nomus;
         public static byte idDep;
+        public static string usuario;
 
 
 

@@ -118,4 +118,10 @@
       <Column Name="descuento" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.consultarGerente" Method="consultarGerente">
+    <Parameter Name="usuario" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="consultarGerenteResult">
+      <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(67)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

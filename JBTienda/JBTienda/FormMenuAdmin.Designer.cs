@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuAdmin));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.sidemenu = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
@@ -48,6 +46,7 @@
             this.aej1 = new JBTienda.Aej();
             this.acom1 = new JBTienda.Acom();
             this.ac1 = new JBTienda.Ac();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.sidemenu.SuspendLayout();
             this.SuspendLayout();
@@ -55,26 +54,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnsalir);
             this.panel2.Controls.Add(this.btnmenubar);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 37);
             this.panel2.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(769, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 21);
-            this.button2.TabIndex = 9;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnmenubar
             // 
@@ -89,15 +75,6 @@
             this.btnmenubar.TabStop = false;
             this.btnmenubar.UseVisualStyleBackColor = true;
             this.btnmenubar.Click += new System.EventHandler(this.btnmenubar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(522, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Carrito";
             // 
             // sidemenu
             // 
@@ -116,6 +93,7 @@
             this.sidemenu.Size = new System.Drawing.Size(262, 413);
             this.sidemenu.TabIndex = 9;
             this.sidemenu.TabStop = true;
+            this.sidemenu.Paint += new System.Windows.Forms.PaintEventHandler(this.sidemenu_Paint);
             // 
             // logo
             // 
@@ -296,6 +274,21 @@
             this.ac1.Size = new System.Drawing.Size(800, 450);
             this.ac1.TabIndex = 17;
             // 
+            // btnsalir
+            // 
+            this.btnsalir.FlatAppearance.BorderSize = 0;
+            this.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsalir.Location = new System.Drawing.Point(667, 0);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(133, 34);
+            this.btnsalir.TabIndex = 10;
+            this.btnsalir.Text = "Cerrar Sesión";
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
             // FormMenuAdmin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -315,7 +308,6 @@
             this.Text = "FormMenuAdmin";
             this.Load += new System.EventHandler(this.FormMenuAdmin_Load);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.sidemenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -324,9 +316,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnmenubar;
-        private System.Windows.Forms.Label label2;
   
         private System.Windows.Forms.Panel sidemenu;
         private System.Windows.Forms.Panel logo;
@@ -343,5 +333,6 @@
         private Aej aej1;
         private Acom acom1;
         private Ac ac1;
+        private System.Windows.Forms.Button btnsalir;
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuJ));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
             this.sidemenu = new System.Windows.Forms.Panel();
@@ -39,10 +40,10 @@
             this.btnmo = new System.Windows.Forms.Button();
             this.btnAg = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.di1 = new JBTienda.di();
-            this.de1 = new JBTienda.de();
-            this.dm1 = new JBTienda.dm();
             this.da1 = new JBTienda.da();
+            this.de1 = new JBTienda.de();
+            this.di1 = new JBTienda.di();
+            this.dm1 = new JBTienda.dm();
             this.panel2.SuspendLayout();
             this.sidemenu.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
+            this.panel2.Controls.Add(this.lblNombre);
             this.panel2.Controls.Add(this.btnsalir);
             this.panel2.Controls.Add(this.btnmenubar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -58,15 +60,31 @@
             this.panel2.Size = new System.Drawing.Size(800, 37);
             this.panel2.TabIndex = 7;
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNombre.Location = new System.Drawing.Point(67, 9);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(57, 20);
+            this.lblNombre.TabIndex = 10;
+            this.lblNombre.Text = "label1";
+            // 
             // btnsalir
             // 
+            this.btnsalir.CausesValidation = false;
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsalir.FlatAppearance.BorderSize = 0;
+            this.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
-            this.btnsalir.Location = new System.Drawing.Point(769, 3);
+            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsalir.Location = new System.Drawing.Point(664, 0);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(28, 21);
+            this.btnsalir.Size = new System.Drawing.Size(133, 37);
             this.btnsalir.TabIndex = 9;
+            this.btnsalir.Text = "Cerrar Sesión";
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
@@ -82,6 +100,7 @@
             this.btnmenubar.TabIndex = 8;
             this.btnmenubar.TabStop = false;
             this.btnmenubar.UseVisualStyleBackColor = true;
+            this.btnmenubar.Click += new System.EventHandler(this.btnmenubar_Click);
             // 
             // sidemenu
             // 
@@ -95,10 +114,9 @@
             this.sidemenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidemenu.Location = new System.Drawing.Point(0, 37);
             this.sidemenu.Name = "sidemenu";
-            this.sidemenu.Size = new System.Drawing.Size(262, 413);
+            this.sidemenu.Size = new System.Drawing.Size(262, 480);
             this.sidemenu.TabIndex = 8;
             this.sidemenu.TabStop = true;
-            this.sidemenu.Paint += new System.Windows.Forms.PaintEventHandler(this.sidemenu_Paint);
             // 
             // logo
             // 
@@ -188,14 +206,14 @@
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
-            // di1
+            // da1
             // 
-            this.di1.BackColor = System.Drawing.Color.White;
-            this.di1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.di1.Location = new System.Drawing.Point(0, 0);
-            this.di1.Name = "di1";
-            this.di1.Size = new System.Drawing.Size(800, 450);
-            this.di1.TabIndex = 9;
+            this.da1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.da1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.da1.Location = new System.Drawing.Point(262, 37);
+            this.da1.Name = "da1";
+            this.da1.Size = new System.Drawing.Size(538, 480);
+            this.da1.TabIndex = 13;
             // 
             // de1
             // 
@@ -203,8 +221,17 @@
             this.de1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.de1.Location = new System.Drawing.Point(0, 0);
             this.de1.Name = "de1";
-            this.de1.Size = new System.Drawing.Size(800, 450);
+            this.de1.Size = new System.Drawing.Size(800, 517);
             this.de1.TabIndex = 10;
+            // 
+            // di1
+            // 
+            this.di1.BackColor = System.Drawing.Color.White;
+            this.di1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.di1.Location = new System.Drawing.Point(0, 0);
+            this.di1.Name = "di1";
+            this.di1.Size = new System.Drawing.Size(800, 517);
+            this.di1.TabIndex = 9;
             // 
             // dm1
             // 
@@ -213,24 +240,14 @@
             this.dm1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dm1.Location = new System.Drawing.Point(0, 0);
             this.dm1.Name = "dm1";
-            this.dm1.Size = new System.Drawing.Size(800, 450);
+            this.dm1.Size = new System.Drawing.Size(800, 517);
             this.dm1.TabIndex = 12;
-            // 
-            // da1
-            // 
-            this.da1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.da1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.da1.Location = new System.Drawing.Point(262, 37);
-            this.da1.Name = "da1";
-            this.da1.Size = new System.Drawing.Size(538, 413);
-            this.da1.TabIndex = 13;
-            this.da1.Load += new System.EventHandler(this.da1_Load);
             // 
             // FormMenuJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 517);
             this.Controls.Add(this.da1);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.panel2);
@@ -242,6 +259,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormMenuJ_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.sidemenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -263,5 +281,6 @@
         private de de1;
         private dm dm1;
         private da da1;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

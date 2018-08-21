@@ -16,5 +16,10 @@ namespace JBTienda
         {
             InitializeComponent();
         }
+
+        private void dm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

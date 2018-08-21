@@ -50,9 +50,7 @@ namespace JBTienda
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form p = new FormLoginA();
-            p.Show();
-            this.Hide();
+          
         }
 
         private void btnInicio_Click_1(object sender, EventArgs e)
@@ -100,6 +98,18 @@ namespace JBTienda
         private void aej1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void sidemenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Form p = new FormLoginA();
+            p.Show();
+            this.Hide();
         }
     }
 }

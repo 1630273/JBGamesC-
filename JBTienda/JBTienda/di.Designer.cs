@@ -66,8 +66,6 @@
             this.dtai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtai.Size = new System.Drawing.Size(645, 150);
             this.dtai.TabIndex = 3;
-            this.dtai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtai_CellContentClick);
-            this.dtai.DoubleClick += new System.EventHandler(this.dtai_DoubleClick);
             // 
             // di
             // 
