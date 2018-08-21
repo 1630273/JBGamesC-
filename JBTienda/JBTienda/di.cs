@@ -38,9 +38,9 @@ namespace JBTienda
             data.Columns[2].Width = 165;
             data.Columns[3].Width = 90;
             data.Columns[4].Width = 50;
-            data.Columns[5].Width = 165;
-            data.Columns[6].Width = 100;
-            data.Columns[7].Width = 100;
+            data.Columns[5].Width = 80;
+            data.Columns[6].Width = 80;
+            data.Columns[7].Width = 80;
             
             //data.Columns[7].Width = 125;
 

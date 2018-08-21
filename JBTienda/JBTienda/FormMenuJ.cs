@@ -41,7 +41,7 @@ namespace JBTienda
         {
 
             dcTiendaDataContext dc = new dcTiendaDataContext();
-            var nom = from con in dc.consultarGerente(usu)
+            var nom = from con in dc.consultarNombreGerentes(usu)
                       select con;
 
             foreach (var n in nom)

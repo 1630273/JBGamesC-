@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtai = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,30 +60,44 @@
             this.dtai.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtai.EnableHeadersVisualStyles = false;
             this.dtai.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtai.Location = new System.Drawing.Point(3, 65);
+            this.dtai.Location = new System.Drawing.Point(16, 79);
             this.dtai.Name = "dtai";
             this.dtai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtai.RowHeadersVisible = false;
             this.dtai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtai.Size = new System.Drawing.Size(503, 241);
+            this.dtai.Size = new System.Drawing.Size(503, 336);
             this.dtai.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
+            this.label1.Location = new System.Drawing.Point(102, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(346, 37);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Productos Agergados";
             // 
             // di
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtai);
             this.Name = "di";
-            this.Size = new System.Drawing.Size(546, 337);
+            this.Size = new System.Drawing.Size(546, 550);
             this.Load += new System.EventHandler(this.di_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dtai;
+        private System.Windows.Forms.Label label1;
     }
 }

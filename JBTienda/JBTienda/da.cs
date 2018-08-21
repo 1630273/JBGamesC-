@@ -52,7 +52,7 @@ namespace JBTienda
             try
             {
                 // Objetos de conexión y comando
-                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda; Integrated Security=True");
+                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-4UDBD8N\\SQLEXPRESS;Initial Catalog=Tienda;Integrated Security=True");
                 SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
 
