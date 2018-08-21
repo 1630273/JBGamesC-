@@ -82,6 +82,7 @@
             this.btnmenubar.TabIndex = 8;
             this.btnmenubar.TabStop = false;
             this.btnmenubar.UseVisualStyleBackColor = true;
+            this.btnmenubar.Click += new System.EventHandler(this.btnmenubar_Click);
             // 
             // sidemenu
             // 
@@ -95,10 +96,10 @@
             this.sidemenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidemenu.Location = new System.Drawing.Point(0, 37);
             this.sidemenu.Name = "sidemenu";
-            this.sidemenu.Size = new System.Drawing.Size(262, 413);
+            this.sidemenu.Size = new System.Drawing.Size(262, 481);
             this.sidemenu.TabIndex = 8;
             this.sidemenu.TabStop = true;
-            this.sidemenu.Paint += new System.Windows.Forms.PaintEventHandler(this.sidemenu_Paint);
+            
             // 
             // logo
             // 
@@ -194,7 +195,7 @@
             this.di1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.di1.Location = new System.Drawing.Point(0, 0);
             this.di1.Name = "di1";
-            this.di1.Size = new System.Drawing.Size(800, 450);
+            this.di1.Size = new System.Drawing.Size(800, 518);
             this.di1.TabIndex = 9;
             // 
             // de1
@@ -203,7 +204,7 @@
             this.de1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.de1.Location = new System.Drawing.Point(0, 0);
             this.de1.Name = "de1";
-            this.de1.Size = new System.Drawing.Size(800, 450);
+            this.de1.Size = new System.Drawing.Size(800, 518);
             this.de1.TabIndex = 10;
             // 
             // dm1
@@ -213,7 +214,7 @@
             this.dm1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dm1.Location = new System.Drawing.Point(0, 0);
             this.dm1.Name = "dm1";
-            this.dm1.Size = new System.Drawing.Size(800, 450);
+            this.dm1.Size = new System.Drawing.Size(800, 518);
             this.dm1.TabIndex = 12;
             // 
             // da1
@@ -222,7 +223,7 @@
             this.da1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.da1.Location = new System.Drawing.Point(262, 37);
             this.da1.Name = "da1";
-            this.da1.Size = new System.Drawing.Size(538, 413);
+            this.da1.Size = new System.Drawing.Size(538, 481);
             this.da1.TabIndex = 13;
             this.da1.Load += new System.EventHandler(this.da1_Load);
             // 
@@ -230,7 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 518);
             this.Controls.Add(this.da1);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.panel2);

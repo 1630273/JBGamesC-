@@ -16,5 +16,52 @@ namespace JBTienda
         {
             InitializeComponent();
         }
+
+        void cargarProducto( byte idProducto)
+        {
+            cboNombre.SelectedIndexChanged -= new EventHandler(cboNombre_SelectedIndexChanged);
+
+            dcTiendaDataContext dc = new dcTiendaDataContext();
+
+            var Jugador = from j in dc.consultarProductos(idProducto)
+                          select new { j.idProducto, j.nombreProducto };
+
+
+
+            cboNombre.DataSource = Jugador.ToList();
+            cboNombre.ValueMember = "idProducto";
+            cboNombre.DisplayMember = "nombreProducto";
+
+
+            cboNombre.SelectedIndexChanged += new EventHandler(cboNombre_SelectedIndexChanged);
+        }
+
+        private void cboNombre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtId.Text = cboNombre.SelectedValue.ToString();
+        }
+
+        private void cboNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            dcTiendaDataContext dc = new dcTiendaDataContext();
+            dc.eliminarProducto(
+
+                Byte.Parse(txtId.Text)
+            
+
+            );
+            MessageBox.Show("Producto Eliminado");
+
+        }
+
+        private void de_Load(object sender, EventArgs e)
+        {
+            cargarProducto(byte.Parse(Variables.idDep.ToString()));
+        }
     }
 }

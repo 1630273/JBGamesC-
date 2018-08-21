@@ -22,13 +22,10 @@ namespace JBTienda
 
         private void FormMenuJ_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(Variables.idDep.ToString());
-        }
-
-        private void sidemenu_Paint(object sender, PaintEventArgs e)
-        {
 
         }
+
+      
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
@@ -72,7 +69,28 @@ namespace JBTienda
 
         private void da1_Load(object sender, EventArgs e)
         {
-           // ConsultarDep(byte.Parse(Variables.idDep.ToString()));
+          
+        }
+
+        private void btnmenubar_Click(object sender, EventArgs e)
+        {
+            if (sidemenu.Width == 55)
+            {
+                //EXPAND
+                sidemenu.Visible = true;
+                sidemenu.Width = 260;
+
+
+            }
+            else
+            {
+                //Minimize
+
+                sidemenu.Visible = true;
+                sidemenu.Width = 55;
+
+
+            }
         }
     }
 }

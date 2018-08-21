@@ -40,6 +40,7 @@ namespace JBTienda
             data.Columns[4].Width = 50;
             data.Columns[5].Width = 165;
             data.Columns[6].Width = 100;
+            data.Columns[7].Width = 100;
             
             //data.Columns[7].Width = 125;
 
@@ -47,23 +48,7 @@ namespace JBTienda
         }
 
 
-        void cargarProductos(byte id)
-        {
-            dcTiendaDataContext st = new dcTiendaDataContext();
-
-            var r = from con in st.consultarProductos(id)
-                    select con;
-
-            foreach (var n in r)
-            {
-
-                
-                //dtai.Rows.Add(n.idProducto, n.nombreDepa, n.nombreProducto,n.descripcion,n.precio,n.cantidad               );
-
-
-
-            }
-        }
+      
 
         private void dtai_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -71,16 +56,10 @@ namespace JBTienda
         }
 
         private void di_Load(object sender, EventArgs e)
-        {
-            //cargarProductos(Variables.idDep);
+        { 
             listarProductos(dtai);
         }
 
-        private void dtai_DoubleClick(object sender, EventArgs e)
-        {
-            Form p = new FormModificarP();
-            p.Show();
-            this.Hide();
-        }
+       
     }
 }

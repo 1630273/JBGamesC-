@@ -64,10 +64,10 @@
             this.dtai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtai.RowHeadersVisible = false;
             this.dtai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtai.Size = new System.Drawing.Size(645, 150);
+            this.dtai.Size = new System.Drawing.Size(503, 241);
             this.dtai.TabIndex = 3;
             this.dtai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtai_CellContentClick);
-            this.dtai.DoubleClick += new System.EventHandler(this.dtai_DoubleClick);
+
             // 
             // di
             // 
@@ -76,7 +76,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dtai);
             this.Name = "di";
-            this.Size = new System.Drawing.Size(660, 337);
+            this.Size = new System.Drawing.Size(546, 337);
             this.Load += new System.EventHandler(this.di_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).EndInit();
             this.ResumeLayout(false);
