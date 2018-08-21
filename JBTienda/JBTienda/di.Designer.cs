@@ -60,12 +60,12 @@
             this.dtai.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtai.EnableHeadersVisualStyles = false;
             this.dtai.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtai.Location = new System.Drawing.Point(16, 79);
+            this.dtai.Location = new System.Drawing.Point(0, 76);
             this.dtai.Name = "dtai";
             this.dtai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtai.RowHeadersVisible = false;
             this.dtai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtai.Size = new System.Drawing.Size(503, 336);
+            this.dtai.Size = new System.Drawing.Size(530, 412);
             this.dtai.TabIndex = 3;
             // 
             // label1
@@ -73,7 +73,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.label1.Location = new System.Drawing.Point(102, 16);
+            this.label1.Location = new System.Drawing.Point(80, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(346, 37);
             this.label1.TabIndex = 51;
@@ -87,7 +87,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtai);
             this.Name = "di";
-            this.Size = new System.Drawing.Size(546, 550);
+            this.Size = new System.Drawing.Size(535, 498);
             this.Load += new System.EventHandler(this.di_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtai)).EndInit();
             this.ResumeLayout(false);

@@ -29,6 +29,8 @@ namespace JBTienda
 
         private void btnCom_Click(object sender, EventArgs e)
         {
+
+            Variables.idDep = 1;
             SidePanel.Height = btnCom.Height;
             SidePanel.Top = btnCom.Top;
             cucom1.BringToFront();

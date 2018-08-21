@@ -240,6 +240,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.button2);
             this.Name = "FormModificarP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Producto";
             this.Load += new System.EventHandler(this.FormModificarP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();

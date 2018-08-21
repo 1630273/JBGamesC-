@@ -38,7 +38,6 @@
             this.btnJuego = new System.Windows.Forms.Button();
             this.btnCom = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
@@ -193,21 +192,11 @@
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(602, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Carrito";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnmenubar);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -281,7 +270,6 @@
             this.Text = "FormMCliente";
             this.sidemenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -296,7 +284,6 @@
         private System.Windows.Forms.Button btnJuego;
         private System.Windows.Forms.Button btnCom;
         private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private Cujuegos cujuegos1;
         private Cucom cucom1;

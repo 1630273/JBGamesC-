@@ -40,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.label1.Location = new System.Drawing.Point(105, 13);
+            this.label1.Location = new System.Drawing.Point(114, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 37);
             this.label1.TabIndex = 50;
@@ -76,7 +76,7 @@
             this.dtm.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtm.RowHeadersVisible = false;
             this.dtm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtm.Size = new System.Drawing.Size(503, 336);
+            this.dtm.Size = new System.Drawing.Size(530, 412);
             this.dtm.TabIndex = 51;
             this.dtm.DoubleClick += new System.EventHandler(this.dtm_DoubleClick);
             // 
@@ -89,7 +89,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "dm";
-            this.Size = new System.Drawing.Size(521, 456);
+            this.Size = new System.Drawing.Size(543, 475);
             this.Load += new System.EventHandler(this.dm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtm)).EndInit();
             this.ResumeLayout(false);

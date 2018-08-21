@@ -40,7 +40,7 @@ namespace JBTienda
             data.DataSource = dt;
           
 
-            //data.Columns[7].Width = 125;
+           
 
             conn.Close();
         }
@@ -60,11 +60,14 @@ namespace JBTienda
 
 
             Variables.idProd = int.Parse(dtm.CurrentRow.Cells[7].Value.ToString());
-            MessageBox.Show(Variables.idProd.ToString());
+   
            
-            Form p = new FormModificarP();
-            p.Show();
+            Form A = new FormModificarP();
+            A.Show();
             this.Hide();
+           
+
+
         }
 
 
