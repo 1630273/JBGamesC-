@@ -39,6 +39,7 @@
             this.btnExaminar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cboDesc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblId = new MaterialSkin.Controls.MaterialSingleLineTextField();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,11 +176,27 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "Descuento";
             // 
+            // lblId
+            // 
+            this.lblId.Depth = 0;
+            this.lblId.Hint = "ID";
+            this.lblId.Location = new System.Drawing.Point(338, 193);
+            this.lblId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblId.Name = "lblId";
+            this.lblId.PasswordChar = '\0';
+            this.lblId.SelectedText = "";
+            this.lblId.SelectionLength = 0;
+            this.lblId.SelectionStart = 0;
+            this.lblId.Size = new System.Drawing.Size(29, 23);
+            this.lblId.TabIndex = 45;
+            this.lblId.UseSystemPasswordChar = false;
+            // 
             // da
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboDesc);
             this.Controls.Add(this.btnExaminar);
@@ -191,7 +208,7 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Name = "da";
-            this.Size = new System.Drawing.Size(370, 475);
+            this.Size = new System.Drawing.Size(370, 529);
             this.Load += new System.EventHandler(this.da_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
@@ -212,5 +229,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnExaminar;
         private System.Windows.Forms.ComboBox cboDesc;
         private System.Windows.Forms.Label label2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField lblId;
     }
 }

@@ -24,7 +24,7 @@ namespace JBTienda
 
         private void da_Load(object sender, EventArgs e)
         {
-            cargarCarreras();
+            cargarDescuentos();
         }
 
       
@@ -55,25 +55,10 @@ namespace JBTienda
                 SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda; Integrated Security=True");
                 SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
-                //int idDepartamento = 1;
-                
-                //FileStream stream = new FileStream(btnExaminar.Text, FileMode.Open, FileAccess.Read);
-                ////Se inicailiza un flujo de archivo con la imagen seleccionada desde el disco.
-                //BinaryReader br = new BinaryReader(stream);
-                //FileInfo fi = new FileInfo(btnExaminar.Text);
-
-                ////Se inicializa un arreglo de Bytes del tamaño de la imagen
-                //byte[] binData = new byte[stream.Length];
-                ////Se almacena en el arreglo de bytes la informacion que se obtiene del flujo de archivos(foto)
-                ////Lee el bloque de bytes del flujo y escribe los datos en un búfer dado.
-                //stream.Read(binData, 0, Convert.ToInt32(stream.Length));
-
-                //////Se muetra la imagen obtenida desde el flujo de datos
-                //pic1.Image = Image.FromStream(stream);
 
                 // Estableciento propiedades
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO Producto(nombreProducto,descripcion,precio,cantidad,imagen,idDepartamento) VALUES(@nombreProducto, @descripcion, @precio, @cantidad, @imagen, @idDepartamento);";
+                cmd.CommandText = "INSERT INTO Producto(nombreProducto,descripcion,precio,cantidad,imagen,idDepartamento,idDescuento) VALUES(@nombreProducto, @descripcion, @precio, @cantidad, @imagen, @idDepartamento, @idDescuento);";
                 conn.Open();
                 // Creando los parámetros necesarios
                 cmd.Parameters.Add("@nombreProducto", System.Data.SqlDbType.VarChar);
@@ -82,6 +67,7 @@ namespace JBTienda
                 cmd.Parameters.Add("@cantidad", System.Data.SqlDbType.TinyInt);
                 cmd.Parameters.Add("@imagen", System.Data.SqlDbType.Image);
                 cmd.Parameters.Add("@idDepartamento", System.Data.SqlDbType.TinyInt);
+                cmd.Parameters.Add("@idDescuento", System.Data.SqlDbType.TinyInt);
 
                 // Asignando los valores a los atributos
                 cmd.Parameters["@nombreProducto"].Value = txtNombre.Text;
@@ -89,6 +75,7 @@ namespace JBTienda
                 cmd.Parameters["@precio"].Value = int.Parse(txtPrecio.Text);
                 cmd.Parameters["@cantidad"].Value = int.Parse(txtCantidad.Text);
                 cmd.Parameters["@idDepartamento"].Value = Variables.idDep;
+                cmd.Parameters["@idDescuento"].Value = lblId.Text;
 
                 // Asignando el valor de la imagen
 
@@ -114,8 +101,10 @@ namespace JBTienda
 
         }
 
-        void cargarCarreras()
+        void cargarDescuentos()
         {
+            //cboDesc.SelectedIndexChanged -= new EventHandler(cboDesc_SelectedIndexChanged);
+
 
             dcTiendaDataContext dc = new dcTiendaDataContext();
             var carreras = from c in dc.CargarDescuentos()
@@ -124,11 +113,13 @@ namespace JBTienda
             cboDesc.DataSource = carreras.ToList();
             cboDesc.ValueMember = "idDescuento";
             cboDesc.DisplayMember = "Descuento";
+
+            //cboDesc.SelectedIndexChanged += new EventHandler(cboDesc_SelectedIndexChanged);
         }
 
         private void cboDesc_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            lblId.Text = cboDesc.SelectedValue.ToString();
         }
     }
 }
