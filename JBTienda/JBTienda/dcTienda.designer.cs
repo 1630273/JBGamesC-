@@ -181,13 +181,6 @@ namespace JBTienda
 			return ((ISingleResult<LogearGerenteResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.consultarCom")]
-		public ISingleResult<consultarComResult> consultarCom()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<consultarComResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.consultarDatosComprar")]
 		public ISingleResult<consultarDatosComprarResult> consultarDatosComprar([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> idProducto)
 		{
@@ -195,18 +188,25 @@ namespace JBTienda
 			return ((ISingleResult<consultarDatosComprarResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultarCompras")]
-		public int ConsultarCompras([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nommnbre", DbType="VarChar(20)")] string nommnbre, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Descripcion", DbType="VarChar(30)")] string descripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Precio", DbType="Money")] System.Nullable<decimal> precio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cantidad)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nommnbre, descripcion, precio, cantidad);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.consultarCarrito")]
 		public ISingleResult<consultarCarritoResult> consultarCarrito()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<consultarCarritoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.consultarCom")]
+		public ISingleResult<consultarComResult> consultarCom()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<consultarComResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultarCompras")]
+		public int ConsultarCompras([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nommnbre", DbType="VarChar(20)")] string nommnbre, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Descripcion", DbType="VarChar(30)")] string descripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Precio", DbType="Money")] System.Nullable<decimal> precio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cantidad, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Total", DbType="Int")] System.Nullable<int> total)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nommnbre, descripcion, precio, cantidad, total);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -1188,6 +1188,202 @@ namespace JBTienda
 		}
 	}
 	
+	public partial class consultarDatosComprarResult
+	{
+		
+		private System.Data.Linq.Binary _Imagen;
+		
+		private string _Nombre;
+		
+		private string _Descripcion;
+		
+		private System.Nullable<decimal> _Precio;
+		
+		private string _Descuento;
+		
+		public consultarDatosComprarResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imagen", DbType="Image")]
+		public System.Data.Linq.Binary Imagen
+		{
+			get
+			{
+				return this._Imagen;
+			}
+			set
+			{
+				if ((this._Imagen != value))
+				{
+					this._Imagen = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(30)")]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(100)")]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this._Descripcion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Precio", DbType="Money")]
+		public System.Nullable<decimal> Precio
+		{
+			get
+			{
+				return this._Precio;
+			}
+			set
+			{
+				if ((this._Precio != value))
+				{
+					this._Precio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descuento", DbType="VarChar(10)")]
+		public string Descuento
+		{
+			get
+			{
+				return this._Descuento;
+			}
+			set
+			{
+				if ((this._Descuento != value))
+				{
+					this._Descuento = value;
+				}
+			}
+		}
+	}
+	
+	public partial class consultarCarritoResult
+	{
+		
+		private string _Nombre;
+		
+		private string _Descripcion;
+		
+		private decimal _Precio;
+		
+		private int _Cantidad;
+		
+		private int _Total;
+		
+		public consultarCarritoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this._Descripcion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Precio", DbType="Money NOT NULL")]
+		public decimal Precio
+		{
+			get
+			{
+				return this._Precio;
+			}
+			set
+			{
+				if ((this._Precio != value))
+				{
+					this._Precio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cantidad", DbType="Int NOT NULL")]
+		public int Cantidad
+		{
+			get
+			{
+				return this._Cantidad;
+			}
+			set
+			{
+				if ((this._Cantidad != value))
+				{
+					this._Cantidad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total", DbType="Int NOT NULL")]
+		public int Total
+		{
+			get
+			{
+				return this._Total;
+			}
+			set
+			{
+				if ((this._Total != value))
+				{
+					this._Total = value;
+				}
+			}
+		}
+	}
+	
 	public partial class consultarComResult
 	{
 		
@@ -1299,184 +1495,6 @@ namespace JBTienda
 				if ((this._Id != value))
 				{
 					this._Id = value;
-				}
-			}
-		}
-	}
-	
-	public partial class consultarDatosComprarResult
-	{
-		
-		private System.Data.Linq.Binary _Imagen;
-		
-		private string _Nombre;
-		
-		private string _Descripcion;
-		
-		private System.Nullable<decimal> _Precio;
-		
-		private string _Descuento;
-		
-		public consultarDatosComprarResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imagen", DbType="Image")]
-		public System.Data.Linq.Binary Imagen
-		{
-			get
-			{
-				return this._Imagen;
-			}
-			set
-			{
-				if ((this._Imagen != value))
-				{
-					this._Imagen = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(30)")]
-		public string Nombre
-		{
-			get
-			{
-				return this._Nombre;
-			}
-			set
-			{
-				if ((this._Nombre != value))
-				{
-					this._Nombre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(100)")]
-		public string Descripcion
-		{
-			get
-			{
-				return this._Descripcion;
-			}
-			set
-			{
-				if ((this._Descripcion != value))
-				{
-					this._Descripcion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Precio", DbType="Money")]
-		public System.Nullable<decimal> Precio
-		{
-			get
-			{
-				return this._Precio;
-			}
-			set
-			{
-				if ((this._Precio != value))
-				{
-					this._Precio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descuento", DbType="VarChar(10)")]
-		public string Descuento
-		{
-			get
-			{
-				return this._Descuento;
-			}
-			set
-			{
-				if ((this._Descuento != value))
-				{
-					this._Descuento = value;
-				}
-			}
-		}
-	}
-	
-	public partial class consultarCarritoResult
-	{
-		
-		private string _Nombre;
-		
-		private string _Descripcion;
-		
-		private decimal _Precio;
-		
-		private int _Cantidad;
-		
-		public consultarCarritoResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Nombre
-		{
-			get
-			{
-				return this._Nombre;
-			}
-			set
-			{
-				if ((this._Nombre != value))
-				{
-					this._Nombre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Descripcion
-		{
-			get
-			{
-				return this._Descripcion;
-			}
-			set
-			{
-				if ((this._Descripcion != value))
-				{
-					this._Descripcion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Precio", DbType="Money NOT NULL")]
-		public decimal Precio
-		{
-			get
-			{
-				return this._Precio;
-			}
-			set
-			{
-				if ((this._Precio != value))
-				{
-					this._Precio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cantidad", DbType="Int NOT NULL")]
-		public int Cantidad
-		{
-			get
-			{
-				return this._Cantidad;
-			}
-			set
-			{
-				if ((this._Cantidad != value))
-				{
-					this._Cantidad = value;
 				}
 			}
 		}

@@ -73,8 +73,15 @@ namespace JBTienda
 
                 txtnp.Text = Variables.Np.ToString();
 
+                var p = double.Parse(txtnp.Text);
 
+                var can = int.Parse(cantidad.Value.ToString());
 
+                Variables.tc = p * can;
+                txtTo.Text = Variables.tc.ToString();
+              
+                
+               
             }
         }
 
@@ -126,8 +133,10 @@ namespace JBTienda
                 txtNombre.Text,
                 txtDescripcion.Text,
                int.Parse( txtnp.Text.ToString()),
-                 int.Parse(cantidad.Value.ToString())
-      
+                 int.Parse(cantidad.Value.ToString()),
+                int.Parse(txtTo.Text.ToString())
+
+
          );
             
             MessageBox.Show("Producto Agregado al Carrito");

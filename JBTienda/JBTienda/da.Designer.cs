@@ -137,6 +137,7 @@
             // 
             // pic1
             // 
+            this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic1.Location = new System.Drawing.Point(44, 236);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(204, 182);

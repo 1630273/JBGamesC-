@@ -14,6 +14,8 @@ namespace JBTienda
         public static string usuario;
         public static Double Np;
 
+        public static Double tc;
+
 
 
 

@@ -43,6 +43,8 @@
             this.txtDes = new System.Windows.Forms.TextBox();
             this.txtnp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtTo = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +85,7 @@
             // btnComprar
             // 
             this.btnComprar.Depth = 0;
-            this.btnComprar.Location = new System.Drawing.Point(40, 503);
+            this.btnComprar.Location = new System.Drawing.Point(37, 542);
             this.btnComprar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Primary = true;
@@ -95,6 +97,7 @@
             // 
             // pic1
             // 
+            this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic1.Location = new System.Drawing.Point(83, 114);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(213, 182);
@@ -149,10 +152,25 @@
             // 
             // cantidad
             // 
-            this.cantidad.Location = new System.Drawing.Point(102, 475);
+            this.cantidad.Location = new System.Drawing.Point(113, 476);
+            this.cantidad.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.cantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.cantidad.Name = "cantidad";
             this.cantidad.Size = new System.Drawing.Size(33, 20);
             this.cantidad.TabIndex = 96;
+            this.cantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtPrecio
             // 
@@ -192,11 +210,33 @@
             this.label4.TabIndex = 99;
             this.label4.Text = "Precio hora $:";
             // 
+            // txtTo
+            // 
+            this.txtTo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtTo.Location = new System.Drawing.Point(113, 507);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.ReadOnly = true;
+            this.txtTo.Size = new System.Drawing.Size(183, 20);
+            this.txtTo.TabIndex = 102;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(1, 509);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.TabIndex = 101;
+            this.label6.Text = "Total $:";
+            // 
             // FormComprar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 550);
+            this.ClientSize = new System.Drawing.Size(361, 565);
+            this.Controls.Add(this.txtTo);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtnp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDes);
@@ -238,5 +278,7 @@
         private System.Windows.Forms.TextBox txtDes;
         private System.Windows.Forms.TextBox txtnp;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtTo;
+        private System.Windows.Forms.Label label6;
     }
 }
