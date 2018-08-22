@@ -43,10 +43,7 @@ namespace JBTienda
             cujuegos1.BringToFront();
         }
 
-        private void btnCel_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnEle_Click(object sender, EventArgs e)
         {
@@ -58,12 +55,7 @@ namespace JBTienda
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form p = new FormLogin();
-            p.Show();
-            this.Hide();
-        }
+      
 
         private void btnmenubar_Click(object sender, EventArgs e)
         {
@@ -89,6 +81,20 @@ namespace JBTienda
 
         }
 
+        void ConsultarNombre(string usu)
+        {
+
+            dcTiendaDataContext dc = new dcTiendaDataContext();
+            var nom = from con in dc.consultarNombreCliente(usu)
+                      select con;
+
+            foreach (var n in nom)
+            {
+                lbNombre.Text = n.NombreCompleto;
+
+            }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -107,6 +113,18 @@ namespace JBTienda
         private void cujuegos1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Form p = new FormLogin();
+            p.Show();
+            this.Hide();
+        }
+
+        private void FormMCliente_Load(object sender, EventArgs e)
+        {
+            ConsultarNombre(Variables.usuario);
         }
     }
 }

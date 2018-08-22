@@ -60,12 +60,12 @@
             this.dtCom.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtCom.EnableHeadersVisualStyles = false;
             this.dtCom.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtCom.Location = new System.Drawing.Point(3, 84);
+            this.dtCom.Location = new System.Drawing.Point(3, 61);
             this.dtCom.Name = "dtCom";
             this.dtCom.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtCom.RowHeadersVisible = false;
             this.dtCom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtCom.Size = new System.Drawing.Size(530, 412);
+            this.dtCom.Size = new System.Drawing.Size(500, 334);
             this.dtCom.TabIndex = 52;
             // 
             // label1
@@ -73,7 +73,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.label1.Location = new System.Drawing.Point(149, 21);
+            this.label1.Location = new System.Drawing.Point(146, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 37);
             this.label1.TabIndex = 53;

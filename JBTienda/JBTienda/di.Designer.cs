@@ -65,7 +65,7 @@
             this.dtai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtai.RowHeadersVisible = false;
             this.dtai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtai.Size = new System.Drawing.Size(530, 412);
+            this.dtai.Size = new System.Drawing.Size(530, 389);
             this.dtai.TabIndex = 3;
             // 
             // label1

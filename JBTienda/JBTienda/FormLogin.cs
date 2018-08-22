@@ -43,7 +43,7 @@ namespace JBTienda
                     case 2:
                         MessageBox.Show("Bienvenido,Usted es Cliente.");
 
-                        // Variables.usuario = txtUsuario.Text; 
+                        Variables.usuario = txtUsuario.Text;
 
                         FormMCliente ir = new FormMCliente();
                         ir.Show();

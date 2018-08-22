@@ -100,5 +100,10 @@ namespace JBTienda
             SidePanel.Top = btnel.Top;
             de1.BringToFront();
         }
+
+        private void da1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,7 +16,6 @@ namespace JBTienda
         public FormComprar()
         {
             
-
             InitializeComponent();
             MaterialSkin.MaterialSkinManager skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);

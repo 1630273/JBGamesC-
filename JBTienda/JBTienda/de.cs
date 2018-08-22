@@ -24,13 +24,13 @@ namespace JBTienda
             dcTiendaDataContext dc = new dcTiendaDataContext();
 
             var Jugador = from j in dc.consultarProductos(idProducto)
-                          select new { j.idProducto, j.nombreProducto };
+                          select new { j.Id, j.Nombre };
 
 
 
             cboNombre.DataSource = Jugador.ToList();
-            cboNombre.ValueMember = "idProducto";
-            cboNombre.DisplayMember = "nombreProducto";
+            cboNombre.ValueMember = "Id";
+            cboNombre.DisplayMember = "Nombre";
 
 
             cboNombre.SelectedIndexChanged += new EventHandler(cboNombre_SelectedIndexChanged);

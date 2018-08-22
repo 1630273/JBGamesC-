@@ -80,7 +80,7 @@
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsalir.Location = new System.Drawing.Point(664, 0);
+            this.btnsalir.Location = new System.Drawing.Point(665, 0);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(133, 37);
             this.btnsalir.TabIndex = 9;
@@ -214,6 +214,7 @@
             this.da1.Name = "da1";
             this.da1.Size = new System.Drawing.Size(538, 480);
             this.da1.TabIndex = 13;
+            this.da1.Load += new System.EventHandler(this.da1_Load);
             // 
             // de1
             // 
