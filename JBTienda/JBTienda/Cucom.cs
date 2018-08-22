@@ -28,9 +28,9 @@ namespace JBTienda
         {
             SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-4UDBD8N\\SQLEXPRESS;Initial Catalog=Tienda;Integrated Security=True");
             conn.Open();
-            SqlCommand comando = new SqlCommand("consultarProductos", conn);
+            SqlCommand comando = new SqlCommand("consultarCom", conn);
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.Add("@idDepartamento", SqlDbType.Int).Value = Variables.idDep;
+            //comando.Parameters.Add("@idDepartamento", SqlDbType.Int).Value = Variables.idDep;
             comando.Connection = conn;
             comando.ExecuteNonQuery();
             DataTable dt = new DataTable();

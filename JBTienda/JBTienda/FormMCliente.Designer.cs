@@ -39,11 +39,13 @@
             this.btnCom = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
             this.cujuegos1 = new JBTienda.Cujuegos();
             this.cuinicio1 = new JBTienda.Cuinicio();
             this.cucom1 = new JBTienda.Cucom();
+            this.da1 = new JBTienda.da();
             this.sidemenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -136,7 +138,6 @@
             this.btnCel.Text = "   Celulares";
             this.btnCel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCel.UseVisualStyleBackColor = true;
-            this.btnCel.Click += new System.EventHandler(this.btnCel_Click);
             // 
             // btnJuego
             // 
@@ -195,7 +196,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.lbNombre);
+            this.panel2.Controls.Add(this.btnsalir);
             this.panel2.Controls.Add(this.btnmenubar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -203,17 +205,33 @@
             this.panel2.Size = new System.Drawing.Size(800, 37);
             this.panel2.TabIndex = 4;
             // 
-            // button2
+            // lbNombre
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(769, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 21);
-            this.button2.TabIndex = 9;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbNombre.Location = new System.Drawing.Point(65, 9);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(57, 20);
+            this.lbNombre.TabIndex = 15;
+            this.lbNombre.Text = "label1";
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.CausesValidation = false;
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.FlatAppearance.BorderSize = 0;
+            this.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsalir.Location = new System.Drawing.Point(667, -3);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(133, 37);
+            this.btnsalir.TabIndex = 14;
+            this.btnsalir.Text = "Cerrar Sesión";
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnmenubar
             // 
@@ -232,9 +250,9 @@
             // cujuegos1
             // 
             this.cujuegos1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cujuegos1.Location = new System.Drawing.Point(0, 37);
+            this.cujuegos1.Location = new System.Drawing.Point(0, 0);
             this.cujuegos1.Name = "cujuegos1";
-            this.cujuegos1.Size = new System.Drawing.Size(800, 413);
+            this.cujuegos1.Size = new System.Drawing.Size(800, 450);
             this.cujuegos1.TabIndex = 7;
             this.cujuegos1.Load += new System.EventHandler(this.cujuegos1_Load);
             // 
@@ -248,11 +266,21 @@
             // 
             // cucom1
             // 
+            this.cucom1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cucom1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cucom1.Location = new System.Drawing.Point(0, 0);
             this.cucom1.Name = "cucom1";
             this.cucom1.Size = new System.Drawing.Size(800, 450);
             this.cucom1.TabIndex = 8;
+            // 
+            // da1
+            // 
+            this.da1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.da1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.da1.Location = new System.Drawing.Point(0, 0);
+            this.da1.Name = "da1";
+            this.da1.Size = new System.Drawing.Size(800, 450);
+            this.da1.TabIndex = 16;
             // 
             // FormMCliente
             // 
@@ -260,16 +288,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.sidemenu);
-            this.Controls.Add(this.cujuegos1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.cujuegos1);
             this.Controls.Add(this.cuinicio1);
             this.Controls.Add(this.cucom1);
+            this.Controls.Add(this.da1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMCliente";
+            this.Load += new System.EventHandler(this.FormMCliente_Load);
             this.sidemenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -288,8 +319,10 @@
         private Cujuegos cujuegos1;
         private Cucom cucom1;
         private Cuinicio cuinicio1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel logo;
         private System.Windows.Forms.Button btnmenubar;
+        private System.Windows.Forms.Label lbNombre;
+        private System.Windows.Forms.Button btnsalir;
+        private da da1;
     }
 }
