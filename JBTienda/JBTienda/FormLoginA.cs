@@ -128,5 +128,11 @@ namespace JBTienda
                 btnInicio.Focus();
             }
         }
+
+        private void linkRC_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RecuperarContra ir = new RecuperarContra();
+            ir.ShowDialog();
+        }
     }
 }

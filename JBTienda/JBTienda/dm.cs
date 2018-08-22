@@ -27,7 +27,7 @@ namespace JBTienda
 
         public void listarProductos(DataGridView data)
         {
-            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-4UDBD8N\\SQLEXPRESS;Initial Catalog=Tienda;Integrated Security=True");
+            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
             conn.Open();
             SqlCommand comando = new SqlCommand("consultarProductos", conn);
             comando.CommandType = CommandType.StoredProcedure;
@@ -38,10 +38,6 @@ namespace JBTienda
             SqlDataAdapter da = new SqlDataAdapter(comando);
             da.Fill(dt);
             data.DataSource = dt;
-          
-
-           
-
             conn.Close();
         }
 
@@ -59,7 +55,7 @@ namespace JBTienda
         {
 
 
-            Variables.idProd = int.Parse(dtm.CurrentRow.Cells[7].Value.ToString());
+            Variables.idProd = byte.Parse(dtm.CurrentRow.Cells[7].Value.ToString());
    
            
             Form A = new FormModificarP();
@@ -72,41 +68,5 @@ namespace JBTienda
 
 
 
-        //private void btnModificar_Click(object sender, EventArgs e)
-        //{
-
-        //    System.IO.MemoryStream ms = new System.IO.MemoryStream();
-        //    pic1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-
-        //    dcTiendaDataContext mod = new dcTiendaDataContext();
-        //    mod.modificarProducto(
-        //        Byte.Parse(txtId.Text),
-        //        txtNombre.Text,
-        //        txtDescripcion.Text,
-        //        int.Parse(txtPrecio.Text),
-        //        byte.Parse(txtCantidad.Text),
-        //        ms.GetBuffer(),
-        //        byte.Parse(cboDesc.Text)
-
-
-
-        // );
-        //    MessageBox.Show("Producto Modificado");
-        //}
-
-        //private void lstModificar_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    cargarProducto(byte.Parse(lstModificar.SelectedValue.ToString()));
-        //}
-
-        //private void lstModificar_Click(object sender, EventArgs e)
-        //{
-        //    txtId.Text = lstModificar.SelectedValue.ToString();
-        //    txtNombre.Text = lstModificar.SelectedValue.ToString();
-        //    txtDescripcion.Text = lstModificar.SelectedValue.ToString();
-        //    txtPrecio.Text = lstModificar.SelectedValue.ToString();
-        //    txtCantidad.Text = lstModificar.SelectedValue.ToString();
-        //    cboDesc.Text = lstModificar.SelectedValue.ToString();
-        //}
     }
 }

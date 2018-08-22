@@ -43,6 +43,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtId = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.lblId = new MaterialSkin.Controls.MaterialSingleLineTextField();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +81,7 @@
             this.cboDesc.Name = "cboDesc";
             this.cboDesc.Size = new System.Drawing.Size(179, 21);
             this.cboDesc.TabIndex = 75;
+            this.cboDesc.SelectedIndexChanged += new System.EventHandler(this.cboDesc_SelectedIndexChanged);
             // 
             // btnExaminar
             // 
@@ -91,6 +94,7 @@
             this.btnExaminar.TabIndex = 74;
             this.btnExaminar.Text = "EXAMINAR";
             this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click_1);
             // 
             // pic1
             // 
@@ -111,6 +115,7 @@
             this.btnModificar.TabIndex = 72;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtCantidad
             // 
@@ -220,11 +225,43 @@
             this.label5.TabIndex = 80;
             this.label5.Text = "Cantidad:";
             // 
+            // txtId
+            // 
+            this.txtId.Depth = 0;
+            this.txtId.Hint = "ID";
+            this.txtId.Location = new System.Drawing.Point(371, 206);
+            this.txtId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtId.Name = "txtId";
+            this.txtId.PasswordChar = '\0';
+            this.txtId.SelectedText = "";
+            this.txtId.SelectionLength = 0;
+            this.txtId.SelectionStart = 0;
+            this.txtId.Size = new System.Drawing.Size(38, 23);
+            this.txtId.TabIndex = 81;
+            this.txtId.UseSystemPasswordChar = false;
+            // 
+            // lblId
+            // 
+            this.lblId.Depth = 0;
+            this.lblId.Hint = "ID";
+            this.lblId.Location = new System.Drawing.Point(12, 78);
+            this.lblId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblId.Name = "lblId";
+            this.lblId.PasswordChar = '\0';
+            this.lblId.SelectedText = "";
+            this.lblId.SelectionLength = 0;
+            this.lblId.SelectionStart = 0;
+            this.lblId.Size = new System.Drawing.Size(38, 23);
+            this.lblId.TabIndex = 82;
+            this.lblId.UseSystemPasswordChar = false;
+            // 
             // FormModificarP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 500);
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -264,5 +301,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtId;
+        private MaterialSkin.Controls.MaterialSingleLineTextField lblId;
     }
 }
