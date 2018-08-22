@@ -78,19 +78,6 @@
       <Column Name="idDescuento" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.consultarDatosProductos2" Method="consultarDatosProductos2">
-    <Parameter Name="idProducto" Type="System.Int32" DbType="Int" />
-    <ElementType Name="consultarDatosProductos2Result">
-      <Column Name="idProducto" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-      <Column Name="nombreDepa" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
-      <Column Name="nombreProducto" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-      <Column Name="imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
-      <Column Name="idDescuento" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.ConsultarDep" Method="ConsultarDep">
     <Parameter Name="usuario" Type="System.String" DbType="VarChar(25)" />
     <ElementType Name="ConsultarDepResult">
@@ -102,6 +89,12 @@
       <Column Name="idGerente" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
       <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(67)" CanBeNull="true" />
       <Column Name="nombredepa" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.consultarNombreCliente" Method="consultarNombreCliente">
+    <Parameter Name="nombreusuario" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="consultarNombreClienteResult">
+      <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(67)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.consultarNombreGerentes" Method="consultarNombreGerentes">
@@ -173,11 +166,5 @@
     <Parameter Name="imagen" Type="System.Data.Linq.Binary" DbType="Image" />
     <Parameter Name="idDescuento" Type="System.Byte" DbType="TinyInt" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.consultarNombreCliente" Method="consultarNombreCliente">
-    <Parameter Name="nombreusuario" Type="System.String" DbType="VarChar(25)" />
-    <ElementType Name="consultarNombreClienteResult">
-      <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(67)" CanBeNull="true" />
-    </ElementType>
   </Function>
 </Database>

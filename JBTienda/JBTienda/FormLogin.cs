@@ -82,6 +82,9 @@ namespace JBTienda
         private void btnIncio_Click(object sender, EventArgs e)
         {
             login(txtUsuario.Text,txtContraseña.Text);
+
+            txtUsuario.Text = "";
+            txtContraseña.Text = "";
         
         }
 
@@ -136,6 +139,12 @@ namespace JBTienda
                 e.Cancel = false;
                 btnInicio.Focus();
             }
+        }
+
+        private void linkRC_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RecuperarContra ir = new RecuperarContra();
+            ir.ShowDialog();
         }
     }
 }

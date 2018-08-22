@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tc));
             this.txtNP = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtFe = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -39,8 +40,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCod = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNP
@@ -59,6 +62,7 @@
             this.txtNP.TabIndex = 66;
             this.txtNP.UseSystemPasswordChar = false;
             this.txtNP.Click += new System.EventHandler(this.txtContraseña_Click);
+            this.txtNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNP_KeyPress);
             // 
             // txtFe
             // 
@@ -91,6 +95,7 @@
             this.txtNumT.Size = new System.Drawing.Size(236, 23);
             this.txtNumT.TabIndex = 64;
             this.txtNumT.UseSystemPasswordChar = false;
+            this.txtNumT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumT_KeyPress);
             // 
             // btnRegistrar
             // 
@@ -108,6 +113,7 @@
             this.btnRegistrar.TabIndex = 67;
             this.btnRegistrar.Text = "Continuar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnC
             // 
@@ -197,6 +203,10 @@
             this.txtCod.TabIndex = 72;
             this.txtCod.UseSystemPasswordChar = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Tc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +224,7 @@
             this.Size = new System.Drawing.Size(537, 310);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +242,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCod;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

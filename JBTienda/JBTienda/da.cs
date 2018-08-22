@@ -98,6 +98,12 @@ namespace JBTienda
                 MessageBox.Show(ex.Message);
             }
 
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
+            txtPrecio.Text = "";
+            txtCantidad.Text = "";
+
+
 
         }
 

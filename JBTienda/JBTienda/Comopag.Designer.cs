@@ -31,10 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comopag));
             this.btnC = new System.Windows.Forms.Button();
             this.btnD = new System.Windows.Forms.Button();
-            this.btnE = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -50,13 +48,14 @@
             this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC.Image = ((System.Drawing.Image)(resources.GetObject("btnC.Image")));
             this.btnC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnC.Location = new System.Drawing.Point(0, 47);
+            this.btnC.Location = new System.Drawing.Point(8, 49);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(399, 60);
             this.btnC.TabIndex = 0;
             this.btnC.Text = "        Tarjeta de crédito";
             this.btnC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnC.UseVisualStyleBackColor = false;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btnD
             // 
@@ -69,32 +68,14 @@
             this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD.Image = ((System.Drawing.Image)(resources.GetObject("btnD.Image")));
             this.btnD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnD.Location = new System.Drawing.Point(0, 111);
+            this.btnD.Location = new System.Drawing.Point(8, 165);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(399, 60);
             this.btnD.TabIndex = 1;
             this.btnD.Text = "        Tarjeta de débito";
             this.btnD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnD.UseVisualStyleBackColor = false;
-            // 
-            // btnE
-            // 
-            this.btnE.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnE.FlatAppearance.BorderSize = 0;
-            this.btnE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnE.Image = ((System.Drawing.Image)(resources.GetObject("btnE.Image")));
-            this.btnE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnE.Location = new System.Drawing.Point(-3, 175);
-            this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(402, 60);
-            this.btnE.TabIndex = 2;
-            this.btnE.Text = "        Efectivo en puntos de pago";
-            this.btnE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnE.UseVisualStyleBackColor = false;
+            this.btnD.Click += new System.EventHandler(this.btnD_Click);
             // 
             // label1
             // 
@@ -114,23 +95,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Green;
-            this.label2.Location = new System.Drawing.Point(70, 89);
+            this.label2.Location = new System.Drawing.Point(82, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 13);
             this.label2.TabIndex = 57;
             this.label2.Text = "Hasta 12 meses sin intereses";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(70, 219);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 13);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "BBV Bancomer, Banamex  y Otros";
             // 
             // panel1
             // 
@@ -147,9 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnE);
             this.Controls.Add(this.btnD);
             this.Controls.Add(this.btnC);
             this.Name = "Comopag";
@@ -165,10 +132,8 @@
 
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnD;
-        private System.Windows.Forms.Button btnE;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
     }
 }

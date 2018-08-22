@@ -26,5 +26,34 @@ namespace JBTienda
         {
 
         }
-    }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Compra Satisfactoria");
+
+        }
+
+        private void txtNP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space));
+            {
+
+                errorProvider1.SetError(txtNP, "SOLO SE PERMITEN LETRAS!");
+
+            }
+
+        }
+
+        private void txtNumT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!(char.IsDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space));
+            {
+
+                errorProvider1.SetError(txtNumT, "SOLO SE PERMITEN Dijitos!");
+            }
+        
+
+            }
+        }
 }
