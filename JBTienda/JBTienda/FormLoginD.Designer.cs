@@ -32,18 +32,19 @@
             System.Windows.Forms.PictureBox pictureBox2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoginD));
             System.Windows.Forms.PictureBox pictureBox1;
-            this.linkRC = new System.Windows.Forms.LinkLabel();
             this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnSalir = new System.Windows.Forms.Button();
             this.Mostrar = new MaterialSkin.Controls.MaterialCheckBox();
             this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             pictureBox2 = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -67,19 +68,6 @@
             pictureBox1.Size = new System.Drawing.Size(24, 24);
             pictureBox1.TabIndex = 40;
             pictureBox1.TabStop = false;
-            // 
-            // linkRC
-            // 
-            this.linkRC.ActiveLinkColor = System.Drawing.Color.DarkBlue;
-            this.linkRC.AutoSize = true;
-            this.linkRC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkRC.LinkColor = System.Drawing.Color.Purple;
-            this.linkRC.Location = new System.Drawing.Point(192, 204);
-            this.linkRC.Name = "linkRC";
-            this.linkRC.Size = new System.Drawing.Size(164, 16);
-            this.linkRC.TabIndex = 46;
-            this.linkRC.TabStop = true;
-            this.linkRC.Text = "Recuperar Contraseña";
             // 
             // btnInicio
             // 
@@ -172,6 +160,10 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // FormLoginD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,7 +173,6 @@
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.linkRC);
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox1);
@@ -192,19 +183,19 @@
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel linkRC;
         private MaterialSkin.Controls.MaterialRaisedButton btnInicio;
         private System.Windows.Forms.Button btnSalir;
         private MaterialSkin.Controls.MaterialCheckBox Mostrar;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtContraseña;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

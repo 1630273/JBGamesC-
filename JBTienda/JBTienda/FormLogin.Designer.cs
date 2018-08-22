@@ -151,6 +151,7 @@
             this.linkRC.TabIndex = 32;
             this.linkRC.TabStop = true;
             this.linkRC.Text = "Recuperar Contraseña";
+            this.linkRC.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRC_LinkClicked);
             // 
             // btnRegistrarse
             // 

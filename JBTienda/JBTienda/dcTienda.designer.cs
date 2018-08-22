@@ -275,24 +275,34 @@ namespace JBTienda
 	public partial class ConsultarDepResult
 	{
 		
-		private System.Nullable<byte> _idDepartamento;
-		
-		public ConsultarDepResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idDepartamento", DbType="TinyInt")]
-		public System.Nullable<byte> idDepartamento
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Precio", DbType="Money")]
+		public System.Nullable<decimal> Precio
 		{
 			get
 			{
-				return this._idDepartamento;
+				return this._Precio;
 			}
 			set
 			{
-				if ((this._idDepartamento != value))
+				if ((this._Precio != value))
 				{
-					this._idDepartamento = value;
+					this._Precio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descuento", DbType="VarChar(10)")]
+		public string Descuento
+		{
+			get
+			{
+				return this._Descuento;
+			}
+			set
+			{
+				if ((this._Descuento != value))
+				{
+					this._Descuento = value;
 				}
 			}
 		}
@@ -560,9 +570,9 @@ namespace JBTienda
 			}
 			set
 			{
-				if ((this._idCiudad != value))
+				if ((this._idGerente != value))
 				{
-					this._idCiudad = value;
+					this._idGerente = value;
 				}
 			}
 		}
@@ -583,18 +593,18 @@ namespace JBTienda
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idEstado", DbType="TinyInt")]
-		public System.Nullable<byte> idEstado
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombredepa", DbType="VarChar(25)")]
+		public string nombredepa
 		{
 			get
 			{
-				return this._idEstado;
+				return this._nombredepa;
 			}
 			set
 			{
-				if ((this._idEstado != value))
+				if ((this._nombredepa != value))
 				{
-					this._idEstado = value;
+					this._nombredepa = value;
 				}
 			}
 		}
@@ -1467,18 +1477,18 @@ namespace JBTienda
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descuento", DbType="VarChar(10)")]
-		public string Descuento
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="VarChar(25)")]
+		public string nombre
 		{
 			get
 			{
-				return this._Descuento;
+				return this._nombre;
 			}
 			set
 			{
-				if ((this._Descuento != value))
+				if ((this._nombre != value))
 				{
-					this._Descuento = value;
+					this._nombre = value;
 				}
 			}
 		}

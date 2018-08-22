@@ -82,6 +82,9 @@ namespace JBTienda
         private void btnIncio_Click_1(object sender, EventArgs e)
         {
             login(txtUsuario.Text,txtContraseña.Text);
+
+            txtUsuario.Text = "";
+            txtContraseña.Text = "";
         }
 
         private void Mostrar_CheckedChanged(object sender, EventArgs e)

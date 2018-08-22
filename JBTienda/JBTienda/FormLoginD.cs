@@ -139,6 +139,9 @@ namespace JBTienda
         private void btnIncio_Click(object sender, EventArgs e)
         {
             login(txtUsuario.Text,txtContraseña.Text);
+
+            txtUsuario.Text = "";
+            txtContraseña.Text = "";
         }
 
         private void Mostrar_CheckedChanged(object sender, EventArgs e)
@@ -158,10 +161,9 @@ namespace JBTienda
         {
             if (txtUsuario.Text.Trim().Length <= 0)
             {
-                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
                 e.Cancel = true;
+
+                errorProvider1.SetError(txtUsuario, "EL CAMPO USUARIO ES REQUERIDO!");
             }
             else
             {
@@ -179,10 +181,11 @@ namespace JBTienda
         {
             if (txtContraseña.Text.Trim().Length <= 0)
             {
-                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+
+
                 e.Cancel = true;
+                errorProvider1.SetError(txtContraseña, "EL CAMPO CONTRASEÑA ES REQUERIDO!");
+       
             }
             else
             {
