@@ -67,6 +67,7 @@
             this.dtCom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtCom.Size = new System.Drawing.Size(500, 334);
             this.dtCom.TabIndex = 52;
+            this.dtCom.DoubleClick += new System.EventHandler(this.dtCom_DoubleClick);
             // 
             // label1
             // 

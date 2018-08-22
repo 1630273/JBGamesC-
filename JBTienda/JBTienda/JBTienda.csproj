@@ -151,6 +151,12 @@
     <Compile Include="Efectivo.Designer.cs">
       <DependentUpon>Efectivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCarrito.Designer.cs">
+      <DependentUpon>FormCarrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormComprar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Efectivo.resx">
       <DependentUpon>Efectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCarrito.resx">
+      <DependentUpon>FormCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormComprar.resx">
       <DependentUpon>FormComprar.cs</DependentUpon>

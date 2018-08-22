@@ -12,12 +12,12 @@ namespace JBTienda
         public static byte idDep;
         public static byte idProd;
         public static string usuario;
+        public static Double Np;
 
 
 
 
 
-   
 
 
     }

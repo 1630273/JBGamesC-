@@ -22,7 +22,7 @@ namespace JBTienda
 
         public void listarProductos(DataGridView data)
         {
-            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-4UDBD8N\\SQLEXPRESS;Initial Catalog=Tienda;Integrated Security=True");
             conn.Open();
             SqlCommand comando = new SqlCommand("consultarProductos", conn);
             comando.CommandType = CommandType.StoredProcedure;
@@ -33,16 +33,7 @@ namespace JBTienda
             SqlDataAdapter da = new SqlDataAdapter(comando);
             da.Fill(dt);
             data.DataSource = dt;
-            data.Columns[0].Width = 60;
-            data.Columns[1].Width = 165;
-            data.Columns[2].Width = 165;
-            data.Columns[3].Width = 90;
-            data.Columns[4].Width = 50;
-            data.Columns[5].Width = 80;
-            data.Columns[6].Width = 80;
-            data.Columns[7].Width = 80;
-            
-            //data.Columns[7].Width = 125;
+         
 
             conn.Close();
         }

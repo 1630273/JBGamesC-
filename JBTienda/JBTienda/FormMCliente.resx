@@ -239,6 +239,19 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btncar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA37AAAN+wELdzWbAAAAB3RJ
+        TUUH4ggVDTQIfcYU0wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFISURBVEhL
+        tZWxSgNBFEVXEGw1aBotLSNY6BcIphJE8g1p0mgvGGxsRSz0A6y0SSs2tmIjYhcbSysFsRB1c2bnms3u
+        JFPsjAdO8+7NhSRLkvw7aZp2SzYVxYHBMjeK4sP4MX7gtE5xYXgbDes6xYXhGv7ink7xYfwBY/Gs2RyO
+        JzaLwrlmczju2CwKLc3mcJxH8z2E8oM1zRYheMwqYdxrzoXw1HaCONKcC2HLdoLY0JwL4YLtVOYTZzQ3
+        HgpPWbUa15qZDKUL2y3whS94hz08wwNs4xau4SL6f8sozOE73uImrqB5fKdUCYOhQzTP8apO8WB0Ft+w
+        MpoaD/muraXfeIXlf7xJjlLXnAthudxR5EXdP15xSVERgv2sktNX5IWeecejtBUVIWjYfMilIi+mZ+tD
+        GopcCDvYR/OiZZ29mJ765nX6WJNkAHO4Rgt/JfbXAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnmenubar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS

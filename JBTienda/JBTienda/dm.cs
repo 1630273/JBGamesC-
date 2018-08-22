@@ -27,7 +27,7 @@ namespace JBTienda
 
         public void listarProductos(DataGridView data)
         {
-            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-4UDBD8N\\SQLEXPRESS;Initial Catalog=Tienda;Integrated Security=True");
             conn.Open();
             SqlCommand comando = new SqlCommand("consultarProductos", conn);
             comando.CommandType = CommandType.StoredProcedure;

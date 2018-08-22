@@ -47,5 +47,19 @@ namespace JBTienda
         {
             listarProductos(dtCom);
         }
+
+        private void dtCom_DoubleClick(object sender, EventArgs e)
+        {
+
+
+            Variables.idProd = byte.Parse(dtCom.CurrentRow.Cells[5].Value.ToString());
+
+
+
+            Form A = new FormComprar();
+            A.Show();
+            this.Hide();
+
+        }
     }
 }

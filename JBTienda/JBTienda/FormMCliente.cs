@@ -126,5 +126,12 @@ namespace JBTienda
         {
             ConsultarNombre(Variables.usuario);
         }
+
+        private void btncar_Click(object sender, EventArgs e)
+        {
+            Form car = new FormCarrito();
+            car.Show();
+            this.Hide();
+        }
     }
 }

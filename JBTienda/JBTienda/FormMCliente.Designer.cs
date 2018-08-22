@@ -46,6 +46,7 @@
             this.cuinicio1 = new JBTienda.Cuinicio();
             this.cucom1 = new JBTienda.Cucom();
             this.da1 = new JBTienda.da();
+            this.btncar = new System.Windows.Forms.Button();
             this.sidemenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -196,6 +197,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
+            this.panel2.Controls.Add(this.btncar);
             this.panel2.Controls.Add(this.lbNombre);
             this.panel2.Controls.Add(this.btnsalir);
             this.panel2.Controls.Add(this.btnmenubar);
@@ -282,6 +284,20 @@
             this.da1.Size = new System.Drawing.Size(800, 450);
             this.da1.TabIndex = 16;
             // 
+            // btncar
+            // 
+            this.btncar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncar.FlatAppearance.BorderSize = 0;
+            this.btncar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btncar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncar.Image = ((System.Drawing.Image)(resources.GetObject("btncar.Image")));
+            this.btncar.Location = new System.Drawing.Point(623, -3);
+            this.btncar.Name = "btncar";
+            this.btncar.Size = new System.Drawing.Size(38, 39);
+            this.btncar.TabIndex = 16;
+            this.btncar.UseVisualStyleBackColor = true;
+            this.btncar.Click += new System.EventHandler(this.btncar_Click);
+            // 
             // FormMCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,5 +340,6 @@
         private System.Windows.Forms.Label lbNombre;
         private System.Windows.Forms.Button btnsalir;
         private da da1;
+        private System.Windows.Forms.Button btncar;
     }
 }
