@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace JBTienda
 {
-    public partial class Cujuegos : UserControl
+    public partial class CuEjercicio : UserControl
     {
-        public Cujuegos()
+        public CuEjercicio()
         {
             InitializeComponent();
-        }
-
-        private void Cujuegos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

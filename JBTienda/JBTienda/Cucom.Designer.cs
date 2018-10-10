@@ -60,7 +60,7 @@
             this.dtCom.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtCom.EnableHeadersVisualStyles = false;
             this.dtCom.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtCom.Location = new System.Drawing.Point(3, 61);
+            this.dtCom.Location = new System.Drawing.Point(14, 61);
             this.dtCom.Name = "dtCom";
             this.dtCom.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtCom.RowHeadersVisible = false;
@@ -88,7 +88,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtCom);
             this.Name = "Cucom";
-            this.Size = new System.Drawing.Size(541, 499);
+            this.Size = new System.Drawing.Size(540, 500);
             this.Load += new System.EventHandler(this.Cucom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtCom)).EndInit();
             this.ResumeLayout(false);

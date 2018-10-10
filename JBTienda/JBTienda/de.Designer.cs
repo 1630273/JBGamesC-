@@ -37,6 +37,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Depth = 0;
             this.btnEliminar.Location = new System.Drawing.Point(34, 202);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
@@ -68,7 +69,7 @@
             this.lblDesc.AutoSize = true;
             this.lblDesc.Depth = 0;
             this.lblDesc.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblDesc.ForeColor = System.Drawing.Color.Black;
+            this.lblDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblDesc.Location = new System.Drawing.Point(30, 99);
             this.lblDesc.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblDesc.Name = "lblDesc";

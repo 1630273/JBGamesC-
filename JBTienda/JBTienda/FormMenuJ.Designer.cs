@@ -114,7 +114,7 @@
             this.sidemenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidemenu.Location = new System.Drawing.Point(0, 37);
             this.sidemenu.Name = "sidemenu";
-            this.sidemenu.Size = new System.Drawing.Size(262, 480);
+            this.sidemenu.Size = new System.Drawing.Size(189, 480);
             this.sidemenu.TabIndex = 8;
             this.sidemenu.TabStop = true;
             // 
@@ -136,6 +136,7 @@
             // 
             // btnel
             // 
+            this.btnel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnel.FlatAppearance.BorderSize = 0;
             this.btnel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,9 +144,9 @@
             this.btnel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnel.Image = ((System.Drawing.Image)(resources.GetObject("btnel.Image")));
             this.btnel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnel.Location = new System.Drawing.Point(12, 197);
+            this.btnel.Location = new System.Drawing.Point(12, 150);
             this.btnel.Name = "btnel";
-            this.btnel.Size = new System.Drawing.Size(240, 51);
+            this.btnel.Size = new System.Drawing.Size(177, 51);
             this.btnel.TabIndex = 5;
             this.btnel.Text = "   Eliminar";
             this.btnel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -154,6 +155,7 @@
             // 
             // btnmo
             // 
+            this.btnmo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnmo.FlatAppearance.BorderSize = 0;
             this.btnmo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,9 +163,9 @@
             this.btnmo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnmo.Image = ((System.Drawing.Image)(resources.GetObject("btnmo.Image")));
             this.btnmo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmo.Location = new System.Drawing.Point(12, 152);
+            this.btnmo.Location = new System.Drawing.Point(12, 188);
             this.btnmo.Name = "btnmo";
-            this.btnmo.Size = new System.Drawing.Size(240, 51);
+            this.btnmo.Size = new System.Drawing.Size(177, 51);
             this.btnmo.TabIndex = 4;
             this.btnmo.Text = "  Modificar";
             this.btnmo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -172,6 +174,7 @@
             // 
             // btnAg
             // 
+            this.btnAg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAg.FlatAppearance.BorderSize = 0;
             this.btnAg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnAg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -181,7 +184,7 @@
             this.btnAg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAg.Location = new System.Drawing.Point(12, 108);
             this.btnAg.Name = "btnAg";
-            this.btnAg.Size = new System.Drawing.Size(240, 51);
+            this.btnAg.Size = new System.Drawing.Size(177, 51);
             this.btnAg.TabIndex = 3;
             this.btnAg.Text = "  Agregar";
             this.btnAg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -190,6 +193,7 @@
             // 
             // btnInicio
             // 
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.FlatAppearance.BorderSize = 0;
             this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -199,7 +203,7 @@
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.Location = new System.Drawing.Point(12, 64);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(240, 51);
+            this.btnInicio.Size = new System.Drawing.Size(177, 51);
             this.btnInicio.TabIndex = 2;
             this.btnInicio.Text = "   Inicio";
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -210,9 +214,9 @@
             // 
             this.da1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.da1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.da1.Location = new System.Drawing.Point(262, 37);
+            this.da1.Location = new System.Drawing.Point(189, 37);
             this.da1.Name = "da1";
-            this.da1.Size = new System.Drawing.Size(538, 480);
+            this.da1.Size = new System.Drawing.Size(611, 480);
             this.da1.TabIndex = 13;
             this.da1.Load += new System.EventHandler(this.da1_Load);
             // 

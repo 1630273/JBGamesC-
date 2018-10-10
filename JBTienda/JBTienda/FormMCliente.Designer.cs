@@ -39,14 +39,17 @@
             this.btnCom = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btncar = new System.Windows.Forms.Button();
             this.lbNombre = new System.Windows.Forms.Label();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
+            this.cuEjercicio1 = new JBTienda.CuEjercicio();
+            this.cucelulares1 = new JBTienda.Cucelulares();
             this.cujuegos1 = new JBTienda.Cujuegos();
             this.cuinicio1 = new JBTienda.Cuinicio();
+            this.cuelectrodomestico1 = new JBTienda.Cuelectrodomestico();
             this.cucom1 = new JBTienda.Cucom();
             this.da1 = new JBTienda.da();
-            this.btncar = new System.Windows.Forms.Button();
             this.sidemenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -96,7 +99,7 @@
             this.btnSalud.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSalud.Image = ((System.Drawing.Image)(resources.GetObject("btnSalud.Image")));
             this.btnSalud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalud.Location = new System.Drawing.Point(12, 293);
+            this.btnSalud.Location = new System.Drawing.Point(12, 196);
             this.btnSalud.Name = "btnSalud";
             this.btnSalud.Size = new System.Drawing.Size(240, 51);
             this.btnSalud.TabIndex = 7;
@@ -114,7 +117,7 @@
             this.btnEle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEle.Image = ((System.Drawing.Image)(resources.GetObject("btnEle.Image")));
             this.btnEle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEle.Location = new System.Drawing.Point(12, 244);
+            this.btnEle.Location = new System.Drawing.Point(12, 239);
             this.btnEle.Name = "btnEle";
             this.btnEle.Size = new System.Drawing.Size(250, 51);
             this.btnEle.TabIndex = 6;
@@ -132,13 +135,14 @@
             this.btnCel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCel.Image = ((System.Drawing.Image)(resources.GetObject("btnCel.Image")));
             this.btnCel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCel.Location = new System.Drawing.Point(12, 197);
+            this.btnCel.Location = new System.Drawing.Point(12, 109);
             this.btnCel.Name = "btnCel";
             this.btnCel.Size = new System.Drawing.Size(240, 51);
             this.btnCel.TabIndex = 5;
             this.btnCel.Text = "   Celulares";
             this.btnCel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCel.UseVisualStyleBackColor = true;
+            this.btnCel.Click += new System.EventHandler(this.btnCel_Click);
             // 
             // btnJuego
             // 
@@ -149,9 +153,9 @@
             this.btnJuego.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnJuego.Image = ((System.Drawing.Image)(resources.GetObject("btnJuego.Image")));
             this.btnJuego.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnJuego.Location = new System.Drawing.Point(12, 152);
+            this.btnJuego.Location = new System.Drawing.Point(12, 282);
             this.btnJuego.Name = "btnJuego";
-            this.btnJuego.Size = new System.Drawing.Size(240, 51);
+            this.btnJuego.Size = new System.Drawing.Size(250, 51);
             this.btnJuego.TabIndex = 4;
             this.btnJuego.Text = "  Juegos";
             this.btnJuego.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,7 +171,7 @@
             this.btnCom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCom.Image = ((System.Drawing.Image)(resources.GetObject("btnCom.Image")));
             this.btnCom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCom.Location = new System.Drawing.Point(12, 108);
+            this.btnCom.Location = new System.Drawing.Point(12, 153);
             this.btnCom.Name = "btnCom";
             this.btnCom.Size = new System.Drawing.Size(240, 51);
             this.btnCom.TabIndex = 3;
@@ -206,6 +210,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 37);
             this.panel2.TabIndex = 4;
+            // 
+            // btncar
+            // 
+            this.btncar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncar.FlatAppearance.BorderSize = 0;
+            this.btncar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btncar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncar.Image = ((System.Drawing.Image)(resources.GetObject("btncar.Image")));
+            this.btncar.Location = new System.Drawing.Point(623, -3);
+            this.btncar.Name = "btncar";
+            this.btncar.Size = new System.Drawing.Size(38, 39);
+            this.btncar.TabIndex = 16;
+            this.btncar.UseVisualStyleBackColor = true;
+            this.btncar.Click += new System.EventHandler(this.btncar_Click);
             // 
             // lbNombre
             // 
@@ -249,8 +267,27 @@
             this.btnmenubar.UseVisualStyleBackColor = true;
             this.btnmenubar.Click += new System.EventHandler(this.btnmenubar_Click);
             // 
+            // cuEjercicio1
+            // 
+            this.cuEjercicio1.BackColor = System.Drawing.SystemColors.Window;
+            this.cuEjercicio1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cuEjercicio1.Location = new System.Drawing.Point(262, 37);
+            this.cuEjercicio1.Name = "cuEjercicio1";
+            this.cuEjercicio1.Size = new System.Drawing.Size(538, 413);
+            this.cuEjercicio1.TabIndex = 19;
+            // 
+            // cucelulares1
+            // 
+            this.cucelulares1.BackColor = System.Drawing.SystemColors.Window;
+            this.cucelulares1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cucelulares1.Location = new System.Drawing.Point(262, 37);
+            this.cucelulares1.Name = "cucelulares1";
+            this.cucelulares1.Size = new System.Drawing.Size(538, 413);
+            this.cucelulares1.TabIndex = 18;
+            // 
             // cujuegos1
             // 
+            this.cujuegos1.BackColor = System.Drawing.SystemColors.Window;
             this.cujuegos1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cujuegos1.Location = new System.Drawing.Point(0, 0);
             this.cujuegos1.Name = "cujuegos1";
@@ -260,11 +297,22 @@
             // 
             // cuinicio1
             // 
+            this.cuinicio1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.cuinicio1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cuinicio1.Location = new System.Drawing.Point(0, 0);
             this.cuinicio1.Name = "cuinicio1";
             this.cuinicio1.Size = new System.Drawing.Size(800, 450);
             this.cuinicio1.TabIndex = 9;
+            // 
+            // cuelectrodomestico1
+            // 
+            this.cuelectrodomestico1.BackColor = System.Drawing.SystemColors.Window;
+            this.cuelectrodomestico1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.cuelectrodomestico1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cuelectrodomestico1.Location = new System.Drawing.Point(0, 0);
+            this.cuelectrodomestico1.Name = "cuelectrodomestico1";
+            this.cuelectrodomestico1.Size = new System.Drawing.Size(800, 450);
+            this.cuelectrodomestico1.TabIndex = 17;
             // 
             // cucom1
             // 
@@ -284,29 +332,18 @@
             this.da1.Size = new System.Drawing.Size(800, 450);
             this.da1.TabIndex = 16;
             // 
-            // btncar
-            // 
-            this.btncar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncar.FlatAppearance.BorderSize = 0;
-            this.btncar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btncar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncar.Image = ((System.Drawing.Image)(resources.GetObject("btncar.Image")));
-            this.btncar.Location = new System.Drawing.Point(623, -3);
-            this.btncar.Name = "btncar";
-            this.btncar.Size = new System.Drawing.Size(38, 39);
-            this.btncar.TabIndex = 16;
-            this.btncar.UseVisualStyleBackColor = true;
-            this.btncar.Click += new System.EventHandler(this.btncar_Click);
-            // 
             // FormMCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cuEjercicio1);
+            this.Controls.Add(this.cucelulares1);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cujuegos1);
             this.Controls.Add(this.cuinicio1);
+            this.Controls.Add(this.cuelectrodomestico1);
             this.Controls.Add(this.cucom1);
             this.Controls.Add(this.da1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -341,5 +378,8 @@
         private System.Windows.Forms.Button btnsalir;
         private da da1;
         private System.Windows.Forms.Button btncar;
+        private Cuelectrodomestico cuelectrodomestico1;
+        private Cucelulares cucelulares1;
+        private CuEjercicio cuEjercicio1;
     }
 }

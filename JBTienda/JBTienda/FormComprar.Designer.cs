@@ -44,7 +44,6 @@
             this.txtnp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.SuspendLayout();
@@ -84,8 +83,9 @@
             // 
             // btnComprar
             // 
+            this.btnComprar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnComprar.Depth = 0;
-            this.btnComprar.Location = new System.Drawing.Point(37, 542);
+            this.btnComprar.Location = new System.Drawing.Point(37, 530);
             this.btnComprar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Primary = true;
@@ -101,6 +101,7 @@
             this.pic1.Location = new System.Drawing.Point(83, 114);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(213, 182);
+            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic1.TabIndex = 89;
             this.pic1.TabStop = false;
             // 
@@ -198,6 +199,7 @@
             this.txtnp.ReadOnly = true;
             this.txtnp.Size = new System.Drawing.Size(183, 20);
             this.txtnp.TabIndex = 100;
+            this.txtnp.TextChanged += new System.EventHandler(this.txtnp_TextChanged);
             // 
             // label4
             // 
@@ -213,22 +215,11 @@
             // txtTo
             // 
             this.txtTo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtTo.Location = new System.Drawing.Point(113, 507);
+            this.txtTo.Location = new System.Drawing.Point(112, 504);
             this.txtTo.Name = "txtTo";
             this.txtTo.ReadOnly = true;
             this.txtTo.Size = new System.Drawing.Size(183, 20);
-            this.txtTo.TabIndex = 102;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(1, 509);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
-            this.label6.TabIndex = 101;
-            this.label6.Text = "Total $:";
+            this.txtTo.TabIndex = 101;
             // 
             // FormComprar
             // 
@@ -236,7 +227,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(361, 565);
             this.Controls.Add(this.txtTo);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtnp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDes);
@@ -279,6 +269,5 @@
         private System.Windows.Forms.TextBox txtnp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTo;
-        private System.Windows.Forms.Label label6;
     }
 }

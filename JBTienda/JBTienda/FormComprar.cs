@@ -24,12 +24,7 @@ namespace JBTienda
 
         }
 
-    
-     
-
-
-
-
+   
         void cargarinfo(byte info)
         {
             dcTiendaDataContext pro = new dcTiendaDataContext();
@@ -84,14 +79,13 @@ namespace JBTienda
                
             }
         }
-
-        
+ 
                 
         private void listarProductos()
         {
 
             System.Data.DataSet ds = new System.Data.DataSet();
-            System.Data.SqlClient.SqlDataAdapter da = new System.Data.SqlClient.SqlDataAdapter("SELECT imagen FROM Producto WHERE idProducto = @idPro", "Data Source=DESKTOP-4UDBD8N\\SQLEXPRESS;Initial Catalog=Tienda;Integrated Security=True");
+            System.Data.SqlClient.SqlDataAdapter da = new System.Data.SqlClient.SqlDataAdapter("SELECT imagen FROM Producto WHERE idProducto = @idPro", "Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
 
             da.SelectCommand.Parameters.Add("@idPro", System.Data.SqlDbType.TinyInt);
             da.SelectCommand.Parameters["@idPro"].Value = Variables.idProd;
@@ -121,9 +115,8 @@ namespace JBTienda
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormMCliente p = new FormMCliente();
-            p.Show();
-            this.Hide();
+            this.Close();
+           
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
@@ -141,13 +134,10 @@ namespace JBTienda
             
             MessageBox.Show("Producto Agregado al Carrito");
 
-            FormMCliente ir = new FormMCliente();
-            ir.Show();
-            this.Hide();
-         
+        }
 
-
-
+        private void txtnp_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

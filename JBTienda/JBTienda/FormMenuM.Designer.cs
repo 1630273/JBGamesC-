@@ -98,7 +98,7 @@
             this.Controls.Add(this.btnAdmin);
             this.Name = "FormMenuM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bienvenido";
+            this.Text = "Menu Empleados";
             this.Load += new System.EventHandler(this.FormMenuM_Load);
             this.ResumeLayout(false);
 

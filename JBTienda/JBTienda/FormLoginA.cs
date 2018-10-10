@@ -41,7 +41,7 @@ namespace JBTienda
                 switch (int.Parse(u.idTipoUSuario.ToString()))
                 {
                     case 1:
-                        MessageBox.Show("Bienvenido,Usted es Administrador.");
+                     //   MessageBox.Show("Bienvenido,Usted es Administrador.");
 
                         // Variables.usuario = txtUsuario.Text; 
 

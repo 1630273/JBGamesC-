@@ -32,6 +32,7 @@ namespace JBTienda
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
+            this.Close();
             FormLoginD p = new FormLoginD();
             p.Show();
             this.Hide();

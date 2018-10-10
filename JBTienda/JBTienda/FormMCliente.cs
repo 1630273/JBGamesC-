@@ -29,8 +29,7 @@ namespace JBTienda
 
         private void btnCom_Click(object sender, EventArgs e)
         {
-
-            Variables.idDep = 1;
+            
             SidePanel.Height = btnCom.Height;
             SidePanel.Top = btnCom.Top;
             cucom1.BringToFront();
@@ -43,16 +42,26 @@ namespace JBTienda
             cujuegos1.BringToFront();
         }
 
-        
+        private void btnCel_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnCel.Height;
+            SidePanel.Top = btnCel.Top;
+            cucelulares1.BringToFront();
+        }
+
 
         private void btnEle_Click(object sender, EventArgs e)
         {
-
+            SidePanel.Height = btnEle.Height;
+            SidePanel.Top = btnEle.Top;
+            cuelectrodomestico1.BringToFront();
         }
 
         private void btnSalud_Click(object sender, EventArgs e)
         {
-
+            SidePanel.Height = btnSalud.Height;
+            SidePanel.Top = btnSalud.Top;
+            cuEjercicio1.BringToFront();
         }
 
       
@@ -117,6 +126,7 @@ namespace JBTienda
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
+            this.Close();
             Form p = new FormLogin();
             p.Show();
             this.Hide();
@@ -133,5 +143,12 @@ namespace JBTienda
             car.Show();
             this.Hide();
         }
+
+        private void cuinicio2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

@@ -63,7 +63,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.label1.Location = new System.Drawing.Point(135, 23);
+            this.label1.Location = new System.Drawing.Point(137, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(296, 29);
             this.label1.TabIndex = 64;
@@ -74,7 +74,7 @@
             this.txtContraseña.BackColor = System.Drawing.Color.White;
             this.txtContraseña.Depth = 0;
             this.txtContraseña.Hint = "Contraseña";
-            this.txtContraseña.Location = new System.Drawing.Point(169, 121);
+            this.txtContraseña.Location = new System.Drawing.Point(167, 121);
             this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '\0';
@@ -90,7 +90,7 @@
             this.rdoMujer.AutoSize = true;
             this.rdoMujer.Depth = 0;
             this.rdoMujer.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rdoMujer.Location = new System.Drawing.Point(325, 284);
+            this.rdoMujer.Location = new System.Drawing.Point(307, 284);
             this.rdoMujer.Margin = new System.Windows.Forms.Padding(0);
             this.rdoMujer.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdoMujer.MouseState = MaterialSkin.MouseState.HOVER;
@@ -107,7 +107,7 @@
             this.rdoHombre.AutoSize = true;
             this.rdoHombre.Depth = 0;
             this.rdoHombre.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rdoHombre.Location = new System.Drawing.Point(169, 284);
+            this.rdoHombre.Location = new System.Drawing.Point(225, 284);
             this.rdoHombre.Margin = new System.Windows.Forms.Padding(0);
             this.rdoHombre.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdoHombre.MouseState = MaterialSkin.MouseState.HOVER;
@@ -124,7 +124,7 @@
             this.txtApellidoMaterno.BackColor = System.Drawing.Color.White;
             this.txtApellidoMaterno.Depth = 0;
             this.txtApellidoMaterno.Hint = "Apellido Materno";
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(169, 240);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(167, 240);
             this.txtApellidoMaterno.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.PasswordChar = '\0';
@@ -140,7 +140,7 @@
             this.txtApellidoPaterno.BackColor = System.Drawing.Color.White;
             this.txtApellidoPaterno.Depth = 0;
             this.txtApellidoPaterno.Hint = "Apellido Paterno";
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(169, 200);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(167, 200);
             this.txtApellidoPaterno.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.PasswordChar = '\0';
@@ -156,7 +156,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.Depth = 0;
             this.txtNombre.Hint = "Nombre";
-            this.txtNombre.Location = new System.Drawing.Point(169, 161);
+            this.txtNombre.Location = new System.Drawing.Point(167, 161);
             this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
@@ -172,7 +172,7 @@
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.Depth = 0;
             this.txtUsuario.Hint = "Usuario";
-            this.txtUsuario.Location = new System.Drawing.Point(169, 83);
+            this.txtUsuario.Location = new System.Drawing.Point(167, 83);
             this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';

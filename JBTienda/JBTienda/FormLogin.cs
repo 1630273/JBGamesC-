@@ -41,7 +41,7 @@ namespace JBTienda
                 switch (int.Parse(u.idTipoUSuario.ToString()))
                 {
                     case 2:
-                        MessageBox.Show("Bienvenido,Usted es Cliente.");
+               //         MessageBox.Show("Bienvenido,Usted es Cliente.");
 
                         Variables.usuario = txtUsuario.Text;
 
@@ -58,7 +58,7 @@ namespace JBTienda
 
             if (bandera == false)
             {
-                MessageBox.Show("Usuario y contraseña incorrectos.");
+                MessageBox.Show("Usuario y contraseña incorrectos");
             }
 
         }

@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
-    </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
@@ -98,11 +95,29 @@
       <DependentUpon>Comopag.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Cucelulares.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cucelulares.Designer.cs">
+      <DependentUpon>Cucelulares.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cucom.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Cucom.Designer.cs">
       <DependentUpon>Cucom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuEjercicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CuEjercicio.Designer.cs">
+      <DependentUpon>CuEjercicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cuelectrodomestico.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cuelectrodomestico.Designer.cs">
+      <DependentUpon>Cuelectrodomestico.cs</DependentUpon>
     </Compile>
     <Compile Include="Cuinicio.cs">
       <SubType>UserControl</SubType>
@@ -266,8 +281,17 @@
     <EmbeddedResource Include="Comopag.resx">
       <DependentUpon>Comopag.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cucelulares.resx">
+      <DependentUpon>Cucelulares.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cucom.resx">
       <DependentUpon>Cucom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuEjercicio.resx">
+      <DependentUpon>CuEjercicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuelectrodomestico.resx">
+      <DependentUpon>Cuelectrodomestico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cuinicio.resx">
       <DependentUpon>Cuinicio.cs</DependentUpon>

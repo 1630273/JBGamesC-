@@ -1,6 +1,6 @@
 ﻿namespace JBTienda
 {
-    partial class Cuinicio
+    partial class Cucelulares
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,19 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Cuinicio
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
+            this.label1.Location = new System.Drawing.Point(193, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 37);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Celulares";
+            // 
+            // Cucelulares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.Name = "Cuinicio";
-            this.Size = new System.Drawing.Size(496, 362);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.label1);
+            this.Name = "Cucelulares";
+            this.Size = new System.Drawing.Size(540, 500);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

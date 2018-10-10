@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuAdmin));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
             this.sidemenu = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.Panel();
@@ -46,7 +47,6 @@
             this.aej1 = new JBTienda.Aej();
             this.acom1 = new JBTienda.Acom();
             this.ac1 = new JBTienda.Ac();
-            this.btnsalir = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.sidemenu.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 37);
             this.panel2.TabIndex = 6;
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.FlatAppearance.BorderSize = 0;
+            this.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnsalir.Location = new System.Drawing.Point(667, 0);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(133, 34);
+            this.btnsalir.TabIndex = 10;
+            this.btnsalir.Text = "Cerrar Sesión";
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnmenubar
             // 
@@ -113,6 +129,7 @@
             // 
             // btnSalud
             // 
+            this.btnSalud.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalud.FlatAppearance.BorderSize = 0;
             this.btnSalud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -120,7 +137,7 @@
             this.btnSalud.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSalud.Image = ((System.Drawing.Image)(resources.GetObject("btnSalud.Image")));
             this.btnSalud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalud.Location = new System.Drawing.Point(12, 293);
+            this.btnSalud.Location = new System.Drawing.Point(12, 213);
             this.btnSalud.Name = "btnSalud";
             this.btnSalud.Size = new System.Drawing.Size(240, 51);
             this.btnSalud.TabIndex = 7;
@@ -131,6 +148,7 @@
             // 
             // btnEle
             // 
+            this.btnEle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEle.FlatAppearance.BorderSize = 0;
             this.btnEle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnEle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -138,7 +156,7 @@
             this.btnEle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEle.Image = ((System.Drawing.Image)(resources.GetObject("btnEle.Image")));
             this.btnEle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEle.Location = new System.Drawing.Point(12, 244);
+            this.btnEle.Location = new System.Drawing.Point(12, 260);
             this.btnEle.Name = "btnEle";
             this.btnEle.Size = new System.Drawing.Size(250, 51);
             this.btnEle.TabIndex = 6;
@@ -149,6 +167,7 @@
             // 
             // btnCel
             // 
+            this.btnCel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCel.FlatAppearance.BorderSize = 0;
             this.btnCel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnCel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -156,7 +175,7 @@
             this.btnCel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCel.Image = ((System.Drawing.Image)(resources.GetObject("btnCel.Image")));
             this.btnCel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCel.Location = new System.Drawing.Point(12, 197);
+            this.btnCel.Location = new System.Drawing.Point(12, 116);
             this.btnCel.Name = "btnCel";
             this.btnCel.Size = new System.Drawing.Size(240, 51);
             this.btnCel.TabIndex = 5;
@@ -167,6 +186,7 @@
             // 
             // btnJuego
             // 
+            this.btnJuego.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnJuego.FlatAppearance.BorderSize = 0;
             this.btnJuego.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnJuego.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -174,7 +194,7 @@
             this.btnJuego.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnJuego.Image = ((System.Drawing.Image)(resources.GetObject("btnJuego.Image")));
             this.btnJuego.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnJuego.Location = new System.Drawing.Point(12, 152);
+            this.btnJuego.Location = new System.Drawing.Point(12, 305);
             this.btnJuego.Name = "btnJuego";
             this.btnJuego.Size = new System.Drawing.Size(240, 51);
             this.btnJuego.TabIndex = 4;
@@ -185,6 +205,7 @@
             // 
             // btnCom
             // 
+            this.btnCom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCom.FlatAppearance.BorderSize = 0;
             this.btnCom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnCom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -192,7 +213,7 @@
             this.btnCom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCom.Image = ((System.Drawing.Image)(resources.GetObject("btnCom.Image")));
             this.btnCom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCom.Location = new System.Drawing.Point(12, 108);
+            this.btnCom.Location = new System.Drawing.Point(12, 160);
             this.btnCom.Name = "btnCom";
             this.btnCom.Size = new System.Drawing.Size(240, 51);
             this.btnCom.TabIndex = 3;
@@ -203,6 +224,7 @@
             // 
             // btnInicio
             // 
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.FlatAppearance.BorderSize = 0;
             this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -273,21 +295,6 @@
             this.ac1.Name = "ac1";
             this.ac1.Size = new System.Drawing.Size(800, 450);
             this.ac1.TabIndex = 17;
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.FlatAppearance.BorderSize = 0;
-            this.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsalir.Location = new System.Drawing.Point(667, 0);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(133, 34);
-            this.btnsalir.TabIndex = 10;
-            this.btnsalir.Text = "Cerrar Sesión";
-            this.btnsalir.UseVisualStyleBackColor = true;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // FormMenuAdmin
             // 

@@ -33,7 +33,7 @@ namespace JBTienda
 
         public void listarCarito(DataGridView data)
         {
-            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-4UDBD8N\\SQLEXPRESS;Initial Catalog=Tienda;Integrated Security=True");
+            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
             conn.Open();
             SqlCommand comando = new SqlCommand("consultarCarrito", conn);
             comando.CommandType = CommandType.StoredProcedure;

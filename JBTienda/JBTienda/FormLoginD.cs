@@ -60,7 +60,7 @@ namespace JBTienda
                 switch (int.Parse(u.idTipoUsuario.ToString()))
                 {
                     case 3:
-                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Computación.");
+                        //MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Computación.");
                         Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
                         ConsultarDep(txtUsuario.Text);
@@ -70,7 +70,7 @@ namespace JBTienda
 
                         break;
                     case 4:
-                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De VideoJuegos.");
+                      //  MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De VideoJuegos.");
 
                         Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
@@ -80,7 +80,7 @@ namespace JBTienda
                         this.Hide();
                         break;
                     case 5:
-                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Celulares.");
+                    //    MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Celulares.");
 
                         Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
@@ -90,7 +90,7 @@ namespace JBTienda
                         this.Hide();
                         break;
                     case 6:
-                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Electrodomesticos.");
+                  //      MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Electrodomesticos.");
 
                         Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
@@ -100,7 +100,7 @@ namespace JBTienda
                         this.Hide();
                         break;
                     case 7:
-                        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Gimnasio.");
+                //        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Gimnasio.");
                         Variables.usuario = txtUsuario.Text;
                         Variables.idDep = idDepa;
                         ConsultarDep(txtUsuario.Text);
@@ -125,7 +125,7 @@ namespace JBTienda
 
         private void FormLoginD_Load(object sender, EventArgs e)
         {
-           
+          
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

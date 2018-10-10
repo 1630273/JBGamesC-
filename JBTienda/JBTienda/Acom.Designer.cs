@@ -44,7 +44,7 @@
             this.rdoMujer.AutoSize = true;
             this.rdoMujer.Depth = 0;
             this.rdoMujer.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rdoMujer.Location = new System.Drawing.Point(322, 278);
+            this.rdoMujer.Location = new System.Drawing.Point(284, 278);
             this.rdoMujer.Margin = new System.Windows.Forms.Padding(0);
             this.rdoMujer.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdoMujer.MouseState = MaterialSkin.MouseState.HOVER;
@@ -62,7 +62,7 @@
             this.rdoHombre.AutoSize = true;
             this.rdoHombre.Depth = 0;
             this.rdoHombre.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rdoHombre.Location = new System.Drawing.Point(166, 278);
+            this.rdoHombre.Location = new System.Drawing.Point(179, 278);
             this.rdoHombre.Margin = new System.Windows.Forms.Padding(0);
             this.rdoHombre.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdoHombre.MouseState = MaterialSkin.MouseState.HOVER;
@@ -80,7 +80,7 @@
             this.txtApellidoMaterno.BackColor = System.Drawing.Color.White;
             this.txtApellidoMaterno.Depth = 0;
             this.txtApellidoMaterno.Hint = "Apellido Materno";
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(166, 234);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(157, 234);
             this.txtApellidoMaterno.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.PasswordChar = '\0';
@@ -97,7 +97,7 @@
             this.txtApellidoPaterno.BackColor = System.Drawing.Color.White;
             this.txtApellidoPaterno.Depth = 0;
             this.txtApellidoPaterno.Hint = "Apellido Paterno";
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(166, 194);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(157, 194);
             this.txtApellidoPaterno.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.PasswordChar = '\0';
@@ -114,7 +114,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.Depth = 0;
             this.txtNombre.Hint = "Nombre";
-            this.txtNombre.Location = new System.Drawing.Point(166, 155);
+            this.txtNombre.Location = new System.Drawing.Point(157, 155);
             this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
@@ -131,7 +131,7 @@
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.Depth = 0;
             this.txtUsuario.Hint = "Usuario";
-            this.txtUsuario.Location = new System.Drawing.Point(166, 77);
+            this.txtUsuario.Location = new System.Drawing.Point(157, 77);
             this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
@@ -148,7 +148,7 @@
             this.txtContraseña.BackColor = System.Drawing.Color.White;
             this.txtContraseña.Depth = 0;
             this.txtContraseña.Hint = "Contraseña";
-            this.txtContraseña.Location = new System.Drawing.Point(166, 115);
+            this.txtContraseña.Location = new System.Drawing.Point(157, 115);
             this.txtContraseña.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '\0';
@@ -165,7 +165,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.label1.Location = new System.Drawing.Point(104, 23);
+            this.label1.Location = new System.Drawing.Point(98, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(354, 29);
             this.label1.TabIndex = 46;
@@ -181,7 +181,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnRegistrar.Location = new System.Drawing.Point(166, 337);
+            this.btnRegistrar.Location = new System.Drawing.Point(157, 337);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(236, 28);
             this.btnRegistrar.TabIndex = 54;
