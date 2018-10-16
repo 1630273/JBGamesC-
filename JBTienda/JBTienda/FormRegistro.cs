@@ -114,5 +114,42 @@ namespace JBTienda
             volver.Show();
             this.Hide();
         }
+
+        private void txtNombreUsuario_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtNombreUsuario.Text.Trim().Length <= 0)
+            {
+                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                txtContraseña.Focus();
+            }
+        }
+
+        private void txtContraseña_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtContraseña.Text.Trim().Length <= 0)
+            {
+                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                txtContraseña2.Focus();
+            }
+        }
+
+        private void txtContraseña2_Validating(object sender, CancelEventArgs e)
+        {
+           
+        }
     }
 }

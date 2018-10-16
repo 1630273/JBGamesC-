@@ -108,7 +108,7 @@ namespace JBTienda
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form p = new FormLoginA();
+            Form p = new FormLogin();
             p.Show();
             this.Hide();
         }

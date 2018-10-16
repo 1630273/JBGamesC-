@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtNombreUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtContraseña2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -47,6 +48,8 @@
             this.btnRegistrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtContraseña
@@ -64,6 +67,7 @@
             this.txtContraseña.Size = new System.Drawing.Size(311, 23);
             this.txtContraseña.TabIndex = 31;
             this.txtContraseña.UseSystemPasswordChar = false;
+            this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña_Validating);
             // 
             // txtNombreUsuario
             // 
@@ -80,6 +84,7 @@
             this.txtNombreUsuario.Size = new System.Drawing.Size(311, 23);
             this.txtNombreUsuario.TabIndex = 30;
             this.txtNombreUsuario.UseSystemPasswordChar = false;
+            this.txtNombreUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombreUsuario_Validating);
             // 
             // txtContraseña2
             // 
@@ -96,6 +101,7 @@
             this.txtContraseña2.Size = new System.Drawing.Size(311, 23);
             this.txtContraseña2.TabIndex = 33;
             this.txtContraseña2.UseSystemPasswordChar = false;
+            this.txtContraseña2.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña2_Validating);
             // 
             // txtNombre
             // 
@@ -343,6 +349,10 @@
             this.txtCorreo.TabIndex = 49;
             this.txtCorreo.UseSystemPasswordChar = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,6 +381,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Usuario";
             this.Load += new System.EventHandler(this.FormRegistro_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,5 +408,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnRegistrar;
         private System.Windows.Forms.ComboBox cboEstado;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCorreo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

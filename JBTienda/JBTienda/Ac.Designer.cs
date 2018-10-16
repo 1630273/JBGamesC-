@@ -199,6 +199,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Name = "Ac";
             this.Size = new System.Drawing.Size(537, 417);
+            this.Load += new System.EventHandler(this.Ac_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

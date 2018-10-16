@@ -16,7 +16,7 @@ namespace JBTienda
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPortada());
+            Application.Run(new FormLogin());
         }
     }
 }

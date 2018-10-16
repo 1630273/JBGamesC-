@@ -12,6 +12,8 @@ namespace JBTienda
 {
     public partial class FormLogin : MaterialSkin.Controls.MaterialForm
     {
+
+        public byte idDepa;
         public FormLogin()
         {
             InitializeComponent();
@@ -20,6 +22,24 @@ namespace JBTienda
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Purple800, MaterialSkin.Primary.Grey900, MaterialSkin.Primary.Purple800, MaterialSkin.Accent.Purple700, MaterialSkin.TextShade.WHITE);
 
+        }
+
+
+
+        void ConsultarDep(string id)
+        {
+            dcTiendaDataContext dc = new dcTiendaDataContext();
+            var dep = from d in dc.ConsultarDep(id)
+                      select d;
+            foreach (var n in dep)
+            {
+
+
+                Variables.idDep = byte.Parse(n.idDepartamento.ToString());
+
+
+
+            }
         }
 
         public void login(String v_usuario, String v_contraseña)
@@ -40,6 +60,17 @@ namespace JBTienda
 
                 switch (int.Parse(u.idTipoUSuario.ToString()))
                 {
+
+                    case 1:
+                        //   MessageBox.Show("Bienvenido,Usted es Administrador.");
+
+                        // Variables.usuario = txtUsuario.Text; 
+
+                        Form Menu = new FormMenuAdmin();
+                        Menu.Show();
+                        this.Hide();
+
+                        break;
                     case 2:
                //         MessageBox.Show("Bienvenido,Usted es Cliente.");
 
@@ -49,13 +80,62 @@ namespace JBTienda
                         ir.Show();
                         this.Hide();
                         break;
+                    case 3:
+                        //MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Computación.");
+                        Variables.usuario = txtUsuario.Text;
+                        Variables.idDep = idDepa;
+                        ConsultarDep(txtUsuario.Text);
+                        Form p = new FormMenuJ();
+                        p.Show();
+                        this.Hide();
 
-                  
+                        break;
+                    case 4:
+                        //  MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De VideoJuegos.");
+
+                        Variables.usuario = txtUsuario.Text;
+                        Variables.idDep = idDepa;
+                        ConsultarDep(txtUsuario.Text);
+                        Form p1 = new FormMenuJ();
+                        p1.Show();
+                        this.Hide();
+                        break;
+                    case 5:
+                        //    MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Celulares.");
+
+                        Variables.usuario = txtUsuario.Text;
+                        Variables.idDep = idDepa;
+                        ConsultarDep(txtUsuario.Text);
+                        Form p2 = new FormMenuJ();
+                        p2.Show();
+                        this.Hide();
+                        break;
+                    case 6:
+                        //      MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Electrodomesticos.");
+
+                        Variables.usuario = txtUsuario.Text;
+                        Variables.idDep = idDepa;
+                        ConsultarDep(txtUsuario.Text);
+                        Form p3 = new FormMenuJ();
+                        p3.Show();
+                        this.Hide();
+                        break;
+                    case 7:
+                        //        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Gimnasio.");
+                        Variables.usuario = txtUsuario.Text;
+                        Variables.idDep = idDepa;
+                        ConsultarDep(txtUsuario.Text);
+                        Form p4 = new FormMenuJ();
+                        p4.Show();
+                        this.Hide();
+                        break;
+
+
 
                 }
 
             }
-
+ 
             if (bandera == false)
             {
                 MessageBox.Show("Usuario y contraseña incorrectos");
@@ -90,7 +170,7 @@ namespace JBTienda
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Form p = new FormPortada();
+            Form p = new FormLogin();
             p.Show();
             this.Hide();
         }

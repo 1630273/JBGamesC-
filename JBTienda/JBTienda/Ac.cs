@@ -46,5 +46,10 @@ namespace JBTienda
          );
             MessageBox.Show("Gerente Agregado");
         }
+
+        private void Ac_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

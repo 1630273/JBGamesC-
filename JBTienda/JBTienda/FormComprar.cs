@@ -115,8 +115,11 @@ namespace JBTienda
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
-           
+
+            Form A = new FormComprar();
+            
+            this.Hide();
+
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
@@ -129,7 +132,7 @@ namespace JBTienda
                  int.Parse(cantidad.Value.ToString()),
                 int.Parse(txtTo.Text.ToString())
 
-
+           
          );
             
             MessageBox.Show("Producto Agregado al Carrito");
@@ -139,6 +142,11 @@ namespace JBTienda
         private void txtnp_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 

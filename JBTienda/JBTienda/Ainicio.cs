@@ -32,7 +32,7 @@ namespace JBTienda
             foreach (var n in r)
             {
 
-                dtai.Rows.Add(n.nombredepa,  n.NombreCompleto, n.idGerente
+                dtai.Rows.Add(n.nombredepa,  n.NombreCompleto, n.idUsuario
                     );
             }
         }

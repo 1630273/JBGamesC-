@@ -38,9 +38,9 @@ namespace JBTienda
             SqlDataAdapter da = new SqlDataAdapter(comando);
             da.Fill(dt);
             data.DataSource = dt;
+            dtCom.Columns[2].DefaultCellStyle.Format = "$#,##0.00";
 
-
-
+            
 
             conn.Close();
         }
@@ -53,12 +53,14 @@ namespace JBTienda
         {
 
 
-            Variables.idProd = byte.Parse(dtCom.CurrentRow.Cells[5].Value.ToString());
+            Variables.idProd = byte.Parse(dtCom.CurrentRow.Cells[3].Value.ToString());
 
 
             Form A = new FormComprar();
             A.Show();
-            this.Hide();
+           
+
+        
 
         }
     }

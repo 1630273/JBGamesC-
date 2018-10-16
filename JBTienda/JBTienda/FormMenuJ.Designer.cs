@@ -70,6 +70,7 @@
             this.lblNombre.Size = new System.Drawing.Size(57, 20);
             this.lblNombre.TabIndex = 10;
             this.lblNombre.Text = "label1";
+            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // btnsalir
             // 

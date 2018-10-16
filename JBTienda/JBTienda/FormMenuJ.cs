@@ -33,7 +33,7 @@ namespace JBTienda
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormLoginD p = new FormLoginD();
+            FormLogin p = new FormLogin();
             p.Show();
             this.Hide();
         }
@@ -103,6 +103,11 @@ namespace JBTienda
         }
 
         private void da1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
         {
 
         }

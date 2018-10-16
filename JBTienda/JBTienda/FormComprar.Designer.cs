@@ -181,6 +181,7 @@
             this.txtPrecio.ReadOnly = true;
             this.txtPrecio.Size = new System.Drawing.Size(183, 20);
             this.txtPrecio.TabIndex = 97;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // txtDes
             // 
@@ -220,6 +221,7 @@
             this.txtTo.ReadOnly = true;
             this.txtTo.Size = new System.Drawing.Size(183, 20);
             this.txtTo.TabIndex = 101;
+            this.txtTo.Visible = false;
             // 
             // FormComprar
             // 
