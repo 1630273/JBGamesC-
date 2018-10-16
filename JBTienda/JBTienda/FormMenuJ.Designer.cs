@@ -145,7 +145,7 @@
             this.btnel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnel.Image = ((System.Drawing.Image)(resources.GetObject("btnel.Image")));
             this.btnel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnel.Location = new System.Drawing.Point(12, 150);
+            this.btnel.Location = new System.Drawing.Point(12, 189);
             this.btnel.Name = "btnel";
             this.btnel.Size = new System.Drawing.Size(177, 51);
             this.btnel.TabIndex = 5;
@@ -164,7 +164,7 @@
             this.btnmo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnmo.Image = ((System.Drawing.Image)(resources.GetObject("btnmo.Image")));
             this.btnmo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmo.Location = new System.Drawing.Point(12, 188);
+            this.btnmo.Location = new System.Drawing.Point(12, 150);
             this.btnmo.Name = "btnmo";
             this.btnmo.Size = new System.Drawing.Size(177, 51);
             this.btnmo.TabIndex = 4;

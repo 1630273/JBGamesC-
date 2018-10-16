@@ -107,10 +107,24 @@ namespace JBTienda
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form p = new FormLogin();
-            p.Show();
-            this.Hide();
+
+            string message = "Estas seguro de cerrar sesión?";
+            string caption = "Salir";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+
+            // Displays the MessageBox.
+
+            result = MessageBox.Show(message, caption, buttons);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+
+                this.Close();
+                Form p = new FormLogin();
+                p.Show();
+                this.Hide();
+            }
         }
     }
 }
