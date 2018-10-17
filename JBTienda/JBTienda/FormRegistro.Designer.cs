@@ -49,7 +49,29 @@
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorUsuario = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorContraseña = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorContraseña2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorNombre = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorAp = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorAm = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorSexo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorTelefono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorCorreo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorDireccion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorCp = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContraseña2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSexo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCorreo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDireccion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCp)).BeginInit();
             this.SuspendLayout();
             // 
             // txtContraseña
@@ -64,7 +86,7 @@
             this.txtContraseña.SelectedText = "";
             this.txtContraseña.SelectionLength = 0;
             this.txtContraseña.SelectionStart = 0;
-            this.txtContraseña.Size = new System.Drawing.Size(311, 23);
+            this.txtContraseña.Size = new System.Drawing.Size(251, 23);
             this.txtContraseña.TabIndex = 31;
             this.txtContraseña.UseSystemPasswordChar = false;
             this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña_Validating);
@@ -81,7 +103,7 @@
             this.txtNombreUsuario.SelectedText = "";
             this.txtNombreUsuario.SelectionLength = 0;
             this.txtNombreUsuario.SelectionStart = 0;
-            this.txtNombreUsuario.Size = new System.Drawing.Size(311, 23);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(251, 23);
             this.txtNombreUsuario.TabIndex = 30;
             this.txtNombreUsuario.UseSystemPasswordChar = false;
             this.txtNombreUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombreUsuario_Validating);
@@ -98,7 +120,7 @@
             this.txtContraseña2.SelectedText = "";
             this.txtContraseña2.SelectionLength = 0;
             this.txtContraseña2.SelectionStart = 0;
-            this.txtContraseña2.Size = new System.Drawing.Size(311, 23);
+            this.txtContraseña2.Size = new System.Drawing.Size(251, 23);
             this.txtContraseña2.TabIndex = 33;
             this.txtContraseña2.UseSystemPasswordChar = false;
             this.txtContraseña2.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña2_Validating);
@@ -115,49 +137,52 @@
             this.txtNombre.SelectedText = "";
             this.txtNombre.SelectionLength = 0;
             this.txtNombre.SelectionStart = 0;
-            this.txtNombre.Size = new System.Drawing.Size(311, 23);
+            this.txtNombre.Size = new System.Drawing.Size(251, 23);
             this.txtNombre.TabIndex = 32;
             this.txtNombre.UseSystemPasswordChar = false;
+            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // txtApellidoMaterno
             // 
             this.txtApellidoMaterno.BackColor = System.Drawing.Color.White;
             this.txtApellidoMaterno.Depth = 0;
             this.txtApellidoMaterno.Hint = "Apellido Materno";
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(52, 326);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(52, 325);
             this.txtApellidoMaterno.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.PasswordChar = '\0';
             this.txtApellidoMaterno.SelectedText = "";
             this.txtApellidoMaterno.SelectionLength = 0;
             this.txtApellidoMaterno.SelectionStart = 0;
-            this.txtApellidoMaterno.Size = new System.Drawing.Size(311, 23);
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(251, 23);
             this.txtApellidoMaterno.TabIndex = 35;
             this.txtApellidoMaterno.UseSystemPasswordChar = false;
             this.txtApellidoMaterno.Click += new System.EventHandler(this.materialSingleLineTextField5_Click);
+            this.txtApellidoMaterno.Validating += new System.ComponentModel.CancelEventHandler(this.txtApellidoMaterno_Validating);
             // 
             // txtApellidoPaterno
             // 
             this.txtApellidoPaterno.BackColor = System.Drawing.Color.White;
             this.txtApellidoPaterno.Depth = 0;
             this.txtApellidoPaterno.Hint = "Apellido Paterno";
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(52, 283);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(52, 282);
             this.txtApellidoPaterno.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.PasswordChar = '\0';
             this.txtApellidoPaterno.SelectedText = "";
             this.txtApellidoPaterno.SelectionLength = 0;
             this.txtApellidoPaterno.SelectionStart = 0;
-            this.txtApellidoPaterno.Size = new System.Drawing.Size(311, 23);
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(251, 23);
             this.txtApellidoPaterno.TabIndex = 34;
             this.txtApellidoPaterno.UseSystemPasswordChar = false;
+            this.txtApellidoPaterno.Validating += new System.ComponentModel.CancelEventHandler(this.txtApellidoPaterno_Validating);
             // 
             // rdoHombre
             // 
             this.rdoHombre.AutoSize = true;
             this.rdoHombre.Depth = 0;
             this.rdoHombre.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rdoHombre.Location = new System.Drawing.Point(52, 373);
+            this.rdoHombre.Location = new System.Drawing.Point(52, 523);
             this.rdoHombre.Margin = new System.Windows.Forms.Padding(0);
             this.rdoHombre.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdoHombre.MouseState = MaterialSkin.MouseState.HOVER;
@@ -174,7 +199,7 @@
             this.rdoMujer.AutoSize = true;
             this.rdoMujer.Depth = 0;
             this.rdoMujer.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rdoMujer.Location = new System.Drawing.Point(239, 373);
+            this.rdoMujer.Location = new System.Drawing.Point(239, 523);
             this.rdoMujer.Margin = new System.Windows.Forms.Padding(0);
             this.rdoMujer.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdoMujer.MouseState = MaterialSkin.MouseState.HOVER;
@@ -185,6 +210,7 @@
             this.rdoMujer.TabStop = true;
             this.rdoMujer.Text = "Mujer";
             this.rdoMujer.UseVisualStyleBackColor = true;
+            this.rdoMujer.Validating += new System.ComponentModel.CancelEventHandler(this.rdoMujer_Validating);
             // 
             // materialSingleLineTextField7
             // 
@@ -192,7 +218,7 @@
             this.materialSingleLineTextField7.Depth = 0;
             this.materialSingleLineTextField7.Enabled = false;
             this.materialSingleLineTextField7.Hint = "";
-            this.materialSingleLineTextField7.Location = new System.Drawing.Point(52, 426);
+            this.materialSingleLineTextField7.Location = new System.Drawing.Point(52, 570);
             this.materialSingleLineTextField7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField7.Name = "materialSingleLineTextField7";
             this.materialSingleLineTextField7.PasswordChar = '\0';
@@ -210,7 +236,7 @@
             this.materialSingleLineTextField8.Depth = 0;
             this.materialSingleLineTextField8.Enabled = false;
             this.materialSingleLineTextField8.Hint = "";
-            this.materialSingleLineTextField8.Location = new System.Drawing.Point(52, 465);
+            this.materialSingleLineTextField8.Location = new System.Drawing.Point(52, 609);
             this.materialSingleLineTextField8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField8.Name = "materialSingleLineTextField8";
             this.materialSingleLineTextField8.PasswordChar = '\0';
@@ -225,18 +251,20 @@
             // cboCiudad
             // 
             this.cboCiudad.FormattingEnabled = true;
-            this.cboCiudad.Location = new System.Drawing.Point(239, 467);
+            this.cboCiudad.Location = new System.Drawing.Point(239, 611);
             this.cboCiudad.Name = "cboCiudad";
             this.cboCiudad.Size = new System.Drawing.Size(121, 21);
             this.cboCiudad.TabIndex = 40;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(239, 507);
+            this.txtTelefono.Location = new System.Drawing.Point(239, 490);
             this.txtTelefono.Mask = "(999)000-0000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(124, 20);
             this.txtTelefono.TabIndex = 42;
+            this.txtTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTelefono_MaskInputRejected);
+            this.txtTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefono_Validating);
             // 
             // materialSingleLineTextField9
             // 
@@ -244,7 +272,7 @@
             this.materialSingleLineTextField9.Depth = 0;
             this.materialSingleLineTextField9.Enabled = false;
             this.materialSingleLineTextField9.Hint = "";
-            this.materialSingleLineTextField9.Location = new System.Drawing.Point(52, 504);
+            this.materialSingleLineTextField9.Location = new System.Drawing.Point(52, 487);
             this.materialSingleLineTextField9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField9.Name = "materialSingleLineTextField9";
             this.materialSingleLineTextField9.PasswordChar = '\0';
@@ -261,32 +289,35 @@
             this.txtDireccion.BackColor = System.Drawing.Color.White;
             this.txtDireccion.Depth = 0;
             this.txtDireccion.Hint = "Dirección";
-            this.txtDireccion.Location = new System.Drawing.Point(52, 582);
+            this.txtDireccion.Location = new System.Drawing.Point(52, 406);
             this.txtDireccion.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.SelectedText = "";
             this.txtDireccion.SelectionLength = 0;
             this.txtDireccion.SelectionStart = 0;
-            this.txtDireccion.Size = new System.Drawing.Size(311, 23);
+            this.txtDireccion.Size = new System.Drawing.Size(251, 23);
             this.txtDireccion.TabIndex = 44;
             this.txtDireccion.UseSystemPasswordChar = false;
+            this.txtDireccion.Click += new System.EventHandler(this.txtDireccion_Click);
+            this.txtDireccion.Validating += new System.ComponentModel.CancelEventHandler(this.txtDireccion_Validating);
             // 
             // txtCp
             // 
             this.txtCp.BackColor = System.Drawing.Color.White;
             this.txtCp.Depth = 0;
             this.txtCp.Hint = "Codigo Postal";
-            this.txtCp.Location = new System.Drawing.Point(52, 620);
+            this.txtCp.Location = new System.Drawing.Point(52, 446);
             this.txtCp.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtCp.Name = "txtCp";
             this.txtCp.PasswordChar = '\0';
             this.txtCp.SelectedText = "";
             this.txtCp.SelectionLength = 0;
             this.txtCp.SelectionStart = 0;
-            this.txtCp.Size = new System.Drawing.Size(311, 23);
+            this.txtCp.Size = new System.Drawing.Size(251, 23);
             this.txtCp.TabIndex = 45;
             this.txtCp.UseSystemPasswordChar = false;
+            this.txtCp.Validating += new System.ComponentModel.CancelEventHandler(this.txtCp_Validating);
             // 
             // btnVolver
             // 
@@ -298,7 +329,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.Purple;
-            this.btnVolver.Location = new System.Drawing.Point(52, 671);
+            this.btnVolver.Location = new System.Drawing.Point(52, 690);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(137, 28);
             this.btnVolver.TabIndex = 47;
@@ -314,7 +345,7 @@
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRegistrar.Location = new System.Drawing.Point(218, 671);
+            this.btnRegistrar.Location = new System.Drawing.Point(222, 690);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Primary = true;
@@ -327,7 +358,7 @@
             // cboEstado
             // 
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(239, 428);
+            this.cboEstado.Location = new System.Drawing.Point(239, 572);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(121, 21);
             this.cboEstado.TabIndex = 48;
@@ -337,27 +368,72 @@
             // 
             this.txtCorreo.BackColor = System.Drawing.Color.White;
             this.txtCorreo.Depth = 0;
-            this.txtCorreo.Hint = "Corre";
-            this.txtCorreo.Location = new System.Drawing.Point(48, 544);
+            this.txtCorreo.Hint = "Correo";
+            this.txtCorreo.Location = new System.Drawing.Point(52, 367);
             this.txtCorreo.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.SelectionLength = 0;
             this.txtCorreo.SelectionStart = 0;
-            this.txtCorreo.Size = new System.Drawing.Size(311, 23);
+            this.txtCorreo.Size = new System.Drawing.Size(251, 23);
             this.txtCorreo.TabIndex = 49;
             this.txtCorreo.UseSystemPasswordChar = false;
+            this.txtCorreo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCorreo_Validating);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // errorUsuario
+            // 
+            this.errorUsuario.ContainerControl = this;
+            // 
+            // errorContraseña
+            // 
+            this.errorContraseña.ContainerControl = this;
+            // 
+            // errorContraseña2
+            // 
+            this.errorContraseña2.ContainerControl = this;
+            // 
+            // errorNombre
+            // 
+            this.errorNombre.ContainerControl = this;
+            // 
+            // errorAp
+            // 
+            this.errorAp.ContainerControl = this;
+            // 
+            // errorAm
+            // 
+            this.errorAm.ContainerControl = this;
+            // 
+            // errorSexo
+            // 
+            this.errorSexo.ContainerControl = this;
+            // 
+            // errorTelefono
+            // 
+            this.errorTelefono.ContainerControl = this;
+            // 
+            // errorCorreo
+            // 
+            this.errorCorreo.ContainerControl = this;
+            // 
+            // errorDireccion
+            // 
+            this.errorDireccion.ContainerControl = this;
+            // 
+            // errorCp
+            // 
+            this.errorCp.ContainerControl = this;
+            // 
             // FormRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 784);
+            this.ClientSize = new System.Drawing.Size(451, 734);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.btnVolver);
@@ -382,6 +458,17 @@
             this.Text = "Registro Usuario";
             this.Load += new System.EventHandler(this.FormRegistro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContraseña2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSexo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCorreo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDireccion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,5 +496,16 @@
         private System.Windows.Forms.ComboBox cboEstado;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCorreo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorUsuario;
+        private System.Windows.Forms.ErrorProvider errorContraseña;
+        private System.Windows.Forms.ErrorProvider errorContraseña2;
+        private System.Windows.Forms.ErrorProvider errorNombre;
+        private System.Windows.Forms.ErrorProvider errorAp;
+        private System.Windows.Forms.ErrorProvider errorAm;
+        private System.Windows.Forms.ErrorProvider errorSexo;
+        private System.Windows.Forms.ErrorProvider errorTelefono;
+        private System.Windows.Forms.ErrorProvider errorCorreo;
+        private System.Windows.Forms.ErrorProvider errorDireccion;
+        private System.Windows.Forms.ErrorProvider errorCp;
     }
 }

@@ -191,33 +191,63 @@ namespace JBTienda
 
         private void txtUsuario_Validating(object sender, CancelEventArgs e)
         {
-            if (txtUsuario.Text.Trim().Length <= 0)
+            //if (txtUsuario.Text.Trim().Length <= 0)
+            //{
+            //    MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Information);
+            //    e.Cancel = true;
+            //}
+            //else
+            //{
+            //    e.Cancel = false;
+            //    txtContraseña.Focus();
+            //}
+
+            if (txtUsuario.Text.Trim() == "")
             {
-                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                errorUsuario.SetError(txtUsuario, "Campo Vacio, Introdusca Usuario");
+             
                 e.Cancel = true;
+
             }
             else
             {
+                errorUsuario.Clear();
                 e.Cancel = false;
                 txtContraseña.Focus();
+
             }
         }
 
         private void txtContraseña_Validating(object sender, CancelEventArgs e)
         {
-            if (txtContraseña.Text.Trim().Length <= 0)
+            //if (txtContraseña.Text.Trim().Length <= 0)
+            //{
+            //    MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Information);
+            //    e.Cancel = true;
+            //}
+            //else
+            //{
+            //    e.Cancel = false;
+            //    btnInicio.Focus();
+            //}
+
+            if (txtContraseña.Text.Trim() == "")
             {
-                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                errorContraseña.SetError(txtContraseña, "Campo Vacio, Introdusca Contraseña");
+                
                 e.Cancel = true;
+
             }
             else
             {
+                errorContraseña.Clear();
+                txtContraseña.Focus();
                 e.Cancel = false;
-                btnInicio.Focus();
+
             }
         }
 
@@ -225,6 +255,7 @@ namespace JBTienda
         {
             RecuperarContra ir = new RecuperarContra();
             ir.ShowDialog();
+            this.Hide();
         }
     }
 }

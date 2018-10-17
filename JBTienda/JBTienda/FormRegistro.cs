@@ -12,6 +12,9 @@ namespace JBTienda
 {
     public partial class FormRegistro : MaterialSkin.Controls.MaterialForm
     {
+
+        private bool ok;
+
         public FormRegistro()
         {
             InitializeComponent();
@@ -63,11 +66,7 @@ namespace JBTienda
             cargarCiudades(byte.Parse(cboEstado.SelectedValue.ToString())); 
         }
 
-        private void materialSingleLineTextField5_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void cboEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarCiudades(byte.Parse(cboEstado.SelectedValue.ToString()));
@@ -75,8 +74,10 @@ namespace JBTienda
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            CancelEventArgs err = new CancelEventArgs();
+
             char idSexo = ' ';
-            int idTipoUsuario = 2;
+            int idTipoUsuario = 2; 
 
             if (rdoHombre.Checked == true)
             {
@@ -86,6 +87,16 @@ namespace JBTienda
             {
                 idSexo = 'M';
             }
+
+
+            //if (rdoHombre.Checked == false || rdoMujer.Checked == false)
+            //{
+            //    MessageBox.Show("Seleccione una opcion");
+            //    errorSexo.SetError(rdoMujer, "Tiene que seleccionar una opcion.");
+            //    err.Cancel = true;
+            //}
+           
+        
 
                 dcTiendaDataContext dc = new dcTiendaDataContext();
                 dc.agregarUsuarios(
@@ -104,7 +115,11 @@ namespace JBTienda
                     byte.Parse(idTipoUsuario.ToString())
 
              );
+
+
                 MessageBox.Show("Usuario Agregado");
+
+                
             
         }
 
@@ -117,31 +132,37 @@ namespace JBTienda
 
         private void txtNombreUsuario_Validating(object sender, CancelEventArgs e)
         {
-            if (txtNombreUsuario.Text.Trim().Length <= 0)
+           
+            if (txtNombreUsuario.Text.Trim() == "")
             {
-                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+             
+                errorUsuario.SetError(txtNombreUsuario, "Campo Vacio, Introdusca Usuario");
                 e.Cancel = true;
+               
             }
             else
             {
+
+                errorUsuario.Clear();
                 e.Cancel = false;
                 txtContraseña.Focus();
+              
             }
         }
 
         private void txtContraseña_Validating(object sender, CancelEventArgs e)
         {
-            if (txtContraseña.Text.Trim().Length <= 0)
+            if (txtContraseña.Text.Trim() == "")
             {
-                MessageBox.Show("El Campo nombre es requerido!", "campo requerido",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+              
+                errorContraseña.SetError(txtContraseña, "Campo Vacio, Introdusca Contraseña");
                 e.Cancel = true;
+              
             }
             else
             {
+             
+                errorContraseña.Clear();
                 e.Cancel = false;
                 txtContraseña2.Focus();
             }
@@ -149,7 +170,199 @@ namespace JBTienda
 
         private void txtContraseña2_Validating(object sender, CancelEventArgs e)
         {
+
+            if (txtContraseña.Text != txtContraseña2.Text)
+            {
+               
+                errorContraseña2.SetError(txtContraseña2, "Las contraseñas no son Iguales.");
+                e.Cancel = true;
+            }
+
+            else
+            {
+               
+                errorContraseña2.Clear();
+                e.Cancel = false;
+                txtNombre.Focus();
+
+            }
+
            
         }
+
+
+       
+
+        private void txtNombre_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (txtNombre.Text.Trim() == "")
+            {
+                
+                errorNombre.SetError(txtNombre, "Campo Vacio, Ingrese Nombre.");
+                e.Cancel = true;
+            }
+
+            else
+            {
+              
+                errorNombre.Clear();
+                e.Cancel = false;
+                txtApellidoPaterno.Focus();
+
+            }
+
+        }
+
+      
+
+        private void txtApellidoPaterno_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtApellidoPaterno.Text.Trim() == "")
+            {
+
+                errorAp.SetError(txtApellidoPaterno, "Campo Vacio, Ingrese Apellido Paterno.");
+                e.Cancel = true;
+            }
+
+            else
+            {
+
+                errorAp.Clear();
+                e.Cancel = false;
+                txtApellidoMaterno.Focus();
+
+            }
+
+        }
+
+
+      
+
+        private void txtApellidoMaterno_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtApellidoMaterno.Text.Trim() == "")
+            {
+
+                errorAm.SetError(txtApellidoMaterno, "Campo Vacio, Ingrese Apellido Materno.");
+                e.Cancel = true;
+            }
+
+            else
+            {
+
+                errorAm.Clear();
+                e.Cancel = false;
+                txtCorreo.Focus();
+
+            }
+
+        }
+
+
+     
+
+        private void txtCorreo_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtCorreo.Text.Trim() == "")
+            {
+
+                errorCorreo.SetError(txtCorreo, "Campo Vacio, Ingrese Correo.");
+                e.Cancel = true;
+            }
+
+            else
+            {
+
+                errorCorreo.Clear();
+                e.Cancel = false;
+                txtDireccion.Focus();
+
+            }
+
+        }
+
+        private void txtDireccion_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtDireccion.Text.Trim() == "")
+            {
+
+                errorDireccion.SetError(txtDireccion, "Campo Vacio, Ingrese Direccion.");
+                e.Cancel = true;
+            }
+
+            else
+            {
+
+                errorDireccion.Clear();
+                e.Cancel = false;
+                txtCp.Focus();
+
+            }
+        }
+
+        private void txtCp_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtCp.Text.Trim() == "")
+            {
+
+                errorCp.SetError(txtCp, "Campo Vacio, Ingrese Codigo Postal.");
+                e.Cancel = true;
+            }
+
+            else
+            {
+
+                errorCp.Clear();
+                e.Cancel = false;
+                txtTelefono.Focus();
+
+            }
+        }
+
+        private void txtTelefono_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtTelefono.Text.Trim() == "")
+            {
+
+                errorTelefono.SetError(txtTelefono, "Campo Vacio, Ingrese Telefono.");
+                e.Cancel = true;
+            }
+
+            else
+            {
+
+                errorTelefono.Clear();
+                e.Cancel = false;
+               
+               
+
+            }
+
+        }
+
+
+        private void rdoMujer_Validating(object sender, CancelEventArgs e)
+        {
+          
+
+        }
+
+        private void txtDireccion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialSingleLineTextField5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+
+        }
+
     }
 }

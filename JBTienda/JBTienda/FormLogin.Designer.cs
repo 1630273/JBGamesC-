@@ -40,11 +40,15 @@
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorUsuario = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorContraseña = new System.Windows.Forms.ErrorProvider(this.components);
             pictureBox2 = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContraseña)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -81,7 +85,7 @@
             this.txtUsuario.SelectedText = "";
             this.txtUsuario.SelectionLength = 0;
             this.txtUsuario.SelectionStart = 0;
-            this.txtUsuario.Size = new System.Drawing.Size(277, 23);
+            this.txtUsuario.Size = new System.Drawing.Size(187, 23);
             this.txtUsuario.TabIndex = 28;
             this.txtUsuario.UseSystemPasswordChar = false;
             this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);
@@ -98,7 +102,7 @@
             this.txtContraseña.SelectedText = "";
             this.txtContraseña.SelectionLength = 0;
             this.txtContraseña.SelectionStart = 0;
-            this.txtContraseña.Size = new System.Drawing.Size(277, 23);
+            this.txtContraseña.Size = new System.Drawing.Size(187, 23);
             this.txtContraseña.TabIndex = 29;
             this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña_Validating);
@@ -188,6 +192,14 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // errorUsuario
+            // 
+            this.errorUsuario.ContainerControl = this;
+            // 
+            // errorContraseña
+            // 
+            this.errorContraseña.ContainerControl = this;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +222,8 @@
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContraseña)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,6 +238,8 @@
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorUsuario;
+        private System.Windows.Forms.ErrorProvider errorContraseña;
     }
 }
 

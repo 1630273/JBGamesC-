@@ -47,6 +47,7 @@
             this.aej1 = new JBTienda.Aej();
             this.acom1 = new JBTienda.Acom();
             this.ac1 = new JBTienda.Ac();
+            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.panel2.SuspendLayout();
             this.sidemenu.SuspendLayout();
             this.SuspendLayout();
@@ -296,10 +297,22 @@
             this.ac1.Size = new System.Drawing.Size(800, 450);
             this.ac1.TabIndex = 17;
             // 
+            // materialTabSelector1
+            // 
+            this.materialTabSelector1.BaseTabControl = null;
+            this.materialTabSelector1.Depth = 0;
+            this.materialTabSelector1.Location = new System.Drawing.Point(267, 66);
+            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialTabSelector1.Name = "materialTabSelector1";
+            this.materialTabSelector1.Size = new System.Drawing.Size(75, 23);
+            this.materialTabSelector1.TabIndex = 18;
+            this.materialTabSelector1.Text = "materialTabSelector1";
+            // 
             // FormMenuAdmin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.aej1);
             this.Controls.Add(this.ael1);
             this.Controls.Add(this.ajuegos1);
@@ -341,5 +354,6 @@
         private Acom acom1;
         private Ac ac1;
         private System.Windows.Forms.Button btnsalir;
+        private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
     }
 }
