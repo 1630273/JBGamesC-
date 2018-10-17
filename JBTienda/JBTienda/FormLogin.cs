@@ -170,9 +170,22 @@ namespace JBTienda
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Form p = new FormLogin();
-            p.Show();
-            this.Hide();
+            string message = "Desea cerrar la aplicacion?";
+            string caption = "Salir";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+
+            // Displays the MessageBox.
+
+            result = MessageBox.Show(message, caption, buttons);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+
+                Application.Exit();
+
+            }
+
         }
 
         private void materialCheckBox1_CheckedChanged(object sender, EventArgs e)

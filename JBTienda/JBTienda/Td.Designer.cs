@@ -144,7 +144,7 @@
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(249, 28);
             this.btnRegistrar.TabIndex = 76;
-            this.btnRegistrar.Text = "Continuar";
+            this.btnRegistrar.Text = "Agregar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             // 
             // txtNP

@@ -51,7 +51,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtCom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtCom.ColumnHeadersHeight = 37;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -77,7 +77,7 @@
             this.dtCom.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtCom.RowHeadersVisible = false;
             this.dtCom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtCom.Size = new System.Drawing.Size(500, 334);
+            this.dtCom.Size = new System.Drawing.Size(470, 334);
             this.dtCom.TabIndex = 52;
             this.dtCom.DoubleClick += new System.EventHandler(this.dtCom_DoubleClick);
             // 
