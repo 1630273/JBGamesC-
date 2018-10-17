@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -37,6 +38,8 @@
             this.txtApellidoPaterno = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistrar
@@ -84,6 +87,7 @@
             this.txtContraseña.Size = new System.Drawing.Size(236, 23);
             this.txtContraseña.TabIndex = 63;
             this.txtContraseña.UseSystemPasswordChar = false;
+            this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña_Validating);
             // 
             // rdoMujer
             // 
@@ -134,6 +138,7 @@
             this.txtApellidoMaterno.Size = new System.Drawing.Size(236, 23);
             this.txtApellidoMaterno.TabIndex = 60;
             this.txtApellidoMaterno.UseSystemPasswordChar = false;
+            this.txtApellidoMaterno.Validating += new System.ComponentModel.CancelEventHandler(this.txtApellidoMaterno_Validating);
             // 
             // txtApellidoPaterno
             // 
@@ -150,6 +155,7 @@
             this.txtApellidoPaterno.Size = new System.Drawing.Size(236, 23);
             this.txtApellidoPaterno.TabIndex = 59;
             this.txtApellidoPaterno.UseSystemPasswordChar = false;
+            this.txtApellidoPaterno.Validating += new System.ComponentModel.CancelEventHandler(this.txtApellidoPaterno_Validating);
             // 
             // txtNombre
             // 
@@ -166,6 +172,7 @@
             this.txtNombre.Size = new System.Drawing.Size(236, 23);
             this.txtNombre.TabIndex = 58;
             this.txtNombre.UseSystemPasswordChar = false;
+            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // txtUsuario
             // 
@@ -184,6 +191,10 @@
             this.txtUsuario.UseSystemPasswordChar = false;
             this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);
             // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
             // Aej
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +211,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Name = "Aej";
             this.Size = new System.Drawing.Size(537, 417);
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +228,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidoPaterno;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNombre;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }

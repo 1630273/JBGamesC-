@@ -1,5 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Tienda" Class="dcTiendaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True" SettingsObjectName="JBTienda.Properties.Settings" SettingsPropertyName="TiendaConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-LN2ROB9J\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True" SettingsObjectName="JBTienda.Properties.Settings" SettingsPropertyName="TiendaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.agregarGerente" Method="agregarGerente">
+    <Parameter Name="nombreusuario" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="contraseña" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="apellidoPaterno" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="apellidoMaterno" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="idSexo" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="idTipoUsuario" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="idDepartamento" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.modificarProducto" Method="modificarProducto">
+    <Parameter Name="idProducto" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="nombreProduco" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="precio" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="cantidad" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="imagen" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="idDescuento" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.agregarProducto" Method="agregarProducto">
     <Parameter Name="nombreProducto" Type="System.String" DbType="VarChar(30)" />
     <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
@@ -54,6 +75,30 @@
       <Column Name="Total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.consultarCelulares" Method="consultarCelulares">
+    <ElementType Name="consultarCelularesResult">
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.consultarCom" Method="consultarCom">
+    <ElementType Name="consultarComResult">
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultarCompras" Method="ConsultarCompras">
+    <Parameter Name="Nommnbre" Parameter="nommnbre" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Total" Parameter="total" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.consultarDatosComprar" Method="consultarDatosComprar">
     <Parameter Name="idProducto" Type="System.Byte" DbType="TinyInt" />
     <ElementType Name="consultarDatosComprarResult">
@@ -77,9 +122,36 @@
       <Column Name="idDescuento" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ConsultarDep" Method="ConsultarDep">
+    <Parameter Name="nombreUsuario" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="ConsultarDepResult">
+      <Column Name="idDepartamento" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.consultarElectrodomesticos" Method="consultarElectrodomesticos">
+    <ElementType Name="consultarElectrodomesticosResult">
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.consultarGerentes" Method="consultarGerentes">
+    <ElementType Name="consultarGerentesResult">
+      <Column Name="idUsuario" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(67)" CanBeNull="true" />
+      <Column Name="nombredepa" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.consultarNombreCliente" Method="consultarNombreCliente">
     <Parameter Name="nombreusuario" Type="System.String" DbType="VarChar(25)" />
     <ElementType Name="consultarNombreClienteResult">
+      <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(67)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.consultarNombreGerentes" Method="consultarNombreGerentes">
+    <Parameter Name="usuario" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="consultarNombreGerentesResult">
       <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(67)" CanBeNull="true" />
     </ElementType>
   </Function>
@@ -93,6 +165,14 @@
       <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="Descuento" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="Cantidad" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.consultarSalud" Method="consultarSalud">
+    <ElementType Name="consultarSaludResult">
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
@@ -115,6 +195,14 @@
       <Column Name="idEstado" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.consultarVideoJuegos" Method="consultarVideoJuegos">
+    <ElementType Name="consultarVideoJuegosResult">
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.eliminarProducto" Method="eliminarProducto">
     <Parameter Name="idProducto" Type="System.Byte" DbType="TinyInt" />
     <Return Type="System.Int32" />
@@ -126,103 +214,6 @@
       <Column Name="idUsuario" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
       <Column Name="nombre" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
       <Column Name="idTipoUSuario" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.LogearGerente" Method="LogearGerente">
-    <Parameter Name="usuario" Type="System.String" DbType="VarChar(25)" />
-    <Parameter Name="contraseña" Type="System.String" DbType="VarChar(20)" />
-    <ElementType Name="LogearGerenteResult">
-      <Column Name="idGerente" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-      <Column Name="nombre" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
-      <Column Name="idTipoUsuario" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.modificarProducto" Method="modificarProducto">
-    <Parameter Name="idProducto" Type="System.Byte" DbType="TinyInt" />
-    <Parameter Name="nombreProduco" Type="System.String" DbType="VarChar(30)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="precio" Type="System.Decimal" DbType="Money" />
-    <Parameter Name="cantidad" Type="System.Byte" DbType="TinyInt" />
-    <Parameter Name="imagen" Type="System.Data.Linq.Binary" DbType="Image" />
-    <Parameter Name="idDescuento" Type="System.Byte" DbType="TinyInt" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.ConsultarCompras" Method="ConsultarCompras">
-    <Parameter Name="Nommnbre" Parameter="nommnbre" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(30)" />
-    <Parameter Name="Precio" Parameter="precio" Type="System.Decimal" DbType="Money" />
-    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Total" Parameter="total" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.consultarCom" Method="consultarCom">
-    <ElementType Name="consultarComResult">
-      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultarDep" Method="ConsultarDep">
-    <Parameter Name="nombreUsuario" Type="System.String" DbType="VarChar(25)" />
-    <ElementType Name="ConsultarDepResult">
-      <Column Name="idDepartamento" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.agregarGerente" Method="agregarGerente">
-    <Parameter Name="nombreusuario" Type="System.String" DbType="VarChar(25)" />
-    <Parameter Name="contraseña" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(25)" />
-    <Parameter Name="apellidoPaterno" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="apellidoMaterno" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="idSexo" Type="System.Char" DbType="Char(1)" />
-    <Parameter Name="idTipoUsuario" Type="System.Byte" DbType="TinyInt" />
-    <Parameter Name="idDepartamento" Type="System.Byte" DbType="TinyInt" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.consultarNombreGerentes" Method="consultarNombreGerentes">
-    <Parameter Name="usuario" Type="System.String" DbType="VarChar(25)" />
-    <ElementType Name="consultarNombreGerentesResult">
-      <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(67)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.consultarGerentes" Method="consultarGerentes">
-    <ElementType Name="consultarGerentesResult">
-      <Column Name="idUsuario" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-      <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(67)" CanBeNull="true" />
-      <Column Name="nombredepa" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.consultarCelulares" Method="consultarCelulares">
-    <ElementType Name="consultarCelularesResult">
-      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.consultarElectrodomesticos" Method="consultarElectrodomesticos">
-    <ElementType Name="consultarElectrodomesticosResult">
-      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.consultarSalud" Method="consultarSalud">
-    <ElementType Name="consultarSaludResult">
-      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.consultarVideoJuegos" Method="consultarVideoJuegos">
-    <ElementType Name="consultarVideoJuegosResult">
-      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="Precio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="Id" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>
