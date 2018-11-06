@@ -8,6 +8,10 @@ namespace JBTienda
 {
     static class Program
     {
+
+
+        //mainPrincipal
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
