@@ -53,7 +53,7 @@ namespace JBTienda
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            FormMCliente ir = new FormMCliente();
+            MenuPrincipalCliente ir = new MenuPrincipalCliente();
             ir.Show();
             this.Hide();
 

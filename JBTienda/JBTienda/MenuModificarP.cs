@@ -13,52 +13,62 @@ using System.IO;
 
 namespace JBTienda
 {
-    public partial class Cujuegos : UserControl
+    public partial class MenuModificarP : UserControl
     {
-        public Cujuegos()
+        public MenuModificarP()
         {
             InitializeComponent();
         }
 
+
+
+
+
+
         public void listarProductos(DataGridView data)
         {
             SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+            SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             conn.Open();
-
-            SqlCommand comando = new SqlCommand("consultarVideoJuegos", conn);
+            SqlCommand comando = new SqlCommand("consultarProductos", conn);
             comando.CommandType = CommandType.StoredProcedure;
-            //comando.Parameters.Add("@idDepartamento", SqlDbType.Int).Value = Variables.idDep;
+            comando.Parameters.Add("@idDepartamento", SqlDbType.Int).Value = Variables.idDep;
+
             comando.Connection = conn;
             comando.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(comando);
             da.Fill(dt);
             data.DataSource = dt;
-            dtJu.Columns[2].DefaultCellStyle.Format = "$#,##0.00";
-
-
             conn.Close();
         }
 
-        private void Cujuegos_Load(object sender, EventArgs e)
+
+
+        private void dm_Load(object sender, EventArgs e)
         {
-            listarProductos(dtJu);
+
+            listarProductos(dtm);
+
+
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void dtm_DoubleClick(object sender, EventArgs e)
         {
+
+
+            Variables.idProd = byte.Parse(dtm.CurrentRow.Cells[7].Value.ToString());
+   
            
-        }
-
-        private void dtJu_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-            Variables.idProd = byte.Parse(dtJu.CurrentRow.Cells[3].Value.ToString());
-
-
-            Form A = new FormComprar();
+            Form A = new MenuModificarProducto();
             A.Show();
+            this.Hide();
+           
+
 
         }
+
+
+
     }
 }

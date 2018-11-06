@@ -51,41 +51,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ac.cs">
+    <Compile Include="RegistrarJefeCelular.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ac.Designer.cs">
-      <DependentUpon>Ac.cs</DependentUpon>
+    <Compile Include="RegistrarJefeCelular.Designer.cs">
+      <DependentUpon>RegistrarJefeCelular.cs</DependentUpon>
     </Compile>
-    <Compile Include="Acom.cs">
+    <Compile Include="RegistrarJefeCom.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Acom.Designer.cs">
-      <DependentUpon>Acom.cs</DependentUpon>
+    <Compile Include="RegistrarJefeCom.Designer.cs">
+      <DependentUpon>RegistrarJefeCom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aej.cs">
+    <Compile Include="RegistrarJefeGym.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Aej.Designer.cs">
-      <DependentUpon>Aej.cs</DependentUpon>
+    <Compile Include="RegistrarJefeGym.Designer.cs">
+      <DependentUpon>RegistrarJefeGym.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ael.cs">
+    <Compile Include="RegistrarJefeElec.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ael.Designer.cs">
-      <DependentUpon>Ael.cs</DependentUpon>
+    <Compile Include="RegistrarJefeElec.Designer.cs">
+      <DependentUpon>RegistrarJefeElec.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ainicio.cs">
+    <Compile Include="MenuInicioAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ainicio.Designer.cs">
-      <DependentUpon>Ainicio.cs</DependentUpon>
+    <Compile Include="MenuInicioAdmin.Designer.cs">
+      <DependentUpon>MenuInicioAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ajuegos.cs">
+    <Compile Include="RegistrarJefeJuegos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ajuegos.Designer.cs">
-      <DependentUpon>Ajuegos.cs</DependentUpon>
+    <Compile Include="RegistrarJefeJuegos.Designer.cs">
+      <DependentUpon>RegistrarJefeJuegos.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaDeDatos.cs" />
     <Compile Include="Comopag.cs">
@@ -131,34 +131,34 @@
     <Compile Include="Cujuegos.Designer.cs">
       <DependentUpon>Cujuegos.cs</DependentUpon>
     </Compile>
-    <Compile Include="da.cs">
+    <Compile Include="MenuAgregarProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="da.Designer.cs">
-      <DependentUpon>da.cs</DependentUpon>
+    <Compile Include="MenuAgregarProducto.Designer.cs">
+      <DependentUpon>MenuAgregarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="dcTienda.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dcTienda.dbml</DependentUpon>
     </Compile>
-    <Compile Include="de.cs">
+    <Compile Include="MenuEliminarProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="de.Designer.cs">
-      <DependentUpon>de.cs</DependentUpon>
+    <Compile Include="MenuEliminarProducto.Designer.cs">
+      <DependentUpon>MenuEliminarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="di.cs">
+    <Compile Include="RegistrarProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="di.Designer.cs">
-      <DependentUpon>di.cs</DependentUpon>
+    <Compile Include="RegistrarProducto.Designer.cs">
+      <DependentUpon>RegistrarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="dm.cs">
+    <Compile Include="MenuModificarP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="dm.Designer.cs">
-      <DependentUpon>dm.cs</DependentUpon>
+    <Compile Include="MenuModificarP.Designer.cs">
+      <DependentUpon>MenuModificarP.cs</DependentUpon>
     </Compile>
     <Compile Include="Efectivo.cs">
       <SubType>UserControl</SubType>
@@ -178,41 +178,41 @@
     <Compile Include="FormComprar.Designer.cs">
       <DependentUpon>FormComprar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="MenuIniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="MenuIniciarSesion.Designer.cs">
+      <DependentUpon>MenuIniciarSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMCliente.cs">
+    <Compile Include="MenuPrincipalCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMCliente.designer.cs">
-      <DependentUpon>FormMCliente.cs</DependentUpon>
+    <Compile Include="MenuPrincipalCliente.designer.cs">
+      <DependentUpon>MenuPrincipalCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenuAdmin.cs">
+    <Compile Include="MenuPrincipalAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenuAdmin.Designer.cs">
-      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    <Compile Include="MenuPrincipalAdmin.Designer.cs">
+      <DependentUpon>MenuPrincipalAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenuJ.cs">
+    <Compile Include="MenuPrincipalGerente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenuJ.Designer.cs">
-      <DependentUpon>FormMenuJ.cs</DependentUpon>
+    <Compile Include="MenuPrincipalGerente.Designer.cs">
+      <DependentUpon>MenuPrincipalGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormModificarP.cs">
+    <Compile Include="MenuModificarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormModificarP.Designer.cs">
-      <DependentUpon>FormModificarP.cs</DependentUpon>
+    <Compile Include="MenuModificarProducto.Designer.cs">
+      <DependentUpon>MenuModificarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegistro.cs">
+    <Compile Include="RegistrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegistro.Designer.cs">
-      <DependentUpon>FormRegistro.cs</DependentUpon>
+    <Compile Include="RegistrarUsuarios.Designer.cs">
+      <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,23 +236,23 @@
     </Compile>
     <Compile Include="UsuarioNeg.cs" />
     <Compile Include="Variables.cs" />
-    <EmbeddedResource Include="Ac.resx">
-      <DependentUpon>Ac.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarJefeCelular.resx">
+      <DependentUpon>RegistrarJefeCelular.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Acom.resx">
-      <DependentUpon>Acom.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarJefeCom.resx">
+      <DependentUpon>RegistrarJefeCom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aej.resx">
-      <DependentUpon>Aej.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarJefeGym.resx">
+      <DependentUpon>RegistrarJefeGym.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ael.resx">
-      <DependentUpon>Ael.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarJefeElec.resx">
+      <DependentUpon>RegistrarJefeElec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ainicio.resx">
-      <DependentUpon>Ainicio.cs</DependentUpon>
+    <EmbeddedResource Include="MenuInicioAdmin.resx">
+      <DependentUpon>MenuInicioAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ajuegos.resx">
-      <DependentUpon>Ajuegos.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarJefeJuegos.resx">
+      <DependentUpon>RegistrarJefeJuegos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Comopag.resx">
       <DependentUpon>Comopag.cs</DependentUpon>
@@ -275,17 +275,17 @@
     <EmbeddedResource Include="Cujuegos.resx">
       <DependentUpon>Cujuegos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="da.resx">
-      <DependentUpon>da.cs</DependentUpon>
+    <EmbeddedResource Include="MenuAgregarProducto.resx">
+      <DependentUpon>MenuAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="de.resx">
-      <DependentUpon>de.cs</DependentUpon>
+    <EmbeddedResource Include="MenuEliminarProducto.resx">
+      <DependentUpon>MenuEliminarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="di.resx">
-      <DependentUpon>di.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarProducto.resx">
+      <DependentUpon>RegistrarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dm.resx">
-      <DependentUpon>dm.cs</DependentUpon>
+    <EmbeddedResource Include="MenuModificarP.resx">
+      <DependentUpon>MenuModificarP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Efectivo.resx">
       <DependentUpon>Efectivo.cs</DependentUpon>
@@ -296,23 +296,23 @@
     <EmbeddedResource Include="FormComprar.resx">
       <DependentUpon>FormComprar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <EmbeddedResource Include="MenuIniciarSesion.resx">
+      <DependentUpon>MenuIniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMCliente.resx">
-      <DependentUpon>FormMCliente.cs</DependentUpon>
+    <EmbeddedResource Include="MenuPrincipalCliente.resx">
+      <DependentUpon>MenuPrincipalCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenuAdmin.resx">
-      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="MenuPrincipalAdmin.resx">
+      <DependentUpon>MenuPrincipalAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenuJ.resx">
-      <DependentUpon>FormMenuJ.cs</DependentUpon>
+    <EmbeddedResource Include="MenuPrincipalGerente.resx">
+      <DependentUpon>MenuPrincipalGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormModificarP.resx">
-      <DependentUpon>FormModificarP.cs</DependentUpon>
+    <EmbeddedResource Include="MenuModificarProducto.resx">
+      <DependentUpon>MenuModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegistro.resx">
-      <DependentUpon>FormRegistro.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarUsuarios.resx">
+      <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

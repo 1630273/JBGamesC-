@@ -1,16 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Tienda" Class="dcTiendaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-LN2ROB9J\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True" SettingsObjectName="JBTienda.Properties.Settings" SettingsPropertyName="TiendaConnectionString" Provider="System.Data.SqlClient" />
-  <Function Name="dbo.agregarGerente" Method="agregarGerente">
-    <Parameter Name="nombreusuario" Type="System.String" DbType="VarChar(25)" />
-    <Parameter Name="contraseña" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(25)" />
-    <Parameter Name="apellidoPaterno" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="apellidoMaterno" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="idSexo" Type="System.Char" DbType="Char(1)" />
-    <Parameter Name="idTipoUsuario" Type="System.Byte" DbType="TinyInt" />
-    <Parameter Name="idDepartamento" Type="System.Byte" DbType="TinyInt" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.modificarProducto" Method="modificarProducto">
     <Parameter Name="idProducto" Type="System.Byte" DbType="TinyInt" />
     <Parameter Name="nombreProduco" Type="System.String" DbType="VarChar(30)" />
@@ -215,5 +204,17 @@
       <Column Name="nombre" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
       <Column Name="idTipoUSuario" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.agregarGerente" Method="agregarGerente">
+    <Parameter Name="nombreusuario" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="contraseña" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="contraseña2" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="apellidoPaterno" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="apellidoMaterno" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="idSexo" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="idTipoUsuario" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="idDepartamento" Type="System.Byte" DbType="TinyInt" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>
