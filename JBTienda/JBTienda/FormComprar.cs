@@ -116,9 +116,18 @@ namespace JBTienda
         private void button2_Click(object sender, EventArgs e)
         {
 
-            Form A = new FormComprar();
-            
-            this.Hide();
+
+            if (cantidad.Value > 1)
+            {
+                MessageBox.Show("salgo");
+
+            }
+            else
+            {
+                Form A = new FormComprar();
+
+                this.Hide();
+            }
 
         }
 
