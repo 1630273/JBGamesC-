@@ -26,23 +26,28 @@ namespace JBTienda
 
         public void listarProductos(DataGridView data)
         {
-            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
-            conn.Open();
+            try
+            {
 
-            SqlCommand comando = new SqlCommand("consultarCom", conn);
-            comando.CommandType = CommandType.StoredProcedure;
-            //comando.Parameters.Add("@idDepartamento", SqlDbType.Int).Value = Variables.idDep;
-            comando.Connection = conn;
-            comando.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(comando);
-            da.Fill(dt);
-            data.DataSource = dt;
-            dtCom.Columns[2].DefaultCellStyle.Format = "$#,##0.00";
+                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
+                conn.Open();
 
-            
-
-            conn.Close();
+                SqlCommand comando = new SqlCommand("consultarCom", conn);
+                comando.CommandType = CommandType.StoredProcedure;
+                //comando.Parameters.Add("@idDepartamento", SqlDbType.Int).Value = Variables.idDep;
+                comando.Connection = conn;
+                comando.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(comando);
+                da.Fill(dt);
+                data.DataSource = dt;
+                dtCom.Columns[2].DefaultCellStyle.Format = "$#,##0.00";
+                conn.Close();
+            }
+            catch
+            {
+                Variables.con2 = false;
+            }
         }
         private void Cucom_Load(object sender, EventArgs e)
         {

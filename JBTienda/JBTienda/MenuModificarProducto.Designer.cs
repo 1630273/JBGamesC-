@@ -262,6 +262,7 @@
             // ErrorCampos
             // 
             this.ErrorCampos.ContainerControl = this;
+            this.ErrorCampos.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrorCampos.Icon")));
             // 
             // MenuModificarProducto
             // 

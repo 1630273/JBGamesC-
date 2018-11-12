@@ -13,8 +13,12 @@ namespace JBTienda
         public static byte idProd;
         public static string usuario;
         public static Double Np;
-
         public static Double tc;
+        public static bool con;
+        public static bool con2;
+        public static int contador=0;
+        public static int contador2 = 5;
+        public static int reintentos = 0;
 
 
 

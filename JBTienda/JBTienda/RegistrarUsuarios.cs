@@ -14,6 +14,7 @@ namespace JBTienda
     public partial class RegistrarUsuarios : MaterialSkin.Controls.MaterialForm
     {
 
+
         public RegistrarUsuarios()
         {
             InitializeComponent();
@@ -23,29 +24,35 @@ namespace JBTienda
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Purple600, MaterialSkin.Primary.Grey900, MaterialSkin.Primary.Purple100, MaterialSkin.Accent.Purple700, MaterialSkin.TextShade.WHITE);
 
         }
-
-
+        
 
         //Metodo para cargar los estados en el combobox
 
         void cargarEstados()
         {
-            cboEstado.SelectedIndexChanged -= new EventHandler(cboEstado_SelectedIndexChanged);
+
+           
+
+                cboEstado.SelectedIndexChanged -= new EventHandler(cboEstado_SelectedIndexChanged);
 
 
-            //OBJETO DEL TIPO DATA CONTEXT
-            dcTiendaDataContext dc = new dcTiendaDataContext();
+                //OBJETO DEL TIPO DATA CONTEXT
+                dcTiendaDataContext dc = new dcTiendaDataContext();
 
-            //VARIABLE DESCRIPTIVA A LO QUE VOY A TREAER
-            var Estado = from es in dc.cargarEstados()
-                         select new { es.idEstado, es.desEstado };
+                //VARIABLE DESCRIPTIVA A LO QUE VOY A TREAER
+                var Estado = from es in dc.cargarEstados()
+                             select new { es.idEstado, es.desEstado };
 
-            cboEstado.DataSource = Estado.ToList();
-            cboEstado.ValueMember = "idEstado";
-            cboEstado.DisplayMember = "desEstado";
+                cboEstado.DataSource = Estado.ToList();
+                cboEstado.ValueMember = "idEstado";
+                cboEstado.DisplayMember = "desEstado";
 
-            cboEstado.SelectedIndexChanged += new EventHandler(cboEstado_SelectedIndexChanged);
+                cboEstado.SelectedIndexChanged += new EventHandler(cboEstado_SelectedIndexChanged);
+
+  
         }
+
+               
 
         //Metodo para cargar las ciudades en el combobox
         void cargarCiudades(byte idEstado)
@@ -117,6 +124,17 @@ namespace JBTienda
 
 
                 MessageBox.Show("Usuario Agregado");
+
+                txtNombreUsuario.Text = "";
+                txtContraseña.Text = "";
+                txtContraseña2.Text = "";
+                txtNombre.Text = "";
+                txtApellidoPaterno.Text = "";
+                txtApellidoMaterno.Text = "";
+                txtTelefono.Text = "";
+                txtCorreo.Text = "";
+                txtDireccion.Text = "";
+                txtCp.Text = "";
 
             }
 
@@ -213,8 +231,8 @@ namespace JBTienda
             if (!rdoHombre.Checked && !rdoMujer.Checked)
             {
                 ok = false;
-                ErrorCampos.SetError(rdoHombre, "Please choose a System");
-                ErrorCampos.SetError(rdoMujer, "Please choose a System");
+                ErrorCampos.SetError(rdoHombre, "Ejija Solo una Opcion.");
+                ErrorCampos.SetError(rdoMujer, "Elija sollo una Opcion");
 
             }
 

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
 
 namespace JBTienda
 {
@@ -14,6 +16,7 @@ namespace JBTienda
     {
 
         public byte idDepa;
+        private Conexion Conexion = new Conexion();
         public MenuIniciarSesion()
         {
             InitializeComponent();
@@ -44,6 +47,7 @@ namespace JBTienda
 
         public void login(String v_usuario, String v_contraseña)
         {
+
             bool bandera = false;
             dcTiendaDataContext dc = new dcTiendaDataContext();
 
@@ -72,22 +76,49 @@ namespace JBTienda
 
                         break;
                     case 2:
-               //         MessageBox.Show("Bienvenido,Usted es Cliente.");
+                        if (Conexion.VerificarConexionClientes())
+                        {
 
-                        Variables.usuario = txtUsuario.Text;
 
-                        MenuPrincipalCliente ir = new MenuPrincipalCliente();
-                        ir.Show();
-                        this.Hide();
+                            //         MessageBox.Show("Bienvenido,Usted es Cliente.");
+
+                            Variables.usuario = txtUsuario.Text;
+
+                            MenuPrincipalCliente ir = new MenuPrincipalCliente();
+                            ir.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error de Conexion, Pongase en contacto con el Administrador");
+
+                            Application.Exit();
+
+
+                        }
                         break;
                     case 3:
-                        //MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Computación.");
-                        Variables.usuario = txtUsuario.Text;
-                        Variables.idDep = idDepa;
-                        ConsultarDep(txtUsuario.Text);
-                        Form p = new MenuPrincipalGerente();
-                        p.Show();
-                        this.Hide();
+
+                        if (Conexion.VerificarConexion())
+                        {
+                            //MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Computación.");
+                            Variables.usuario = txtUsuario.Text;
+                            Variables.idDep = idDepa;
+                            ConsultarDep(txtUsuario.Text);
+                            Form p = new MenuPrincipalGerente();
+                            p.Show();
+                            this.Hide();
+
+                           
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error de Conexion, Pongase en contacto con el Administrador");
+
+                            Application.Exit();
+                            
+                        }
 
                         break;
                     case 4:
@@ -138,7 +169,22 @@ namespace JBTienda
  
             if (bandera == false)
             {
+            
                 MessageBox.Show("Usuario y contraseña incorrectos");
+                Variables.reintentos++;
+
+                for (int x = 1; Variables.reintentos<=3; x++)
+                {
+                    
+                    MessageBox.Show("Reintento "+Variables.reintentos+" / 3");
+                    break;
+                }
+
+                if(Variables.reintentos == 3)
+                {
+                    MessageBox.Show("Usuario Bloqueado, Si no recuerda su contraseña Seleccione la opcion de recuperar Contraseña.");
+                    Application.Exit();
+                }
             }
 
         }
@@ -164,10 +210,11 @@ namespace JBTienda
 
         private void btnIncio_Click(object sender, EventArgs e)
         {
-            login(txtUsuario.Text,txtContraseña.Text);
-
-            txtUsuario.Text = "";
-            txtContraseña.Text = "";
+           
+                login(txtUsuario.Text, txtContraseña.Text);
+                txtUsuario.Text = "";
+                txtContraseña.Text = "";
+          
         
         }
 

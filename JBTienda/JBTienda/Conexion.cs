@@ -25,6 +25,33 @@ namespace JBTienda
             return Con;
         }
 
+        public bool VerificarConexion()
+        {
+            bool verificacion = true;
+
+
+            if(Variables.con == false)
+            {
+                verificacion = false;
+            }
+     
+            return verificacion;
+
+
+        }
+
+        public bool VerificarConexionClientes()
+        {
+            bool Verificacion = true;
+
+            if(Variables.con2 == false)
+            {
+                Verificacion = false;
+            }
+
+            return Verificacion;
+        }
+
 
 
 

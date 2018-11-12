@@ -58,8 +58,7 @@ namespace JBTienda
 
 
 
-            try
-            {
+          
                 // Objetos de conexión y comando
                 SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
                 SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
@@ -105,17 +104,8 @@ namespace JBTienda
                     conn.Close();
 
                 }
-            }
-
-            catch (System.Exception)
-            {
-                MessageBox.Show("Fallo en la conexion en AgregarProductos");
-                MenuIniciarSesion ir = new MenuIniciarSesion();
-                ir.Show();
-                this.Hide();
-
+            
         
-            }
 
             txtNombre.Text = "";
             txtDescripcion.Text = "";

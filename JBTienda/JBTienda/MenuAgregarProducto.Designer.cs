@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAgregarProducto));
             this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtDescripcion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtCantidad = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -210,6 +211,7 @@
             // ErrorCampos
             // 
             this.ErrorCampos.ContainerControl = this;
+            this.ErrorCampos.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrorCampos.Icon")));
             // 
             // MenuAgregarProducto
             // 

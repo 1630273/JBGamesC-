@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarUsuarios));
             this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtNombreUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtContraseña2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -382,46 +383,57 @@
             // ErrorCampos
             // 
             this.ErrorCampos.ContainerControl = this;
+            this.ErrorCampos.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrorCampos.Icon")));
             // 
             // errorUsuario
             // 
             this.errorUsuario.ContainerControl = this;
+            this.errorUsuario.Icon = ((System.Drawing.Icon)(resources.GetObject("errorUsuario.Icon")));
             // 
             // errorContraseña
             // 
             this.errorContraseña.ContainerControl = this;
+            this.errorContraseña.Icon = ((System.Drawing.Icon)(resources.GetObject("errorContraseña.Icon")));
             // 
             // errorContraseña2
             // 
             this.errorContraseña2.ContainerControl = this;
+            this.errorContraseña2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorContraseña2.Icon")));
             // 
             // errorNombre
             // 
             this.errorNombre.ContainerControl = this;
+            this.errorNombre.Icon = ((System.Drawing.Icon)(resources.GetObject("errorNombre.Icon")));
             // 
             // errorAp
             // 
             this.errorAp.ContainerControl = this;
+            this.errorAp.Icon = ((System.Drawing.Icon)(resources.GetObject("errorAp.Icon")));
             // 
             // errorAm
             // 
             this.errorAm.ContainerControl = this;
+            this.errorAm.Icon = ((System.Drawing.Icon)(resources.GetObject("errorAm.Icon")));
             // 
             // errorSexo
             // 
             this.errorSexo.ContainerControl = this;
+            this.errorSexo.Icon = ((System.Drawing.Icon)(resources.GetObject("errorSexo.Icon")));
             // 
             // errorTelefono
             // 
             this.errorTelefono.ContainerControl = this;
+            this.errorTelefono.Icon = ((System.Drawing.Icon)(resources.GetObject("errorTelefono.Icon")));
             // 
             // errorCorreo
             // 
             this.errorCorreo.ContainerControl = this;
+            this.errorCorreo.Icon = ((System.Drawing.Icon)(resources.GetObject("errorCorreo.Icon")));
             // 
             // errorDireccion
             // 
             this.errorDireccion.ContainerControl = this;
+            this.errorDireccion.Icon = ((System.Drawing.Icon)(resources.GetObject("errorDireccion.Icon")));
             // 
             // errorCp
             // 

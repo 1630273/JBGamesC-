@@ -160,9 +160,9 @@ namespace JBTienda
             catch (System.Exception)
             {
                 MessageBox.Show("Fallo en la conexion en AgregarProductos");
-                MenuIniciarSesion ir = new MenuIniciarSesion();
-                ir.Show();
-                this.Hide();
+                //MenuIniciarSesion ir = new MenuIniciarSesion();
+                //ir.Show();
+                //this.Hide();
             }
 
         }
@@ -171,8 +171,7 @@ namespace JBTienda
         {
 
 
-            try
-            {
+            
                 System.Data.DataSet ds = new System.Data.DataSet();
                 System.Data.SqlClient.SqlDataAdapter da = new System.Data.SqlClient.SqlDataAdapter("SELECT imagen FROM Producto WHERE idProducto = @idPro", "Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
 
@@ -192,14 +191,8 @@ namespace JBTienda
                 // Se utiliza el MemoryStream para extraer la imagen
                 pic1.Image = Image.FromStream(ms);
 
-            }
-            catch(System.Exception)
-            {
-                MessageBox.Show("Fallo en la conexion en AgregarProductos");
-                MenuIniciarSesion ir = new MenuIniciarSesion();
-                ir.Show();
-                this.Hide();
-            }
+            
+          
 
         }
 

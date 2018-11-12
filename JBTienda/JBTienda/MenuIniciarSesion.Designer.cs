@@ -195,12 +195,14 @@
             // errorUsuario
             // 
             this.errorUsuario.ContainerControl = this;
+            this.errorUsuario.Icon = ((System.Drawing.Icon)(resources.GetObject("errorUsuario.Icon")));
             // 
             // errorContraseña
             // 
             this.errorContraseña.ContainerControl = this;
+            this.errorContraseña.Icon = ((System.Drawing.Icon)(resources.GetObject("errorContraseña.Icon")));
             // 
-            // FormLogin
+            // MenuIniciarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,7 +217,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox1);
-            this.Name = "FormLogin";
+            this.Name = "MenuIniciarSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
             this.Load += new System.EventHandler(this.FormLogin_Load);

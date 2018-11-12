@@ -150,6 +150,9 @@ namespace JBTienda
             ConsultarNombre(Variables.usuario);
         }
 
+
+        //Metodo que te lleva al frame del carrito
+
         private void btncar_Click(object sender, EventArgs e)
         {
             Form car = new FormCarrito();
