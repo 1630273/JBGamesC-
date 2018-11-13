@@ -23,12 +23,45 @@ namespace JBTienda
 
         private void FormMenuJ_Load(object sender, EventArgs e)
         {
+            if (VerificarConexion() == true)
+            {
+                MessageBox.Show("Conexion Extablecida");
+                ConsultarNombre(Variables.usuario);
 
-            ConsultarNombre(Variables.usuario) ;
+            }
+            else
+            {
+                MessageBox.Show("Error de Conexion, Pongase en contacto con el Administrador");
+
+                Application.Exit();
+
+            }
+        }
+
+
+        public bool VerificarConexion()
+        {
+            bool verificacion;
+
+
+            if (Variables.con == true && Variables.con1 == true)
+            {
+                MessageBox.Show("True");
+                verificacion = true;
+
+            }
+            else
+            {
+                MessageBox.Show("False");
+                verificacion = false;
+
+            }
+
+            return verificacion;
 
         }
 
-       
+
 
         private void btnsalir_Click(object sender, EventArgs e)
         {

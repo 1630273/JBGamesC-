@@ -42,13 +42,17 @@ namespace JBTienda
                 data.DataSource = dt;
                 dtELE.Columns[2].DefaultCellStyle.Format = "$#,##0.00";
 
-
-
                 conn.Close();
+
+
+                Variables.conElec = true;
+                MessageBox.Show("Se paso la Var en CuElectrodomesticos");
             }
-            catch
+            catch(System.Exception)
             {
-                Variables.con2 = false;
+
+                Variables.conElec = false;
+                MessageBox.Show("No se paso la Var en CuElectrodomesticos");
             }
         }
         private void Cuelectrodomestico_Load(object sender, EventArgs e)

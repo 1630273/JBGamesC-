@@ -16,7 +16,7 @@ namespace JBTienda
     {
 
         public byte idDepa;
-        private Conexion Conexion = new Conexion();
+        Conexion Conexion = new Conexion();
         public MenuIniciarSesion()
         {
             InitializeComponent();
@@ -76,34 +76,24 @@ namespace JBTienda
 
                         break;
                     case 2:
-                        if (Conexion.VerificarConexionClientes())
-                        {
-
-
-                            //         MessageBox.Show("Bienvenido,Usted es Cliente.");
+                   
+                            //MessageBox.Show("Bienvenido,Usted es Cliente.");
 
                             Variables.usuario = txtUsuario.Text;
 
                             MenuPrincipalCliente ir = new MenuPrincipalCliente();
                             ir.Show();
                             this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error de Conexion, Pongase en contacto con el Administrador");
-
-                            Application.Exit();
-
-
-                        }
+                    
                         break;
                     case 3:
 
-                        if (Conexion.VerificarConexion())
-                        {
+                        
                             //MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Computación.");
+                        
                             Variables.usuario = txtUsuario.Text;
                             Variables.idDep = idDepa;
+
                             ConsultarDep(txtUsuario.Text);
                             Form p = new MenuPrincipalGerente();
                             p.Show();
@@ -111,14 +101,7 @@ namespace JBTienda
 
                            
 
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error de Conexion, Pongase en contacto con el Administrador");
-
-                            Application.Exit();
-                            
-                        }
+                       
 
                         break;
                     case 4:
@@ -188,6 +171,8 @@ namespace JBTienda
             }
 
         }
+
+    
 
 
         private void FormLogin_Load(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace JBTienda
             try
             {
 
-                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
+                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
                 conn.Open();
 
                 SqlCommand comando = new SqlCommand("consultarCom", conn);
@@ -43,10 +43,17 @@ namespace JBTienda
                 data.DataSource = dt;
                 dtCom.Columns[2].DefaultCellStyle.Format = "$#,##0.00";
                 conn.Close();
+
+                Variables.conCom = true;
+                MessageBox.Show("Se paso la Var en CuCom");
+
+
+
             }
-            catch
+            catch (System.Exception)
             {
-                Variables.con2 = false;
+                Variables.conCom = false;
+                MessageBox.Show("No se paso la Var en CuCom");
             }
         }
         private void Cucom_Load(object sender, EventArgs e)

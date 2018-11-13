@@ -42,10 +42,16 @@ namespace JBTienda
 
 
                 conn.Close();
+
+
+                Variables.conJueg = true;
+                MessageBox.Show("Se paso la Var en CuJuegos");
             }
-            catch
+            catch(System.Exception)
             {
-                Variables.con2 = false;
+
+                Variables.conJueg = false;
+                MessageBox.Show("No se paso la Var en CuJuegos");
 
             }
         }

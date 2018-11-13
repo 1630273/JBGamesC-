@@ -20,15 +20,20 @@ namespace JBTienda
             InitializeComponent();
         }
 
+      
+
         public void listarProductos(DataGridView data)
         {
 
+
             try
             {
-
-                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
+               
+                SqlConnection conn = new System.Data.SqlClient.SqlConnection(" Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
                 SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
                 conn.Open();
+
+              
 
                 SqlCommand comando = new SqlCommand("consultarProductos", conn);
                 comando.CommandType = CommandType.StoredProcedure;
@@ -40,31 +45,33 @@ namespace JBTienda
                 da.Fill(dt);
                 data.DataSource = dt;
 
-
+              
                 conn.Close();
 
+                Variables.con1 = true;
+                MessageBox.Show("Se paso La variable de Registrar Producto");
+
+
             }
 
-
-            catch
+            catch (System.Exception)
             {
+                MessageBox.Show("No se paso la variable de Registrar Producto");
+                Variables.con1 = false;
 
-                Variables.con = false;
-             
 
             }
-        }
 
 
-  
+
+}
 
         private void di_Load(object sender, EventArgs e)
         {
 
-          
                 listarProductos(dtai);
-            
-           
+
+          
         }
 
        

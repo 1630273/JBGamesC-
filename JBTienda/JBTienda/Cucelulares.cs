@@ -42,10 +42,14 @@ namespace JBTienda
                 data.DataSource = dt;
                 dtCel.Columns[2].DefaultCellStyle.Format = "$#,##0.00";
                 conn.Close();
+
+                Variables.conCel = true;
+                MessageBox.Show("Se paso la Var en CuCelulares");
             }
-            catch
+            catch(System.Exception)
             {
-                Variables.con2 = false;
+                Variables.conCel = false;
+                MessageBox.Show("No se paso la Var en CuCelulares");
             }
         }
 

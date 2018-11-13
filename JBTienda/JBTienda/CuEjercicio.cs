@@ -36,11 +36,16 @@ namespace JBTienda
                 data.DataSource = dt;
                 dtej.Columns[2].DefaultCellStyle.Format = "$#,##0.00";
                 conn.Close();
+
+
+                Variables.conEjer = true;
+                MessageBox.Show("Se paso la Var en CuEjercicio");
             }
 
-            catch
+            catch(System.Exception)
             {
-                Variables.con2 = false;
+                Variables.conEjer = false;
+                MessageBox.Show("No se paso la Var en CuEjercicio");
             }
         }
         public CuEjercicio()

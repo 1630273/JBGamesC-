@@ -10,7 +10,9 @@ namespace JBTienda
 {
     public class Conexion
     {
-        private SqlConnection Con = new SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
+       
+
+        private SqlConnection Con = new SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
         public SqlConnection AbrirConexion()
         {
             if (Con.State == System.Data.ConnectionState.Closed)
@@ -25,32 +27,19 @@ namespace JBTienda
             return Con;
         }
 
-        public bool VerificarConexion()
-        {
-            bool verificacion = true;
-
-
-            if(Variables.con == false)
-            {
-                verificacion = false;
-            }
      
-            return verificacion;
 
+        //public bool VerificarConexionClientes()
+        //{
+        //    bool Verificacion = true;
 
-        }
+        //    if(Variables.con2 == false)
+        //    {
+        //        Verificacion = false;
+        //    }
 
-        public bool VerificarConexionClientes()
-        {
-            bool Verificacion = true;
-
-            if(Variables.con2 == false)
-            {
-                Verificacion = false;
-            }
-
-            return Verificacion;
-        }
+        //    return Verificacion;
+        //}
 
 
 

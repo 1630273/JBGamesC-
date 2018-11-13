@@ -147,7 +147,43 @@ namespace JBTienda
 
         private void FormMCliente_Load(object sender, EventArgs e)
         {
-            ConsultarNombre(Variables.usuario);
+
+            if (VerificarConexionCliente() == true)
+            {
+                MessageBox.Show("Conexion Extablecida");
+                ConsultarNombre(Variables.usuario);
+
+            }
+            else
+            {
+                MessageBox.Show("Error de Conexion, Pongase en contacto con el Administrador");
+
+                Application.Exit();
+
+            }
+            
+        }
+
+        public bool VerificarConexionCliente()
+        {
+            bool verificacion;
+
+
+            if (Variables.conCel == true && Variables.conCom == true && Variables.conEjer == true && Variables.conElec == true && Variables.conJueg == true)
+            {
+                MessageBox.Show("True");
+                verificacion = true;
+
+            }
+            else
+            {
+                MessageBox.Show("False");
+                verificacion = false;
+
+            }
+
+            return verificacion;
+
         }
 
 

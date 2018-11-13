@@ -68,7 +68,7 @@ namespace JBTienda
                 {
                     // Estableciento propiedades
                     cmd.Connection = conn;
-                    cmd.CommandText = "INSERT INTO Produc(nombreProducto,descripcion,precio,cantidad,imagen,idDepartamento,idDescuento) VALUES(@nombreProducto, @descripcion, @precio, @cantidad, @imagen, @idDepartamento, @idDescuento);";
+                    cmd.CommandText = "INSERT INTO Producto(nombreProducto,descripcion,precio,cantidad,imagen,idDepartamento,idDescuento) VALUES(@nombreProducto, @descripcion, @precio, @cantidad, @imagen, @idDepartamento, @idDescuento);";
                     conn.Open();
                     // Creando los parámetros necesarios
                     cmd.Parameters.Add("@nombreProducto", System.Data.SqlDbType.VarChar);
