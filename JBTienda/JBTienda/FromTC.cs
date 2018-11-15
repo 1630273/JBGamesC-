@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace JBTienda
 {
-    public partial class Prueba : Form
+    public partial class FromTC : Form
     {
-        public Prueba()
+        public FromTC()
         {
             InitializeComponent();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Form ir = new FormCarrito();
+            ir.Show();
+            this.Hide();
         }
     }
 }

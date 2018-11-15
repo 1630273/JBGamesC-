@@ -12,7 +12,7 @@ namespace JBTienda
     {
        
 
-        private SqlConnection Con = new SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+        private SqlConnection Con = new SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
         public SqlConnection AbrirConexion()
         {
             if (Con.State == System.Data.ConnectionState.Closed)

@@ -47,7 +47,6 @@
             this.aej1 = new JBTienda.RegistrarJefeGym();
             this.acom1 = new JBTienda.RegistrarJefeCom();
             this.ac1 = new JBTienda.RegistrarJefeCelular();
-            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.panel2.SuspendLayout();
             this.sidemenu.SuspendLayout();
             this.SuspendLayout();
@@ -297,22 +296,10 @@
             this.ac1.Size = new System.Drawing.Size(800, 450);
             this.ac1.TabIndex = 17;
             // 
-            // materialTabSelector1
-            // 
-            this.materialTabSelector1.BaseTabControl = null;
-            this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.Location = new System.Drawing.Point(267, 66);
-            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(75, 23);
-            this.materialTabSelector1.TabIndex = 18;
-            this.materialTabSelector1.Text = "materialTabSelector1";
-            // 
-            // FormMenuAdmin
+            // MenuPrincipalAdmin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.aej1);
             this.Controls.Add(this.ael1);
             this.Controls.Add(this.ajuegos1);
@@ -323,7 +310,7 @@
             this.Controls.Add(this.acom1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
-            this.Name = "FormMenuAdmin";
+            this.Name = "MenuPrincipalAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuAdmin";
             this.Load += new System.EventHandler(this.FormMenuAdmin_Load);
@@ -354,6 +341,5 @@
         private RegistrarJefeCom acom1;
         private RegistrarJefeCelular ac1;
         private System.Windows.Forms.Button btnsalir;
-        private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
     }
 }

@@ -28,35 +28,39 @@ namespace JBTienda
 
         private void FormCarrito_Load(object sender, EventArgs e)
         {
-            listarCarito(dtcarro);
+            ListarCarrito(Variables.usuario);
         }
 
-        public void listarCarito(DataGridView data)
+        void ListarCarrito(string usu)
         {
-            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
-            conn.Open();
-            SqlCommand comando = new SqlCommand("consultarCarrito", conn);
-            comando.CommandType = CommandType.StoredProcedure;
-            //comando.Parameters.Add("@idDepartamento", SqlDbType.Int).Value = Variables.idDep;
-            comando.Connection = conn;
-            comando.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(comando);
-            da.Fill(dt);
-            data.DataSource = dt;
+            dcTiendaDataContext st = new dcTiendaDataContext();
 
+            var r = from con in st.consultarCarrito(usu)
+                    select con;
 
+            foreach (var n in r)
+            {
 
+                dtcarro.Rows.Add(n.Nombre, n.Descripcion, n.Precio ,n.Cantidad ,n.Total
+                    );
+                dtcarro.Columns[2].DefaultCellStyle.Format = "$#,##0.00";
+                dtcarro.Columns[4].DefaultCellStyle.Format = "$#,##0.00";
 
-            conn.Close();
+            }
         }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             MenuPrincipalCliente ir = new MenuPrincipalCliente();
             ir.Show();
             this.Hide();
 
+        }
+
+        private void btncomp_Click(object sender, EventArgs e)
+        {
+            Form ir = new FromTC();
+            ir.Show();
+            this.Hide();
         }
     }
 }

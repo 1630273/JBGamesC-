@@ -38,6 +38,7 @@
             // 
             // dtCom
             // 
+            this.dtCom.AllowUserToAddRows = false;
             this.dtCom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtCom.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtCom.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;

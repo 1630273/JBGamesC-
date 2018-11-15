@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Prueba.cs">
+    <Compile Include="FromTC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Prueba.Designer.cs">
-      <DependentUpon>Prueba.cs</DependentUpon>
+    <Compile Include="FromTC.Designer.cs">
+      <DependentUpon>FromTC.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistrarJefeCelular.cs">
       <SubType>UserControl</SubType>
@@ -242,6 +242,9 @@
     </Compile>
     <Compile Include="UsuarioNeg.cs" />
     <Compile Include="Variables.cs" />
+    <EmbeddedResource Include="FromTC.resx">
+      <DependentUpon>FromTC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrarJefeCelular.resx">
       <DependentUpon>RegistrarJefeCelular.cs</DependentUpon>
     </EmbeddedResource>

@@ -74,6 +74,8 @@ namespace JBTienda
 
                 Variables.tc = p * can;
                 txtTo.Text = Variables.tc.ToString();
+                txtCliente.Text = Variables.usuario;
+
               
                 
                
@@ -85,7 +87,7 @@ namespace JBTienda
         {
 
             System.Data.DataSet ds = new System.Data.DataSet();
-            System.Data.SqlClient.SqlDataAdapter da = new System.Data.SqlClient.SqlDataAdapter("SELECT imagen FROM Producto WHERE idProducto = @idPro", "Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+            System.Data.SqlClient.SqlDataAdapter da = new System.Data.SqlClient.SqlDataAdapter("SELECT imagen FROM Producto WHERE idProducto = @idPro", "Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
 
             da.SelectCommand.Parameters.Add("@idPro", System.Data.SqlDbType.TinyInt);
             da.SelectCommand.Parameters["@idPro"].Value = Variables.idProd;
@@ -139,7 +141,8 @@ namespace JBTienda
                 txtDescripcion.Text,
                int.Parse( txtnp.Text.ToString()),
                  int.Parse(cantidad.Value.ToString()),
-                int.Parse(txtTo.Text.ToString())
+                int.Parse(txtTo.Text.ToString()),
+                txtCliente.Text
 
            
          );

@@ -30,5 +30,13 @@ namespace JBTienda
             ir.Show();
             this.Hide();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+
+            Form Menu = new FormCarrito();
+            Menu.Show();
+            this.Hide();
+        }
     }
 }

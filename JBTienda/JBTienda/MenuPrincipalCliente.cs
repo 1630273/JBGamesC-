@@ -131,6 +131,10 @@ namespace JBTienda
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
 
+
+            dcTiendaDataContext dc = new dcTiendaDataContext();
+            dc.Limpiarcarrito();
+
             // Displays the MessageBox.
 
             result = MessageBox.Show(message, caption, buttons);

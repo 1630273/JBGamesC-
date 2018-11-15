@@ -29,7 +29,7 @@ namespace JBTienda
             try
             {
                
-                SqlConnection conn = new System.Data.SqlClient.SqlConnection(" Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
                 SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
                 conn.Open();
 

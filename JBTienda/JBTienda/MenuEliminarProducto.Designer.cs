@@ -63,6 +63,7 @@
             this.txtId.Size = new System.Drawing.Size(85, 23);
             this.txtId.TabIndex = 16;
             this.txtId.UseSystemPasswordChar = false;
+            this.txtId.Visible = false;
             // 
             // lblDesc
             // 

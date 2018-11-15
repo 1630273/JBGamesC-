@@ -48,35 +48,40 @@ namespace JBTienda
         public void login(String v_usuario, String v_contraseña)
         {
 
-            bool bandera = false;
-            dcTiendaDataContext dc = new dcTiendaDataContext();
-
-            var log = from l in dc.Logear(v_usuario, v_contraseña)
-                      select new { l.nombre, l.idTipoUSuario, l.idUsuario };
-
-
-
-            foreach (var u in log)
+            try
             {
-                bandera = true;
 
-         
 
-                switch (int.Parse(u.idTipoUSuario.ToString()))
+
+                bool bandera = false;
+                dcTiendaDataContext dc = new dcTiendaDataContext();
+
+                var log = from l in dc.Logear(v_usuario, v_contraseña)
+                          select new { l.nombre, l.idTipoUSuario, l.idUsuario };
+
+
+
+                foreach (var u in log)
                 {
+                    bandera = true;
 
-                    case 1:
-                        //   MessageBox.Show("Bienvenido,Usted es Administrador.");
 
-                        // Variables.usuario = txtUsuario.Text; 
 
-                        Form Menu = new MenuPrincipalAdmin();
-                        Menu.Show();
-                        this.Hide();
+                    switch (int.Parse(u.idTipoUSuario.ToString()))
+                    {
 
-                        break;
-                    case 2:
-                   
+                        case 1:
+                            //   MessageBox.Show("Bienvenido,Usted es Administrador.");
+
+                            // Variables.usuario = txtUsuario.Text; 
+
+                            Form Menu = new MenuPrincipalAdmin();
+                            Menu.Show();
+                            this.Hide();
+
+                            break;
+                        case 2:
+
                             //MessageBox.Show("Bienvenido,Usted es Cliente.");
 
                             Variables.usuario = txtUsuario.Text;
@@ -84,13 +89,13 @@ namespace JBTienda
                             MenuPrincipalCliente ir = new MenuPrincipalCliente();
                             ir.Show();
                             this.Hide();
-                    
-                        break;
-                    case 3:
 
-                        
+                            break;
+                        case 3:
+
+
                             //MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Computación.");
-                        
+
                             Variables.usuario = txtUsuario.Text;
                             Variables.idDep = idDepa;
 
@@ -99,75 +104,83 @@ namespace JBTienda
                             p.Show();
                             this.Hide();
 
-                           
-
-                       
-
-                        break;
-                    case 4:
-                        //  MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De VideoJuegos.");
-
-                        Variables.usuario = txtUsuario.Text;
-                        Variables.idDep = idDepa;
-                        ConsultarDep(txtUsuario.Text);
-                        Form p1 = new MenuPrincipalGerente();
-                        p1.Show();
-                        this.Hide();
-                        break;
-                    case 5:
-                        //    MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Celulares.");
-
-                        Variables.usuario = txtUsuario.Text;
-                        Variables.idDep = idDepa;
-                        ConsultarDep(txtUsuario.Text);
-                        Form p2 = new MenuPrincipalGerente();
-                        p2.Show();
-                        this.Hide();
-                        break;
-                    case 6:
-                        //      MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Electrodomesticos.");
-
-                        Variables.usuario = txtUsuario.Text;
-                        Variables.idDep = idDepa;
-                        ConsultarDep(txtUsuario.Text);
-                        Form p3 = new MenuPrincipalGerente();
-                        p3.Show();
-                        this.Hide();
-                        break;
-                    case 7:
-                        //        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Gimnasio.");
-                        Variables.usuario = txtUsuario.Text;
-                        Variables.idDep = idDepa;
-                        ConsultarDep(txtUsuario.Text);
-                        Form p4 = new MenuPrincipalGerente();
-                        p4.Show();
-                        this.Hide();
-                        break;
 
 
+
+
+                            break;
+                        case 4:
+                            //  MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De VideoJuegos.");
+
+                            Variables.usuario = txtUsuario.Text;
+                            Variables.idDep = idDepa;
+                            ConsultarDep(txtUsuario.Text);
+                            Form p1 = new MenuPrincipalGerente();
+                            p1.Show();
+                            this.Hide();
+                            break;
+                        case 5:
+                            //    MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Celulares.");
+
+                            Variables.usuario = txtUsuario.Text;
+                            Variables.idDep = idDepa;
+                            ConsultarDep(txtUsuario.Text);
+                            Form p2 = new MenuPrincipalGerente();
+                            p2.Show();
+                            this.Hide();
+                            break;
+                        case 6:
+                            //      MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Electrodomesticos.");
+
+                            Variables.usuario = txtUsuario.Text;
+                            Variables.idDep = idDepa;
+                            ConsultarDep(txtUsuario.Text);
+                            Form p3 = new MenuPrincipalGerente();
+                            p3.Show();
+                            this.Hide();
+                            break;
+                        case 7:
+                            //        MessageBox.Show("Bienvenido,Usted es Jefe de Departamento De Gimnasio.");
+                            Variables.usuario = txtUsuario.Text;
+                            Variables.idDep = idDepa;
+                            ConsultarDep(txtUsuario.Text);
+                            Form p4 = new MenuPrincipalGerente();
+                            p4.Show();
+                            this.Hide();
+                            break;
+
+
+
+                    }
 
                 }
+
+                if (bandera == false)
+                {
+
+                    MessageBox.Show("Usuario y contraseña incorrectos");
+                    Variables.reintentos++;
+
+                    for (int x = 1; Variables.reintentos <= 3; x++)
+                    {
+
+                        MessageBox.Show("Reintento " + Variables.reintentos + " / 3");
+                        break;
+                    }
+
+                    if (Variables.reintentos == 3)
+                    {
+                        MessageBox.Show("Usuario Bloqueado, Si no recuerda su contraseña Seleccione la opcion de recuperar Contraseña.");
+                        Application.Exit();
+                    }
+                }
+
 
             }
- 
-            if (bandera == false)
+            catch(System.Exception)
             {
-            
-                MessageBox.Show("Usuario y contraseña incorrectos");
-                Variables.reintentos++;
-
-                for (int x = 1; Variables.reintentos<=3; x++)
-                {
-                    
-                    MessageBox.Show("Reintento "+Variables.reintentos+" / 3");
-                    break;
-                }
-
-                if(Variables.reintentos == 3)
-                {
-                    MessageBox.Show("Usuario Bloqueado, Si no recuerda su contraseña Seleccione la opcion de recuperar Contraseña.");
-                    Application.Exit();
-                }
+                MessageBox.Show("Error en la conexion");
+                Application.Exit();
             }
 
         }

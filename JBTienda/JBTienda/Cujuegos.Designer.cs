@@ -49,6 +49,7 @@
             // 
             // dtJu
             // 
+            this.dtJu.AllowUserToAddRows = false;
             this.dtJu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtJu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtJu.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;

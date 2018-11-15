@@ -44,6 +44,7 @@
             this.txtnp = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTo = new System.Windows.Forms.TextBox();
+            this.txtCliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.SuspendLayout();
@@ -85,13 +86,13 @@
             // 
             this.btnComprar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnComprar.Depth = 0;
-            this.btnComprar.Location = new System.Drawing.Point(37, 530);
+            this.btnComprar.Location = new System.Drawing.Point(46, 534);
             this.btnComprar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Primary = true;
             this.btnComprar.Size = new System.Drawing.Size(276, 23);
             this.btnComprar.TabIndex = 84;
-            this.btnComprar.Text = "Comprar";
+            this.btnComprar.Text = "Agregar al  Carrito";
             this.btnComprar.UseVisualStyleBackColor = true;
             this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
@@ -223,11 +224,23 @@
             this.txtTo.TabIndex = 101;
             this.txtTo.Visible = false;
             // 
+            // txtCliente
+            // 
+            this.txtCliente.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtCliente.Location = new System.Drawing.Point(113, 534);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.ReadOnly = true;
+            this.txtCliente.Size = new System.Drawing.Size(183, 20);
+            this.txtCliente.TabIndex = 102;
+            this.txtCliente.Visible = false;
+            // 
             // FormComprar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 565);
+            this.ClientSize = new System.Drawing.Size(361, 577);
+            this.Controls.Add(this.btnComprar);
+            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.txtTo);
             this.Controls.Add(this.txtnp);
             this.Controls.Add(this.label4);
@@ -242,10 +255,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnComprar);
             this.Name = "FormComprar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Compra";
+            this.Text = "Producto";
             this.Load += new System.EventHandler(this.FormComprar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
@@ -271,5 +283,6 @@
         private System.Windows.Forms.TextBox txtnp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTo;
+        private System.Windows.Forms.TextBox txtCliente;
     }
 }
