@@ -39,13 +39,13 @@ namespace JBTienda
 
 
                 Variables.conEjer = true;
-                MessageBox.Show("Se paso la Var en CuEjercicio");
+               // MessageBox.Show("Se paso la Var en CuEjercicio");
             }
 
             catch(System.Exception)
             {
                 Variables.conEjer = false;
-                MessageBox.Show("No se paso la Var en CuEjercicio");
+                //MessageBox.Show("No se paso la Var en CuEjercicio");
             }
         }
         public CuEjercicio()

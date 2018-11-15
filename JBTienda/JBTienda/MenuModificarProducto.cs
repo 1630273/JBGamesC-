@@ -97,7 +97,7 @@ namespace JBTienda
         private void button2_Click(object sender, EventArgs e)
         {
             MenuPrincipalGerente p = new MenuPrincipalGerente();
-          
+            p.Show();
             this.Hide();
         }
 

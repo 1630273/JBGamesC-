@@ -472,10 +472,12 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtNombreUsuario);
+            this.KeyPreview = true;
             this.Name = "RegistrarUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Usuario";
             this.Load += new System.EventHandler(this.FormRegistro_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegistrarUsuarios_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorContraseña)).EndInit();

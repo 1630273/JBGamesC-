@@ -44,12 +44,12 @@ namespace JBTienda
                 conn.Close();
 
                 Variables.conCel = true;
-                MessageBox.Show("Se paso la Var en CuCelulares");
+               // MessageBox.Show("Se paso la Var en CuCelulares");
             }
             catch(System.Exception)
             {
                 Variables.conCel = false;
-                MessageBox.Show("No se paso la Var en CuCelulares");
+                //MessageBox.Show("No se paso la Var en CuCelulares");
             }
         }
 

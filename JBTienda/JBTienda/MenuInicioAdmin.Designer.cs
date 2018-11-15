@@ -48,14 +48,13 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.label1.Location = new System.Drawing.Point(90, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 37);
+            this.label1.Size = new System.Drawing.Size(344, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Menu de  Inicio Admin";
+            this.label1.Text = "Menu de Inicio Admin";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dtai
             // 
-            this.dtai.AllowUserToAddRows = false;
             this.dtai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtai.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtai.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -85,32 +84,28 @@
             this.dtai.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtai.Location = new System.Drawing.Point(97, 129);
             this.dtai.Name = "dtai";
-            this.dtai.ReadOnly = true;
             this.dtai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtai.RowHeadersVisible = false;
             this.dtai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtai.Size = new System.Drawing.Size(364, 203);
+            this.dtai.Size = new System.Drawing.Size(363, 127);
             this.dtai.TabIndex = 2;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Departamento";
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             this.Column3.Width = 149;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             this.Column2.Width = 96;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             this.Column1.Width = 53;
             // 
             // errorProvider1

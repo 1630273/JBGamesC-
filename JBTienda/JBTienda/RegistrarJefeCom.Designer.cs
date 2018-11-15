@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarJefeCom));
             this.rdoMujer = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdoHombre = new MaterialSkin.Controls.MaterialRadioButton();
             this.txtApellidoMaterno = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -190,6 +191,7 @@
             // ErrorCampos
             // 
             this.ErrorCampos.ContainerControl = this;
+            this.ErrorCampos.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrorCampos.Icon")));
             // 
             // txtContraseña2
             // 
@@ -225,6 +227,7 @@
             this.Name = "RegistrarJefeCom";
             this.Size = new System.Drawing.Size(537, 417);
             this.Load += new System.EventHandler(this.RegistrarJefeCom_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RegistrarJefeCom_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

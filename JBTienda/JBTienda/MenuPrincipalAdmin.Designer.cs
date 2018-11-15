@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalAdmin));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
             this.sidemenu = new System.Windows.Forms.Panel();
@@ -41,12 +42,13 @@
             this.btnJuego = new System.Windows.Forms.Button();
             this.btnCom = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.ainicio1 = new JBTienda.MenuInicioAdmin();
-            this.ajuegos1 = new JBTienda.RegistrarJefeJuegos();
-            this.ael1 = new JBTienda.RegistrarJefeElec();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.aej1 = new JBTienda.RegistrarJefeGym();
-            this.acom1 = new JBTienda.RegistrarJefeCom();
+            this.ael1 = new JBTienda.RegistrarJefeElec();
+            this.ajuegos1 = new JBTienda.RegistrarJefeJuegos();
+            this.ainicio1 = new JBTienda.MenuInicioAdmin();
             this.ac1 = new JBTienda.RegistrarJefeCelular();
+            this.acom1 = new JBTienda.RegistrarJefeCom();
             this.panel2.SuspendLayout();
             this.sidemenu.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +56,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
+            this.panel2.Controls.Add(this.btnHelp);
             this.panel2.Controls.Add(this.btnsalir);
             this.panel2.Controls.Add(this.btnmenubar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,6 +64,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 37);
             this.panel2.TabIndex = 6;
+            this.panel2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.panel2_PreviewKeyDown);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnHelp.Location = new System.Drawing.Point(633, 3);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(28, 32);
+            this.btnHelp.TabIndex = 37;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btnsalir
             // 
@@ -241,32 +263,22 @@
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click_1);
             // 
-            // ainicio1
+            // btnAyuda
             // 
-            this.ainicio1.BackColor = System.Drawing.Color.White;
-            this.ainicio1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ainicio1.Location = new System.Drawing.Point(262, 37);
-            this.ainicio1.Name = "ainicio1";
-            this.ainicio1.Size = new System.Drawing.Size(538, 413);
-            this.ainicio1.TabIndex = 12;
-            // 
-            // ajuegos1
-            // 
-            this.ajuegos1.BackColor = System.Drawing.Color.White;
-            this.ajuegos1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ajuegos1.Location = new System.Drawing.Point(262, 37);
-            this.ajuegos1.Name = "ajuegos1";
-            this.ajuegos1.Size = new System.Drawing.Size(538, 413);
-            this.ajuegos1.TabIndex = 13;
-            // 
-            // ael1
-            // 
-            this.ael1.BackColor = System.Drawing.Color.White;
-            this.ael1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ael1.Location = new System.Drawing.Point(262, 37);
-            this.ael1.Name = "ael1";
-            this.ael1.Size = new System.Drawing.Size(538, 413);
-            this.ael1.TabIndex = 14;
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAyuda.Location = new System.Drawing.Point(386, 209);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(28, 32);
+            this.btnAyuda.TabIndex = 37;
+            this.btnAyuda.Text = "?";
+            this.btnAyuda.UseVisualStyleBackColor = false;
             // 
             // aej1
             // 
@@ -277,15 +289,34 @@
             this.aej1.Size = new System.Drawing.Size(538, 413);
             this.aej1.TabIndex = 15;
             this.aej1.Load += new System.EventHandler(this.aej1_Load);
+            this.aej1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.aej1_KeyDown);
             // 
-            // acom1
+            // ael1
             // 
-            this.acom1.BackColor = System.Drawing.Color.White;
-            this.acom1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.acom1.Location = new System.Drawing.Point(0, 0);
-            this.acom1.Name = "acom1";
-            this.acom1.Size = new System.Drawing.Size(800, 450);
-            this.acom1.TabIndex = 16;
+            this.ael1.BackColor = System.Drawing.Color.White;
+            this.ael1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ael1.Location = new System.Drawing.Point(262, 37);
+            this.ael1.Name = "ael1";
+            this.ael1.Size = new System.Drawing.Size(538, 413);
+            this.ael1.TabIndex = 14;
+            // 
+            // ajuegos1
+            // 
+            this.ajuegos1.BackColor = System.Drawing.Color.White;
+            this.ajuegos1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ajuegos1.Location = new System.Drawing.Point(262, 37);
+            this.ajuegos1.Name = "ajuegos1";
+            this.ajuegos1.Size = new System.Drawing.Size(538, 413);
+            this.ajuegos1.TabIndex = 13;
+            // 
+            // ainicio1
+            // 
+            this.ainicio1.BackColor = System.Drawing.Color.White;
+            this.ainicio1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ainicio1.Location = new System.Drawing.Point(262, 37);
+            this.ainicio1.Name = "ainicio1";
+            this.ainicio1.Size = new System.Drawing.Size(538, 413);
+            this.ainicio1.TabIndex = 12;
             // 
             // ac1
             // 
@@ -296,10 +327,20 @@
             this.ac1.Size = new System.Drawing.Size(800, 450);
             this.ac1.TabIndex = 17;
             // 
+            // acom1
+            // 
+            this.acom1.BackColor = System.Drawing.Color.White;
+            this.acom1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.acom1.Location = new System.Drawing.Point(0, 0);
+            this.acom1.Name = "acom1";
+            this.acom1.Size = new System.Drawing.Size(800, 450);
+            this.acom1.TabIndex = 16;
+            // 
             // MenuPrincipalAdmin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.aej1);
             this.Controls.Add(this.ael1);
             this.Controls.Add(this.ajuegos1);
@@ -341,5 +382,7 @@
         private RegistrarJefeCom acom1;
         private RegistrarJefeCelular ac1;
         private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

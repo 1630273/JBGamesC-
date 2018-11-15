@@ -126,5 +126,42 @@ namespace JBTienda
                 this.Hide();
             }
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
+            ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_MenuAdmin.pdf";
+            ayuda.Start();
+            ayuda.Close();
+        }
+
+        private void aej1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            KeyPreview = true;
+
+            if (e.KeyCode == Keys.F1)
+            {
+
+                System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
+                ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_MenuAdmin.pdf";
+                ayuda.Start();
+                ayuda.Close();
+            }
+        }
+
+        private void panel2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
+
+            if (e.KeyCode == Keys.F1)
+            {
+
+                System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
+                ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_MenuAdmin.pdf";
+                ayuda.Start();
+                ayuda.Close();
+            }
+        }
     }
 }

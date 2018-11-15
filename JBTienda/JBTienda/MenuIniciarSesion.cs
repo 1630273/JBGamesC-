@@ -47,7 +47,6 @@ namespace JBTienda
 
         public void login(String v_usuario, String v_contraseña)
         {
-
             try
             {
 
@@ -179,7 +178,7 @@ namespace JBTienda
             }
             catch(System.Exception)
             {
-                MessageBox.Show("Error en la conexion");
+                MessageBox.Show("Error con la conexión, Consulte con su administrador");
                 Application.Exit();
             }
 
@@ -190,6 +189,7 @@ namespace JBTienda
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
+
             
 
         }
@@ -212,8 +212,6 @@ namespace JBTienda
                 login(txtUsuario.Text, txtContraseña.Text);
                 txtUsuario.Text = "";
                 txtContraseña.Text = "";
-          
-        
         }
 
         //Metodo para preguntar si deseas salir de la aplicacion
@@ -328,6 +326,67 @@ namespace JBTienda
             RecuperarContra ir = new RecuperarContra();
             ir.ShowDialog();
             this.Hide();
+        }
+
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+
+            System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
+            ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_Login1.pdf";
+            ayuda.Start();
+            ayuda.Close();
+
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                Application.Exit();
+            }
+        }
+
+        private void MenuIniciarSesion_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                 login(txtUsuario.Text, txtContraseña.Text);
+                txtUsuario.Text = "";
+                txtContraseña.Text = "";
+            }
+
+            if(e.KeyCode == Keys.F1)
+            {
+
+                System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
+                ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_Login1.pdf";
+                ayuda.Start();
+                ayuda.Close();
+            }
+
+            if (e.KeyCode == Keys.Escape)
+            {
+
+                string message = "Desea cerrar la aplicacion?";
+                string caption = "Salir";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    Application.Exit();
+
+                }
+            }
+
+           
+           
         }
     }
 }

@@ -46,13 +46,13 @@ namespace JBTienda
 
 
                 Variables.conElec = true;
-                MessageBox.Show("Se paso la Var en CuElectrodomesticos");
+               // MessageBox.Show("Se paso la Var en CuElectrodomesticos");
             }
             catch(System.Exception)
             {
 
                 Variables.conElec = false;
-                MessageBox.Show("No se paso la Var en CuElectrodomesticos");
+                //MessageBox.Show("No se paso la Var en CuElectrodomesticos");
             }
         }
         private void Cuelectrodomestico_Load(object sender, EventArgs e)

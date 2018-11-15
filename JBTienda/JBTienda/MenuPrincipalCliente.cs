@@ -175,13 +175,13 @@ namespace JBTienda
 
             if (Variables.conCel == true && Variables.conCom == true && Variables.conEjer == true && Variables.conElec == true && Variables.conJueg == true)
             {
-                MessageBox.Show("True");
+                //MessageBox.Show("True");
                 verificacion = true;
 
             }
             else
             {
-                MessageBox.Show("False");
+                //MessageBox.Show("False");
                 verificacion = false;
 
             }
