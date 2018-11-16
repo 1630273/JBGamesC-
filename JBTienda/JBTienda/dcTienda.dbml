@@ -222,4 +222,14 @@
   <Function Name="dbo.Limpiarcarrito" Method="Limpiarcarrito">
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Eliminarcarrito" Method="Eliminarcarrito">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(25)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sumarPrecios" Method="sumarPrecios">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="sumarPreciosResult">
+      <Column Name="TOTAL_PAGAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

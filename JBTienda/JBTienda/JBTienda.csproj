@@ -57,6 +57,12 @@
     <Compile Include="FromTC.Designer.cs">
       <DependentUpon>FromTC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nota.Designer.cs">
+      <DependentUpon>Nota.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarJefeCelular.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,12 +172,6 @@
     <Compile Include="MenuModificarP.Designer.cs">
       <DependentUpon>MenuModificarP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Efectivo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Efectivo.Designer.cs">
-      <DependentUpon>Efectivo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +245,9 @@
     <EmbeddedResource Include="FromTC.resx">
       <DependentUpon>FromTC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nota.resx">
+      <DependentUpon>Nota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrarJefeCelular.resx">
       <DependentUpon>RegistrarJefeCelular.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,9 +298,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuModificarP.resx">
       <DependentUpon>MenuModificarP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Efectivo.resx">
-      <DependentUpon>Efectivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCarrito.resx">
       <DependentUpon>FormCarrito.cs</DependentUpon>

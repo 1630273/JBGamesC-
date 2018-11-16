@@ -66,14 +66,8 @@ namespace JBTienda
 
                 }
 
+
                 txtnp.Text = Variables.Np.ToString();
-
-                var p = double.Parse(txtnp.Text);
-
-                var can = int.Parse(cantidad.Value.ToString());
-
-                Variables.tc = p * can;
-                txtTo.Text = Variables.tc.ToString();
                 txtCliente.Text = Variables.usuario;
 
               
@@ -104,7 +98,7 @@ namespace JBTienda
             pic1.Image = Image.FromStream(ms);
 
         }
-
+    
 
 
         private void FormComprar_Load(object sender, EventArgs e)
@@ -121,13 +115,17 @@ namespace JBTienda
 
             if (cantidad.Value > 1)
             {
-                MessageBox.Show("salgo");
+                if (MessageBox.Show("Desea cancelar la compra", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Form A = new FormComprar();
 
+                    this.Hide();
+                }
             }
             else
             {
                 Form A = new FormComprar();
-
+                    
                 this.Hide();
             }
 
@@ -135,6 +133,17 @@ namespace JBTienda
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
+           
+
+            var p = double.Parse(txtnp.Text);
+
+
+            var can = int.Parse(cantidad.Value.ToString());
+
+            Variables.tc = p * can;
+
+            txtTo.Text = Variables.tc.ToString();
+
             dcTiendaDataContext dc = new dcTiendaDataContext();
             dc.ConsultarCompras(
                 txtNombre.Text,
@@ -148,6 +157,7 @@ namespace JBTienda
          );
             
             MessageBox.Show("Producto Agregado al Carrito");
+            cantidad.Value = 1;
 
         }
 
@@ -159,6 +169,11 @@ namespace JBTienda
         private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void pic1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -28,8 +28,13 @@ namespace JBTienda
 
         private void FormCarrito_Load(object sender, EventArgs e)
         {
+         
             ListarCarrito(Variables.usuario);
+        
+
         }
+
+
 
         void ListarCarrito(string usu)
         {
@@ -47,7 +52,11 @@ namespace JBTienda
                 dtcarro.Columns[4].DefaultCellStyle.Format = "$#,##0.00";
 
             }
+            
         }
+
+
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             MenuPrincipalCliente ir = new MenuPrincipalCliente();
@@ -61,6 +70,27 @@ namespace JBTienda
             Form ir = new FromTC();
             ir.Show();
             this.Hide();
+        }
+
+
+        void EliminarProducto(string nom)
+        {
+            dcTiendaDataContext st = new dcTiendaDataContext();
+
+            st.Eliminarcarrito(nom);
+
+
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarProducto(Variables.NomProducto);
+         
+        }
+
+        private void dtcarro_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            Variables.NomProducto = (dtcarro.CurrentRow.Cells[0].Value.ToString());
         }
     }
 }

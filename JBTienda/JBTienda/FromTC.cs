@@ -23,5 +23,12 @@ namespace JBTienda
             ir.Show();
             this.Hide();
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            Nota ir = new Nota();
+            ir.Show();
+            this.Hide();
+        }
     }
 }

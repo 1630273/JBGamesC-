@@ -24,7 +24,7 @@ namespace JBTienda
         public static int contador=0;
         public static int contador2 = 5;
         public static int reintentos = 0;
-
+        public static String NomProducto;
 
 
 
