@@ -74,6 +74,10 @@ namespace JBTienda
             MenuPrincipalCliente ir = new MenuPrincipalCliente();
             ir.Show();
             this.Hide();
+
+
+
+
         }
     }
 }
