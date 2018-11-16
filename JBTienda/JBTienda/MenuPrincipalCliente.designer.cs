@@ -50,6 +50,7 @@
             this.cuelectrodomestico1 = new JBTienda.Cuelectrodomestico();
             this.cucom1 = new JBTienda.Cucom();
             this.da1 = new JBTienda.MenuAgregarProducto();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.sidemenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -201,6 +202,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
+            this.panel2.Controls.Add(this.btnHelp);
             this.panel2.Controls.Add(this.btncar);
             this.panel2.Controls.Add(this.lbNombre);
             this.panel2.Controls.Add(this.btnsalir);
@@ -332,7 +334,24 @@
             this.da1.Size = new System.Drawing.Size(800, 450);
             this.da1.TabIndex = 16;
             // 
-            // FormMCliente
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnHelp.Location = new System.Drawing.Point(589, 5);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(28, 32);
+            this.btnHelp.TabIndex = 38;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            // 
+            // MenuPrincipalCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -347,7 +366,7 @@
             this.Controls.Add(this.cucom1);
             this.Controls.Add(this.da1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormMCliente";
+            this.Name = "MenuPrincipalCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMCliente";
             this.Load += new System.EventHandler(this.FormMCliente_Load);
@@ -381,5 +400,6 @@
         private Cuelectrodomestico cuelectrodomestico1;
         private Cucelulares cucelulares1;
         private CuEjercicio cuEjercicio1;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

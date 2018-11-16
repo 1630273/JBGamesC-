@@ -46,13 +46,13 @@ namespace JBTienda
 
             if (Variables.con == true && Variables.con1 == true)
             {
-                MessageBox.Show("True");
+               // MessageBox.Show("True");
                 verificacion = true;
 
             }
             else
             {
-                MessageBox.Show("False");
+                //MessageBox.Show("False");
                 verificacion = false;
 
             }
@@ -165,6 +165,14 @@ namespace JBTienda
         private void da1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
+            ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_MenuGerente.pdf";
+            ayuda.Start();
+            ayuda.Close();
         }
     }
 }

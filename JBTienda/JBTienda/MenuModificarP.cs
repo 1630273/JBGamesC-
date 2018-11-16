@@ -47,13 +47,13 @@ namespace JBTienda
 
                 
                 Variables.con = true;
-                MessageBox.Show("Se paso la var en ModP");
+               // MessageBox.Show("Se paso la var en ModP");
 
             }
             catch (System.Exception)
             {
                 Variables.con = false;
-                MessageBox.Show("No se paso la var en Modp");
+                //MessageBox.Show("No se paso la var en Modp");
 
 
 

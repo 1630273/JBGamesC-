@@ -147,6 +147,103 @@ namespace JBTienda
 
         }
 
+        private void RegistrarJefeCelular_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+                char idSexo = ' ';
+                int idTipoUsuario = 5;
+                int idDepartmaneto = 3;
+
+                if (rdoHombre.Checked == true)
+                {
+                    idSexo = 'H';
+                }
+                else if (rdoMujer.Checked == true)
+                {
+                    idSexo = 'M';
+                }
+
+                BorrarMensajes();
+                if (ValidarCampos())
+                {
+                    dcTiendaDataContext dc = new dcTiendaDataContext();
+                    dc.agregarGerente(
+                        txtUsuario.Text,
+                        txtContraseña.Text,
+                        txtContraseña2.Text,
+                        txtNombre.Text,
+                        txtApellidoPaterno.Text,
+                        txtApellidoMaterno.Text,
+                        idSexo,
+                        byte.Parse(idTipoUsuario.ToString()),
+                        byte.Parse(idDepartmaneto.ToString())
+
+                 );
+                    MessageBox.Show("Gerente Agregado");
+
+                    txtUsuario.Text = "";
+                    txtContraseña.Text = "";
+                    txtContraseña2.Text = "";
+                    txtNombre.Text = "";
+                    txtApellidoPaterno.Text = "";
+                    txtApellidoMaterno.Text = "";
+
+                }
+
+            }
+        }
+
+        private void txtApellidoMaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+
+                char idSexo = ' ';
+                int idTipoUsuario = 5;
+                int idDepartmaneto = 3;
+
+                if (rdoHombre.Checked == true)
+                {
+                    idSexo = 'H';
+                }
+                else if (rdoMujer.Checked == true)
+                {
+                    idSexo = 'M';
+                }
+
+                BorrarMensajes();
+                if (ValidarCampos())
+                {
+                    dcTiendaDataContext dc = new dcTiendaDataContext();
+                    dc.agregarGerente(
+                        txtUsuario.Text,
+                        txtContraseña.Text,
+                        txtContraseña2.Text,
+                        txtNombre.Text,
+                        txtApellidoPaterno.Text,
+                        txtApellidoMaterno.Text,
+                        idSexo,
+                        byte.Parse(idTipoUsuario.ToString()),
+                        byte.Parse(idDepartmaneto.ToString())
+
+                 );
+                    MessageBox.Show("Gerente Agregado");
+
+                    txtUsuario.Text = "";
+                    txtContraseña.Text = "";
+                    txtContraseña2.Text = "";
+                    txtNombre.Text = "";
+                    txtApellidoPaterno.Text = "";
+                    txtApellidoMaterno.Text = "";
+
+                }
+            }
+        }
+
 
 
 

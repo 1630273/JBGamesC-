@@ -45,7 +45,7 @@ namespace JBTienda
                 conn.Close();
 
                 Variables.conCom = true;
-                MessageBox.Show("Se paso la Var en CuCom");
+               // MessageBox.Show("Se paso la Var en CuCom");
 
 
 
@@ -53,7 +53,7 @@ namespace JBTienda
             catch (System.Exception)
             {
                 Variables.conCom = false;
-                MessageBox.Show("No se paso la Var en CuCom");
+                //MessageBox.Show("No se paso la Var en CuCom");
             }
         }
         private void Cucom_Load(object sender, EventArgs e)

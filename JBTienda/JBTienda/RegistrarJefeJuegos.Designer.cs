@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarJefeJuegos));
             this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.rdoMujer = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdoHombre = new MaterialSkin.Controls.MaterialRadioButton();
@@ -108,6 +109,7 @@
             this.txtApellidoMaterno.Size = new System.Drawing.Size(236, 23);
             this.txtApellidoMaterno.TabIndex = 49;
             this.txtApellidoMaterno.UseSystemPasswordChar = false;
+            this.txtApellidoMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoMaterno_KeyPress);
             // 
             // txtApellidoPaterno
             // 
@@ -206,6 +208,7 @@
             // ErrorCampos
             // 
             this.ErrorCampos.ContainerControl = this;
+            this.ErrorCampos.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrorCampos.Icon")));
             // 
             // RegistrarJefeJuegos
             // 

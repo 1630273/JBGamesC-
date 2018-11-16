@@ -29,7 +29,7 @@ namespace JBTienda
             try
             {
                
-                SqlConnection conn = new System.Data.SqlClient.SqlConnection(" Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
                 SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
                 conn.Open();
 
@@ -49,14 +49,14 @@ namespace JBTienda
                 conn.Close();
 
                 Variables.con1 = true;
-                MessageBox.Show("Se paso La variable de Registrar Producto");
+               // MessageBox.Show("Se paso La variable de Registrar Producto");
 
 
             }
 
             catch (System.Exception)
             {
-                MessageBox.Show("No se paso la variable de Registrar Producto");
+               // MessageBox.Show("No se paso la variable de Registrar Producto");
                 Variables.con1 = false;
 
 

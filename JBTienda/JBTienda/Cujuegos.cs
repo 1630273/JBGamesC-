@@ -45,13 +45,13 @@ namespace JBTienda
 
 
                 Variables.conJueg = true;
-                MessageBox.Show("Se paso la Var en CuJuegos");
+                //MessageBox.Show("Se paso la Var en CuJuegos");
             }
             catch(System.Exception)
             {
 
                 Variables.conJueg = false;
-                MessageBox.Show("No se paso la Var en CuJuegos");
+                //MessageBox.Show("No se paso la Var en CuJuegos");
 
             }
         }

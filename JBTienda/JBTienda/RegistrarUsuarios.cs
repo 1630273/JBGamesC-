@@ -85,7 +85,7 @@ namespace JBTienda
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            CancelEventArgs err = new CancelEventArgs();
+        
 
             char idSexo = ' ';
             int idTipoUsuario = 2;
@@ -507,6 +507,86 @@ namespace JBTienda
 
         }
 
-     
+        private void RegistrarUsuarios_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                char idSexo = ' ';
+                int idTipoUsuario = 2;
+
+                if (rdoHombre.Checked == true)
+                {
+                    idSexo = 'H';
+                }
+                else if (rdoMujer.Checked == true)
+                {
+                    idSexo = 'M';
+                }
+
+                BorrarMensajes();
+                if (ValidarCampos())
+                {
+
+
+                    dcTiendaDataContext dc = new dcTiendaDataContext();
+                    dc.agregarUsuarios(
+                        txtNombreUsuario.Text,
+                        txtContraseña.Text,
+                        txtContraseña2.Text,
+                        txtNombre.Text,
+                        txtApellidoPaterno.Text,
+                        txtApellidoMaterno.Text,
+                        idSexo,
+                        txtTelefono.Text,
+                        txtCorreo.Text,
+                        txtDireccion.Text,
+                        txtcodigop.Text,
+                        byte.Parse(cboCiudad.SelectedValue.ToString()),
+                        byte.Parse(idTipoUsuario.ToString())
+
+                 );
+
+
+                    MessageBox.Show("Usuario Agregado");
+
+                    txtNombreUsuario.Text = "";
+                    txtContraseña.Text = "";
+                    txtContraseña2.Text = "";
+                    txtNombre.Text = "";
+                    txtApellidoPaterno.Text = "";
+                    txtApellidoMaterno.Text = "";
+                    txtTelefono.Text = "";
+                    txtCorreo.Text = "";
+                    txtDireccion.Text = "";
+                    txtCp.Text = "";
+
+                }
+
+            }
+
+
+            if (e.KeyCode == Keys.Escape)
+            {
+
+                string message = "Deseas Salir Sin Guardar?";
+                string caption = "Salir";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    MenuIniciarSesion volver = new MenuIniciarSesion();
+                    volver.Show();
+                    this.Hide();
+
+                }
+            }
+        }
     }
 }

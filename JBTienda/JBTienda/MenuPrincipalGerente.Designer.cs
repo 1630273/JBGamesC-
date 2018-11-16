@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalGerente));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnmenubar = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
+            this.panel2.Controls.Add(this.btnHelp);
             this.panel2.Controls.Add(this.lblNombre);
             this.panel2.Controls.Add(this.btnsalir);
             this.panel2.Controls.Add(this.btnmenubar);
@@ -59,6 +61,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 37);
             this.panel2.TabIndex = 7;
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnHelp.Location = new System.Drawing.Point(631, 5);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(28, 32);
+            this.btnHelp.TabIndex = 38;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // lblNombre
             // 
@@ -289,5 +309,6 @@
         private MenuModificarP dm1;
         private MenuAgregarProducto da1;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

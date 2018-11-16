@@ -42,6 +42,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorContraseña = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnAyuda = new System.Windows.Forms.Button();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).BeginInit();
@@ -105,6 +106,7 @@
             this.txtContraseña.Size = new System.Drawing.Size(187, 23);
             this.txtContraseña.TabIndex = 29;
             this.txtContraseña.UseSystemPasswordChar = true;
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña_Validating);
             // 
             // Mostrar
@@ -202,12 +204,31 @@
             this.errorContraseña.ContainerControl = this;
             this.errorContraseña.Icon = ((System.Drawing.Icon)(resources.GetObject("errorContraseña.Icon")));
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAyuda.Location = new System.Drawing.Point(323, 27);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(28, 32);
+            this.btnAyuda.TabIndex = 36;
+            this.btnAyuda.Text = "?";
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // MenuIniciarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(400, 343);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.linkRC);
@@ -217,10 +238,12 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox1);
+            this.KeyPreview = true;
             this.Name = "MenuIniciarSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
             this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MenuIniciarSesion_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -242,6 +265,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorUsuario;
         private System.Windows.Forms.ErrorProvider errorContraseña;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }
 

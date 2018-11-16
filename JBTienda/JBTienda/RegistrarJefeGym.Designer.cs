@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarJefeGym));
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtContraseña = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -138,6 +139,7 @@
             this.txtApellidoMaterno.Size = new System.Drawing.Size(236, 23);
             this.txtApellidoMaterno.TabIndex = 60;
             this.txtApellidoMaterno.UseSystemPasswordChar = false;
+            this.txtApellidoMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoMaterno_KeyPress);
             // 
             // txtApellidoPaterno
             // 
@@ -190,6 +192,7 @@
             // ErrorCampos
             // 
             this.ErrorCampos.ContainerControl = this;
+            this.ErrorCampos.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrorCampos.Icon")));
             // 
             // txtContraseña2
             // 
