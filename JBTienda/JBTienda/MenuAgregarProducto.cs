@@ -20,14 +20,14 @@ namespace JBTienda
             InitializeComponent();
         }
 
-      
+
 
         private void da_Load(object sender, EventArgs e)
         {
             cargarDescuentos();
         }
 
-      
+
 
         // Se crea el OpenFileDialog
         OpenFileDialog dialog = new OpenFileDialog();
@@ -36,7 +36,7 @@ namespace JBTienda
 
         private void btnExaminar_Click(object sender, EventArgs e)
         {
-             result = dialog.ShowDialog();
+            result = dialog.ShowDialog();
 
             // Si seleccionó un archivo (asumiendo que es una imagen lo que seleccionó)
             // la mostramos en el PictureBox de la inferfaz
@@ -58,59 +58,60 @@ namespace JBTienda
 
 
 
-          
-                // Objetos de conexión y comando
-                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
+
+            // Objetos de conexión y comando
+            SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
             SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
-                BorrarMensajes();
-                if (ValidarCampos())
-                {
-                    // Estableciento propiedades
-                    cmd.Connection = conn;
-                    cmd.CommandText = "INSERT INTO Producto(nombreProducto,descripcion,precio,cantidad,imagen,idDepartamento,idDescuento) VALUES(@nombreProducto, @descripcion, @precio, @cantidad, @imagen, @idDepartamento, @idDescuento);";
-                    conn.Open();
-                    // Creando los parámetros necesarios
-                    cmd.Parameters.Add("@nombreProducto", System.Data.SqlDbType.VarChar);
-                    cmd.Parameters.Add("@descripcion", System.Data.SqlDbType.VarChar);
-                    cmd.Parameters.Add("@precio", System.Data.SqlDbType.Money);
-                    cmd.Parameters.Add("@cantidad", System.Data.SqlDbType.TinyInt);
-                    cmd.Parameters.Add("@imagen", System.Data.SqlDbType.Image);
-                    cmd.Parameters.Add("@idDepartamento", System.Data.SqlDbType.TinyInt);
-                    cmd.Parameters.Add("@idDescuento", System.Data.SqlDbType.TinyInt);
+            BorrarMensajes();
+            if (ValidarCampos())
+            {
+                // Estableciento propiedades
+                cmd.Connection = conn;
+                cmd.CommandText = "INSERT INTO Producto(nombreProducto,descripcion,precio,cantidad,imagen,idDepartamento,idDescuento) VALUES(@nombreProducto, @descripcion, @precio, @cantidad, @imagen, @idDepartamento, @idDescuento);";
+                conn.Open();
+                // Creando los parámetros necesarios
+                cmd.Parameters.Add("@nombreProducto", System.Data.SqlDbType.VarChar);
+                cmd.Parameters.Add("@descripcion", System.Data.SqlDbType.VarChar);
+                cmd.Parameters.Add("@precio", System.Data.SqlDbType.Money);
+                cmd.Parameters.Add("@cantidad", System.Data.SqlDbType.TinyInt);
+                cmd.Parameters.Add("@imagen", System.Data.SqlDbType.Image);
+                cmd.Parameters.Add("@idDepartamento", System.Data.SqlDbType.TinyInt);
+                cmd.Parameters.Add("@idDescuento", System.Data.SqlDbType.TinyInt);
 
-                    // Asignando los valores a los atributos
-                    cmd.Parameters["@nombreProducto"].Value = txtNombre.Text;
-                    cmd.Parameters["@descripcion"].Value = txtDescripcion.Text;
-                    cmd.Parameters["@precio"].Value = int.Parse(txtPrecio.Text);
-                    cmd.Parameters["@cantidad"].Value = int.Parse(txtCantidad.Text);
-                    cmd.Parameters["@idDepartamento"].Value = Variables.idDep;
-                    cmd.Parameters["@idDescuento"].Value = lblId.Text;
+                // Asignando los valores a los atributos
+                cmd.Parameters["@nombreProducto"].Value = txtNombre.Text;
+                cmd.Parameters["@descripcion"].Value = txtDescripcion.Text;
+                cmd.Parameters["@precio"].Value = int.Parse(txtPrecio2.Text);
+                cmd.Parameters["@cantidad"].Value = int.Parse(txtCantidad.Text);
+                cmd.Parameters["@idDepartamento"].Value = Variables.idDep;
+                cmd.Parameters["@idDescuento"].Value = lblId.Text;
 
-                    // Asignando el valor de la imagen
+                // Asignando el valor de la imagen
 
-                    // Stream usado como buffer
-                    System.IO.MemoryStream ms = new System.IO.MemoryStream();
-                    // Se guarda la imagen en el buffer
-                    pic1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    // Se extraen los bytes del buffer para asignarlos como valor para el 
-                    // parámetro.
-                    cmd.Parameters["@imagen"].Value = ms.GetBuffer();
+                // Stream usado como buffer
+                System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                // Se guarda la imagen en el buffer
+                pic1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                // Se extraen los bytes del buffer para asignarlos como valor para el 
+                // parámetro.
+                cmd.Parameters["@imagen"].Value = ms.GetBuffer();
 
-                    MessageBox.Show("Producto Agregado");
+                MessageBox.Show("Producto Agregado");
+
+                txtNombre.Text = "";
+                txtPrecio2.Text = "";
+                txtDescripcion.Text = "";
+                txtCantidad.Text = "";
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+            }
 
 
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
 
-                }
-            
-        
 
-            txtNombre.Text = "";
-            txtDescripcion.Text = "";
-            txtCantidad.Text = "";
-    
 
 
 
@@ -155,11 +156,23 @@ namespace JBTienda
             }
 
 
-            if (!txtPrecio.MaskFull)
+            //if (!txtPrecio.MaskFull)
+            //{
+            //    ok = false;
+            //    ErrorCampos.SetError(txtPrecio, "Campo Vacio, Ingrese Precio");
+            //}
+
+            if (txtPrecio2.Text.Trim() == "")
             {
                 ok = false;
-                ErrorCampos.SetError(txtPrecio, "Campo Vacio, Ingrese Precio");
+                ErrorCampos.SetError(txtPrecio2, "Campo Vacio, Ingrese Precio.");
             }
+
+            else if (!int.TryParse(txtPrecio2.Text, out num))
+            {
+                ok = false;
+                ErrorCampos.SetError(txtPrecio2, "Formato incorrecto, Ingrese un numero");
+            } 
 
 
             if (txtCantidad.Text.Trim() == "")
@@ -194,11 +207,124 @@ namespace JBTienda
 
             ErrorCampos.SetError(txtNombre, "");
             ErrorCampos.SetError(txtDescripcion, "");
-            ErrorCampos.SetError(txtPrecio, "");
+            ErrorCampos.SetError(txtPrecio2, "");
             ErrorCampos.SetError(txtCantidad, "");
             ErrorCampos.SetError(pic1, "");
        
         }
 
+        private void btnExaminar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                // Objetos de conexión y comando
+                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+                SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+
+                BorrarMensajes();
+                if (ValidarCampos())
+                {
+                    // Estableciento propiedades
+                    cmd.Connection = conn;
+                    cmd.CommandText = "INSERT INTO Producto(nombreProducto,descripcion,precio,cantidad,imagen,idDepartamento,idDescuento) VALUES(@nombreProducto, @descripcion, @precio, @cantidad, @imagen, @idDepartamento, @idDescuento);";
+                    conn.Open();
+                    // Creando los parámetros necesarios
+                    cmd.Parameters.Add("@nombreProducto", System.Data.SqlDbType.VarChar);
+                    cmd.Parameters.Add("@descripcion", System.Data.SqlDbType.VarChar);
+                    cmd.Parameters.Add("@precio", System.Data.SqlDbType.Money);
+                    cmd.Parameters.Add("@cantidad", System.Data.SqlDbType.TinyInt);
+                    cmd.Parameters.Add("@imagen", System.Data.SqlDbType.Image);
+                    cmd.Parameters.Add("@idDepartamento", System.Data.SqlDbType.TinyInt);
+                    cmd.Parameters.Add("@idDescuento", System.Data.SqlDbType.TinyInt);
+
+                    // Asignando los valores a los atributos
+                    cmd.Parameters["@nombreProducto"].Value = txtNombre.Text;
+                    cmd.Parameters["@descripcion"].Value = txtDescripcion.Text;
+                    cmd.Parameters["@precio"].Value = int.Parse(txtPrecio2.Text);
+                    cmd.Parameters["@cantidad"].Value = int.Parse(txtCantidad.Text);
+                    cmd.Parameters["@idDepartamento"].Value = Variables.idDep;
+                    cmd.Parameters["@idDescuento"].Value = lblId.Text;
+
+                    // Asignando el valor de la imagen
+
+                    // Stream usado como buffer
+                    System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                    // Se guarda la imagen en el buffer
+                    pic1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    // Se extraen los bytes del buffer para asignarlos como valor para el 
+                    // parámetro.
+                    cmd.Parameters["@imagen"].Value = ms.GetBuffer();
+
+                    MessageBox.Show("Producto Agregado");
+
+                    txtNombre.Text = "";
+                    txtPrecio2.Text = "";
+                    txtDescripcion.Text = "";
+                    txtCantidad.Text = "";
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                }
+
+            }
+        }
+
+        private void cboDesc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                // Objetos de conexión y comando
+                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+                SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+
+                BorrarMensajes();
+                if (ValidarCampos())
+                {
+                    // Estableciento propiedades
+                    cmd.Connection = conn;
+                    cmd.CommandText = "INSERT INTO Producto(nombreProducto,descripcion,precio,cantidad,imagen,idDepartamento,idDescuento) VALUES(@nombreProducto, @descripcion, @precio, @cantidad, @imagen, @idDepartamento, @idDescuento);";
+                    conn.Open();
+                    // Creando los parámetros necesarios
+                    cmd.Parameters.Add("@nombreProducto", System.Data.SqlDbType.VarChar);
+                    cmd.Parameters.Add("@descripcion", System.Data.SqlDbType.VarChar);
+                    cmd.Parameters.Add("@precio", System.Data.SqlDbType.Money);
+                    cmd.Parameters.Add("@cantidad", System.Data.SqlDbType.TinyInt);
+                    cmd.Parameters.Add("@imagen", System.Data.SqlDbType.Image);
+                    cmd.Parameters.Add("@idDepartamento", System.Data.SqlDbType.TinyInt);
+                    cmd.Parameters.Add("@idDescuento", System.Data.SqlDbType.TinyInt);
+
+                    // Asignando los valores a los atributos
+                    cmd.Parameters["@nombreProducto"].Value = txtNombre.Text;
+                    cmd.Parameters["@descripcion"].Value = txtDescripcion.Text;
+                    cmd.Parameters["@precio"].Value = int.Parse(txtPrecio2.Text);
+                    cmd.Parameters["@cantidad"].Value = int.Parse(txtCantidad.Text);
+                    cmd.Parameters["@idDepartamento"].Value = Variables.idDep;
+                    cmd.Parameters["@idDescuento"].Value = lblId.Text;
+
+                    // Asignando el valor de la imagen
+
+                    // Stream usado como buffer
+                    System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                    // Se guarda la imagen en el buffer
+                    pic1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    // Se extraen los bytes del buffer para asignarlos como valor para el 
+                    // parámetro.
+                    cmd.Parameters["@imagen"].Value = ms.GetBuffer();
+
+                    MessageBox.Show("Producto Agregado");
+
+                    txtNombre.Text = "";
+                    txtPrecio2.Text = "";
+                    txtDescripcion.Text = "";
+                    txtCantidad.Text = "";
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                }
+
+            }
+        }
     }
 }

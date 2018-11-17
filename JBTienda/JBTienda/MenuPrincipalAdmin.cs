@@ -135,11 +135,10 @@ namespace JBTienda
             ayuda.Close();
         }
 
-        private void aej1_KeyDown(object sender, KeyEventArgs e)
+      
+
+        private void MenuPrincipalAdmin_KeyDown(object sender, KeyEventArgs e)
         {
-
-            KeyPreview = true;
-
             if (e.KeyCode == Keys.F1)
             {
 
@@ -148,19 +147,47 @@ namespace JBTienda
                 ayuda.Start();
                 ayuda.Close();
             }
-        }
 
-        private void panel2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-
-
-            if (e.KeyCode == Keys.F1)
+            if(e.KeyCode == Keys.Escape)
             {
+                string message = "Estas seguro de cerrar sesión?";
+                string caption = "Salir";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
 
-                System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
-                ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_MenuAdmin.pdf";
-                ayuda.Start();
-                ayuda.Close();
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    this.Close();
+                    Form p = new MenuIniciarSesion();
+                    p.Show();
+                    this.Hide();
+                }
+            }
+
+            if(e.KeyCode == Keys.F2)
+            {
+                if (sidemenu.Width == 55)
+                {
+                    //EXPAND
+                    sidemenu.Visible = true;
+                    sidemenu.Width = 260;
+
+
+                }
+                else
+                {
+                    //Minimize
+
+                    sidemenu.Visible = true;
+                    sidemenu.Width = 55;
+
+
+                }
             }
         }
     }

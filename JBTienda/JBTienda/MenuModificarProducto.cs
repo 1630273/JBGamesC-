@@ -96,9 +96,48 @@ namespace JBTienda
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MenuPrincipalGerente p = new MenuPrincipalGerente();
-            p.Show();
-            this.Hide();
+
+            if (txtNombre.Text != null)
+            {
+
+                string message = "Desea Salir Sin Guardar?";
+                string caption = "Salir";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    Form A = new MenuModificarProducto();
+                    this.Hide();
+
+                }
+
+            }
+            else
+            {
+                string message = "Desea Salir?";
+                string caption = "Salir";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    Form A = new MenuModificarProducto();
+                    this.Hide();
+
+                }
+
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -135,7 +174,7 @@ namespace JBTienda
                     // Asignando los valores a los atributos
                     cmd.Parameters["@nomPro"].Value = txtNombre.Text;
                     cmd.Parameters["@descripcion"].Value = txtDescripcion.Text;
-                    cmd.Parameters["@precio"].Value = int.Parse(txtPrecio.Text);
+                    cmd.Parameters["@precio"].Value = double.Parse(txtPrecio.Text);
                     cmd.Parameters["@cant"].Value = int.Parse(txtCantidad.Text);
                     cmd.Parameters["@desc"].Value = txtId.Text;
                     cmd.Parameters["@idPro"].Value = lblId.Text;
@@ -207,6 +246,7 @@ namespace JBTienda
         {
             bool ok = true;
             int num;
+            double num2;
 
             if (txtNombre.Text.Trim() == "")
             {
@@ -226,7 +266,7 @@ namespace JBTienda
                 ok = false;
                 ErrorCampos.SetError(txtPrecio, "Campo Vacio, Ingrese Precio");
             }
-            else if(!int.TryParse(txtPrecio.Text, out num))
+            else if(!double.TryParse(txtPrecio.Text, out num2))
             {
                 ok = false;
                 ErrorCampos.SetError(txtPrecio, "Formato Incorrecto, Ingrese solo numeros");
@@ -265,6 +305,117 @@ namespace JBTienda
             ErrorCampos.SetError(txtCantidad, "");
      
 
+        }
+
+        private void MenuModificarProducto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+
+                try
+                {
+                    // Objetos de conexión y comando
+                    SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
+                    SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+
+                    BorrarMensajes();
+
+                    if (ValidarCampos())
+                    {
+
+
+                        // Estableciento propiedades
+                        cmd.Connection = conn;
+
+                        cmd.CommandText = "UPDATE Producto SET nombreProducto = @nomPro , descripcion = @descripcion,precio = @precio,cantidad = @cant ,imagen = @imagen,idDescuento = @desc WHERE idProducto = @idPro";
+                        conn.Open();
+                        // Creando los parámetros necesarios
+                        cmd.Parameters.Add("@nomPro", System.Data.SqlDbType.VarChar);
+                        cmd.Parameters.Add("@descripcion", System.Data.SqlDbType.VarChar);
+                        cmd.Parameters.Add("@precio", System.Data.SqlDbType.Money);
+                        cmd.Parameters.Add("@cant", System.Data.SqlDbType.TinyInt);
+                        cmd.Parameters.Add("@imagen", System.Data.SqlDbType.Image);
+                        cmd.Parameters.Add("@desc", System.Data.SqlDbType.TinyInt);
+                        cmd.Parameters.Add("@idPro", System.Data.SqlDbType.TinyInt);
+
+                        // Asignando los valores a los atributos
+                        cmd.Parameters["@nomPro"].Value = txtNombre.Text;
+                        cmd.Parameters["@descripcion"].Value = txtDescripcion.Text;
+                        cmd.Parameters["@precio"].Value = double.Parse(txtPrecio.Text);
+                        cmd.Parameters["@cant"].Value = int.Parse(txtCantidad.Text);
+                        cmd.Parameters["@desc"].Value = txtId.Text;
+                        cmd.Parameters["@idPro"].Value = lblId.Text;
+
+                        // Asignando el valor de la imagen
+
+                        // Stream usado como buffer
+                        System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                        // Se guarda la imagen en el buffer
+                        pic1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        // Se extraen los bytes del buffer para asignarlos como valor para el 
+                        // parámetro.
+                        cmd.Parameters["@imagen"].Value = ms.GetBuffer();
+
+                        MessageBox.Show("Producto Modificado");
+
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+
+                catch (System.Exception)
+                {
+                    MessageBox.Show("Fallo en la conexion en AgregarProductos");
+                    //MenuIniciarSesion ir = new MenuIniciarSesion();
+                    //ir.Show();
+                    //this.Hide();
+                }
+            }
+
+            if(e.KeyCode == Keys.Escape)
+            {
+                if (txtNombre.Text != null)
+                {
+
+                    string message = "Desea Salir Sin Guardar?";
+                    string caption = "Salir";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
+
+                    // Displays the MessageBox.
+
+                    result = MessageBox.Show(message, caption, buttons);
+
+                    if (result == System.Windows.Forms.DialogResult.Yes)
+                    {
+
+                        Form A = new MenuModificarProducto();
+                        this.Hide();
+
+                    }
+
+                }
+                else
+                {
+                    string message = "Desea Salir?";
+                    string caption = "Salir";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
+
+                    // Displays the MessageBox.
+
+                    result = MessageBox.Show(message, caption, buttons);
+
+                    if (result == System.Windows.Forms.DialogResult.Yes)
+                    {
+
+                        Form A = new MenuModificarProducto();
+                        this.Hide();
+
+                    }
+
+                }
+            }
         }
     }
 }

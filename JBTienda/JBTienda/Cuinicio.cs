@@ -12,9 +12,14 @@ namespace JBTienda
 {
     public partial class Cuinicio : UserControl
     {
+
+     
+
         public Cuinicio()
         {
             InitializeComponent();
         }
+
+        
     }
 }

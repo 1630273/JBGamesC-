@@ -43,20 +43,64 @@ namespace JBTienda
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            dcTiendaDataContext dc = new dcTiendaDataContext();
-            dc.eliminarProducto(
+            string message = "Estas seguro que desea eliminar el producto?";
+            string caption = "Eliminar";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
 
-                Byte.Parse(txtId.Text)
-            
+            // Displays the MessageBox.
 
-            );
-            MessageBox.Show("Producto Eliminado");
+            result = MessageBox.Show(message, caption, buttons);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+
+                dcTiendaDataContext dc = new dcTiendaDataContext();
+                dc.eliminarProducto(
+
+                    Byte.Parse(txtId.Text)
+
+
+                );
+                MessageBox.Show("Producto Eliminado");
+
+            }
 
         }
 
         private void de_Load(object sender, EventArgs e)
         {
             cargarProducto(byte.Parse(Variables.idDep.ToString()));
+        }
+
+        private void cboNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                string message = "Estas seguro que desea eliminar?";
+                string caption = "Eliminar";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    dcTiendaDataContext dc = new dcTiendaDataContext();
+                    dc.eliminarProducto(
+
+                        Byte.Parse(txtId.Text)
+
+
+                    );
+                    MessageBox.Show("Producto Eliminado");
+                   // cboNombre.Items.Remove(cboNombre.SelectedItem);
+
+                }
+            }
         }
     }
 }

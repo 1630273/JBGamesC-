@@ -28,19 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FromTC));
             this.txtCod = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtNP = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtFe = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.mtxtTarjeta = new System.Windows.Forms.MaskedTextBox();
             this.txtNumT = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.ErrorCampos = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCod
@@ -65,7 +69,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.label1.Location = new System.Drawing.Point(19, 60);
+            this.label1.Location = new System.Drawing.Point(19, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 25);
             this.label1.TabIndex = 79;
@@ -86,10 +90,26 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnC);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(537, 45);
+            this.panel1.Size = new System.Drawing.Size(537, 42);
             this.panel1.TabIndex = 77;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(497, 14);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(28, 21);
+            this.btnSalir.TabIndex = 69;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnC
             // 
@@ -117,7 +137,7 @@
             this.btnRegistrar.CausesValidation = false;
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.GhostWhite;
@@ -127,6 +147,7 @@
             this.btnRegistrar.TabIndex = 76;
             this.btnRegistrar.Text = "Continuar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtNP
             // 
@@ -148,7 +169,7 @@
             // 
             this.txtFe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtFe.Depth = 0;
-            this.txtFe.Hint = "Fecha  Ex.";
+            this.txtFe.Hint = "Fecha Ex";
             this.txtFe.Location = new System.Drawing.Point(24, 186);
             this.txtFe.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtFe.Name = "txtFe";
@@ -159,6 +180,14 @@
             this.txtFe.Size = new System.Drawing.Size(86, 23);
             this.txtFe.TabIndex = 74;
             this.txtFe.UseSystemPasswordChar = false;
+            // 
+            // mtxtTarjeta
+            // 
+            this.mtxtTarjeta.Location = new System.Drawing.Point(160, 108);
+            this.mtxtTarjeta.Mask = "0000-0000-0000-0000";
+            this.mtxtTarjeta.Name = "mtxtTarjeta";
+            this.mtxtTarjeta.Size = new System.Drawing.Size(117, 20);
+            this.mtxtTarjeta.TabIndex = 81;
             // 
             // txtNumT
             // 
@@ -172,25 +201,14 @@
             this.txtNumT.SelectedText = "";
             this.txtNumT.SelectionLength = 0;
             this.txtNumT.SelectionStart = 0;
-            this.txtNumT.Size = new System.Drawing.Size(236, 23);
+            this.txtNumT.Size = new System.Drawing.Size(130, 23);
             this.txtNumT.TabIndex = 73;
             this.txtNumT.UseSystemPasswordChar = false;
             // 
-            // btnSalir
+            // ErrorCampos
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(497, 14);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(28, 21);
-            this.btnSalir.TabIndex = 69;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.ErrorCampos.ContainerControl = this;
+            this.ErrorCampos.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrorCampos.Icon")));
             // 
             // FromTC
             // 
@@ -198,6 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(537, 315);
+            this.Controls.Add(this.mtxtTarjeta);
             this.Controls.Add(this.txtCod);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -207,9 +226,12 @@
             this.Controls.Add(this.txtFe);
             this.Controls.Add(this.txtNumT);
             this.Name = "FromTC";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FromComoP";
+            this.Load += new System.EventHandler(this.FromTC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +247,9 @@
         private System.Windows.Forms.Button btnRegistrar;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNP;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtFe;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNumT;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.MaskedTextBox mtxtTarjeta;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNumT;
+        private System.Windows.Forms.ErrorProvider ErrorCampos;
     }
 }

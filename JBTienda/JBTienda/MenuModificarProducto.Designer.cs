@@ -285,10 +285,12 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.button2);
+            this.KeyPreview = true;
             this.Name = "MenuModificarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Producto";
             this.Load += new System.EventHandler(this.FormModificarP_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MenuModificarProducto_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).EndInit();
             this.ResumeLayout(false);

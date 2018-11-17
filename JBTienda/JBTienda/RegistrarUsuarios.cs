@@ -8,12 +8,14 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace JBTienda
 {
     public partial class RegistrarUsuarios : MaterialSkin.Controls.MaterialForm
     {
 
+        SoundPlayer player = new SoundPlayer();
 
         public RegistrarUsuarios()
         {
@@ -72,6 +74,8 @@ namespace JBTienda
 
         private void FormRegistro_Load(object sender, EventArgs e)
         {
+            player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\menu_registro.wav";
+            player.Play(); 
             cargarEstados();
             cargarCiudades(byte.Parse(cboEstado.SelectedValue.ToString()));
         }
@@ -85,7 +89,7 @@ namespace JBTienda
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-        
+
 
             char idSexo = ' ';
             int idTipoUsuario = 2;
@@ -122,8 +126,9 @@ namespace JBTienda
 
              );
 
-
-                MessageBox.Show("Usuario Agregado");
+                player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\registro_correcto.wav";
+                player.Play();
+                MessageBox.Show("Se ha registrado correctamente");
 
                 txtNombreUsuario.Text = "";
                 txtContraseña.Text = "";
@@ -137,6 +142,14 @@ namespace JBTienda
                 txtCp.Text = "";
 
             }
+            else
+            {
+
+                player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\faltan_campos.wav";
+                player.Play();
+            }
+
+       
 
 
         }
@@ -162,12 +175,15 @@ namespace JBTienda
 
             if(txtNombreUsuario.Text.Trim() == "")
             {
+
+            
                 ok = false;
                 ErrorCampos.SetError(txtNombreUsuario, "Campo Vacio, Ingrese Usuario");
             }
 
             if(txtContraseña.Text.Trim() == "")
             {
+
                 ok = false;
                 ErrorCampos.SetError(txtContraseña, "Campo Vacio, Ingrese Contraseña");
             }
@@ -272,6 +288,8 @@ namespace JBTienda
         private void btnVolver_Click(object sender, EventArgs e)
         {
 
+            player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\salir_sin_guardar.wav";
+            player.Play();
             string message = "Deseas Salir Sin Guardar?";
             string caption = "Salir";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -547,8 +565,9 @@ namespace JBTienda
 
                  );
 
-
-                    MessageBox.Show("Usuario Agregado");
+                    player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\registro_correcto.wav";
+                    player.Play();
+                    MessageBox.Show("Se ha registrado Correctamente");
 
                     txtNombreUsuario.Text = "";
                     txtContraseña.Text = "";
@@ -562,13 +581,21 @@ namespace JBTienda
                     txtCp.Text = "";
 
                 }
+                else
+                {
+
+                    player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\faltan_campos.wav";
+                    player.Play();
+                }
+
 
             }
 
 
             if (e.KeyCode == Keys.Escape)
             {
-
+                player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\salir_sin_guardar.wav";
+                player.Play();
                 string message = "Deseas Salir Sin Guardar?";
                 string caption = "Salir";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;

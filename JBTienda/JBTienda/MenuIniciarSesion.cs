@@ -9,12 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
+using System.Media;
 
 namespace JBTienda
 {
     public partial class MenuIniciarSesion : MaterialSkin.Controls.MaterialForm
     {
-
+        SoundPlayer player = new SoundPlayer();
         public byte idDepa;
         Conexion Conexion = new Conexion();
         public MenuIniciarSesion()
@@ -156,6 +157,10 @@ namespace JBTienda
 
                 if (bandera == false)
                 {
+                    
+                    player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\incorrecto.wav";
+                    player.Play();
+
 
                     MessageBox.Show("Usuario y contraseña incorrectos");
                     Variables.reintentos++;
@@ -169,6 +174,8 @@ namespace JBTienda
 
                     if (Variables.reintentos == 3)
                     {
+                        player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\usuario_bloqueado.wav";
+                        player.Play();
                         MessageBox.Show("Usuario Bloqueado, Si no recuerda su contraseña Seleccione la opcion de recuperar Contraseña.");
                         Application.Exit();
                     }
@@ -178,6 +185,8 @@ namespace JBTienda
             }
             catch(System.Exception)
             {
+                player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\error_en_la_conexion.wav";
+                player.Play();
                 MessageBox.Show("Error con la conexión, Consulte con su administrador");
                 Application.Exit();
             }
@@ -190,7 +199,9 @@ namespace JBTienda
         private void FormLogin_Load(object sender, EventArgs e)
         {
 
-            
+   
+            player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\iniciar_sesion.wav";
+            player.Play();
 
         }
 
@@ -199,6 +210,7 @@ namespace JBTienda
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
+           
             RegistrarUsuarios Registro = new RegistrarUsuarios();
             Registro.Show();
             this.Hide();
@@ -218,6 +230,8 @@ namespace JBTienda
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\cerrar_aplicacion.wav";
+            player.Play();
             string message = "Desea cerrar la aplicacion?";
             string caption = "Salir";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -229,7 +243,10 @@ namespace JBTienda
 
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
+                player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\hasta_luego.wav";
+                player.Play();
 
+                MessageBox.Show("Hasta Luego!");
                 Application.Exit();
 
             }
@@ -272,6 +289,8 @@ namespace JBTienda
 
             if (txtUsuario.Text.Trim() == "")
             {
+                player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\introduzca_usuario.wav";
+                player.Play();
                 errorUsuario.SetError(txtUsuario, "Campo Vacio, Introdusca Usuario");
              
                // e.Cancel = true;
@@ -305,6 +324,9 @@ namespace JBTienda
 
             if (txtContraseña.Text.Trim() == "")
             {
+
+                player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\introduzca_contraseña.wav";
+                player.Play();
                 errorContraseña.SetError(txtContraseña, "Campo Vacio, Introdusca Contraseña");
                 //e.Cancel = true;
 
@@ -331,7 +353,8 @@ namespace JBTienda
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-
+            player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\ayuda.wav";
+            player.Play();
             System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
             ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_Login1.pdf";
             ayuda.Start();
@@ -352,14 +375,15 @@ namespace JBTienda
 
             if (e.KeyCode == Keys.Enter)
             {
-                 login(txtUsuario.Text, txtContraseña.Text);
+                login(txtUsuario.Text, txtContraseña.Text);
                 txtUsuario.Text = "";
                 txtContraseña.Text = "";
             }
 
             if(e.KeyCode == Keys.F1)
             {
-
+                player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\ayuda.wav";
+                player.Play();
                 System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
                 ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_Login1.pdf";
                 ayuda.Start();
@@ -368,7 +392,8 @@ namespace JBTienda
 
             if (e.KeyCode == Keys.Escape)
             {
-
+                player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\cerrar_aplicacion.wav";
+                player.Play();
                 string message = "Desea cerrar la aplicacion?";
                 string caption = "Salir";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -380,6 +405,9 @@ namespace JBTienda
 
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
+                    player.SoundLocation = "C:\\Users\\julii\\Desktop\\AUDIOS\\hasta_luego.wav";
+                    player.Play();
+                    MessageBox.Show("Hasta Luego!");
                     Application.Exit();
 
                 }

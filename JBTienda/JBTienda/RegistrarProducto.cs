@@ -71,8 +71,7 @@ namespace JBTienda
 
                 listarProductos(dtai);
 
-          
-        }
+   }
 
        
     }

@@ -42,8 +42,8 @@
             this.cboDesc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblId = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.ErrorCampos = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorCampos)).BeginInit();
             this.SuspendLayout();
@@ -100,17 +100,16 @@
             // 
             this.txtPrecio2.BackColor = System.Drawing.Color.White;
             this.txtPrecio2.Depth = 0;
-            this.txtPrecio2.Hint = "";
-            this.txtPrecio2.Location = new System.Drawing.Point(43, 137);
+            this.txtPrecio2.Hint = "Precio";
+            this.txtPrecio2.Location = new System.Drawing.Point(44, 136);
             this.txtPrecio2.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPrecio2.Name = "txtPrecio2";
             this.txtPrecio2.PasswordChar = '\0';
             this.txtPrecio2.SelectedText = "";
             this.txtPrecio2.SelectionLength = 0;
             this.txtPrecio2.SelectionStart = 0;
-            this.txtPrecio2.Size = new System.Drawing.Size(84, 23);
+            this.txtPrecio2.Size = new System.Drawing.Size(137, 23);
             this.txtPrecio2.TabIndex = 36;
-            this.txtPrecio2.Text = "Precio";
             this.txtPrecio2.UseSystemPasswordChar = false;
             // 
             // label1
@@ -163,6 +162,7 @@
             this.btnExaminar.Text = "EXAMINAR";
             this.btnExaminar.UseVisualStyleBackColor = true;
             this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
+            this.btnExaminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnExaminar_KeyPress);
             // 
             // cboDesc
             // 
@@ -172,6 +172,7 @@
             this.cboDesc.Size = new System.Drawing.Size(179, 21);
             this.cboDesc.TabIndex = 43;
             this.cboDesc.SelectedIndexChanged += new System.EventHandler(this.cboDesc_SelectedIndexChanged);
+            this.cboDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboDesc_KeyPress);
             // 
             // label2
             // 
@@ -199,26 +200,27 @@
             this.lblId.TabIndex = 45;
             this.lblId.UseSystemPasswordChar = false;
             // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(141, 140);
-            this.txtPrecio.Mask = "99999$";
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(89, 20);
-            this.txtPrecio.TabIndex = 46;
-            this.txtPrecio.ValidatingType = typeof(int);
-            // 
             // ErrorCampos
             // 
             this.ErrorCampos.ContainerControl = this;
             this.ErrorCampos.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrorCampos.Icon")));
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 17);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "$";
             // 
             // MenuAgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboDesc);
@@ -254,7 +256,7 @@
         private System.Windows.Forms.ComboBox cboDesc;
         private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialSingleLineTextField lblId;
-        private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.ErrorProvider ErrorCampos;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -86,6 +86,7 @@
             this.cboNombre.Size = new System.Drawing.Size(121, 21);
             this.cboNombre.TabIndex = 14;
             this.cboNombre.SelectedIndexChanged += new System.EventHandler(this.cboNombre_SelectedIndexChanged);
+            this.cboNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboNombre_KeyPress);
             // 
             // label1
             // 

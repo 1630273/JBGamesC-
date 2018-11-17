@@ -64,7 +64,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 37);
             this.panel2.TabIndex = 6;
-            this.panel2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.panel2_PreviewKeyDown);
             // 
             // btnHelp
             // 
@@ -289,7 +288,6 @@
             this.aej1.Size = new System.Drawing.Size(538, 413);
             this.aej1.TabIndex = 15;
             this.aej1.Load += new System.EventHandler(this.aej1_Load);
-            this.aej1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.aej1_KeyDown);
             // 
             // ael1
             // 
@@ -351,10 +349,12 @@
             this.Controls.Add(this.acom1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
+            this.KeyPreview = true;
             this.Name = "MenuPrincipalAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuAdmin";
             this.Load += new System.EventHandler(this.FormMenuAdmin_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MenuPrincipalAdmin_KeyDown);
             this.panel2.ResumeLayout(false);
             this.sidemenu.ResumeLayout(false);
             this.ResumeLayout(false);

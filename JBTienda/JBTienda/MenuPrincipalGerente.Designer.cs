@@ -282,9 +282,11 @@
             this.Controls.Add(this.di1);
             this.Controls.Add(this.dm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "MenuPrincipalGerente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormMenuJ_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MenuPrincipalGerente_KeyDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.sidemenu.ResumeLayout(false);

@@ -174,5 +174,62 @@ namespace JBTienda
             ayuda.Start();
             ayuda.Close();
         }
+
+        private void MenuPrincipalGerente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F1)
+            {
+                System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
+                ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_MenuGerente.pdf";
+                ayuda.Start();
+                ayuda.Close();
+            }
+
+            if(e.KeyCode == Keys.F2)
+            {
+                if (sidemenu.Width == 55)
+                {
+                    //EXPAND
+                    sidemenu.Visible = true;
+                    sidemenu.Width = 260;
+
+
+                }
+                else
+                {
+                    //Minimize
+
+                    sidemenu.Visible = true;
+                    sidemenu.Width = 55;
+
+
+                }
+            }
+
+            if(e.KeyCode == Keys.Escape)
+            {
+
+                string message = "Estas seguro de cerrar sesión?";
+                string caption = "Salir";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    this.Close();
+                    MenuIniciarSesion p = new MenuIniciarSesion();
+                    p.Show();
+                    this.Hide();
+
+                }
+
+                
+            }
+        }
     }
 }

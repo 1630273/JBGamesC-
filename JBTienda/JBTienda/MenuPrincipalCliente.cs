@@ -29,7 +29,7 @@ namespace JBTienda
 
         private void btnCom_Click(object sender, EventArgs e)
         {
-            
+
             SidePanel.Height = btnCom.Height;
             SidePanel.Top = btnCom.Top;
             cucom1.BringToFront();
@@ -64,27 +64,27 @@ namespace JBTienda
             cuEjercicio1.BringToFront();
         }
 
-      
+
 
         private void btnmenubar_Click(object sender, EventArgs e)
         {
-        
+
 
             if (sidemenu.Width == 55)
             {
                 //EXPAND
                 sidemenu.Visible = true;
                 sidemenu.Width = 260;
-              
+
 
             }
             else
             {
                 //Minimize
-              
+
                 sidemenu.Visible = true;
                 sidemenu.Width = 55;
-            
+
 
             }
 
@@ -165,7 +165,7 @@ namespace JBTienda
                 Application.Exit();
 
             }
-            
+
         }
 
         public bool VerificarConexionCliente()
@@ -205,6 +205,82 @@ namespace JBTienda
 
         }
 
-       
+        private void MenuPrincipalCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.O)
+            {
+                Form car = new FormCarrito();
+                car.Show();
+                this.Hide();
+            }
+
+            if(e.KeyCode == Keys.F1)
+            {
+                System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
+                ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_MenuCliente.pdf";
+                ayuda.Start();
+                ayuda.Close();
+            }
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                string message = "Estas seguro de cerrar sesión?";
+                string caption = "Salir";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+
+                dcTiendaDataContext dc = new dcTiendaDataContext();
+                dc.Limpiarcarrito();
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    this.Close();
+                    Form p = new MenuIniciarSesion();
+                    p.Show();
+                    this.Hide();
+                }
+
+
+            }
+
+
+            if (e.KeyCode == Keys.F2)
+            {
+                if (sidemenu.Width == 55)
+                {
+                    //EXPAND
+                    sidemenu.Visible = true;
+                    sidemenu.Width = 260;
+
+
+                }
+                else
+                {
+                    //Minimize
+
+                    sidemenu.Visible = true;
+                    sidemenu.Width = 55;
+
+
+                }
+            }
+
+
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process ayuda = new System.Diagnostics.Process();
+            ayuda.StartInfo.FileName = "C:\\Users\\julii\\Desktop\\ManualUsuario\\ManualAyuda_MenuCliente.pdf";
+            ayuda.Start();
+            ayuda.Close();
+        }
     }
+
 }

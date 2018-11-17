@@ -210,9 +210,9 @@
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(0, 441);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 20);
+            this.label4.Size = new System.Drawing.Size(117, 20);
             this.label4.TabIndex = 99;
-            this.label4.Text = "Precio hora $:";
+            this.label4.Text = "Precio Ahora $:";
             // 
             // txtTo
             // 
@@ -255,10 +255,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "FormComprar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Producto";
             this.Load += new System.EventHandler(this.FormComprar_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormComprar_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
             this.ResumeLayout(false);

@@ -39,6 +39,7 @@
             this.btnCom = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.btncar = new System.Windows.Forms.Button();
             this.lbNombre = new System.Windows.Forms.Label();
             this.btnsalir = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.cuelectrodomestico1 = new JBTienda.Cuelectrodomestico();
             this.cucom1 = new JBTienda.Cucom();
             this.da1 = new JBTienda.MenuAgregarProducto();
-            this.btnHelp = new System.Windows.Forms.Button();
             this.sidemenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -213,6 +213,24 @@
             this.panel2.Size = new System.Drawing.Size(800, 37);
             this.panel2.TabIndex = 4;
             // 
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnHelp.Location = new System.Drawing.Point(589, 5);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(28, 32);
+            this.btnHelp.TabIndex = 38;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // btncar
             // 
             this.btncar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -334,23 +352,6 @@
             this.da1.Size = new System.Drawing.Size(800, 450);
             this.da1.TabIndex = 16;
             // 
-            // btnHelp
-            // 
-            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
-            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHelp.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHelp.Location = new System.Drawing.Point(589, 5);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(28, 32);
-            this.btnHelp.TabIndex = 38;
-            this.btnHelp.Text = "?";
-            this.btnHelp.UseVisualStyleBackColor = false;
-            // 
             // MenuPrincipalCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,10 +367,12 @@
             this.Controls.Add(this.cucom1);
             this.Controls.Add(this.da1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "MenuPrincipalCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMCliente";
             this.Load += new System.EventHandler(this.FormMCliente_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MenuPrincipalCliente_KeyDown);
             this.sidemenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -24,12 +24,15 @@ namespace JBTienda
 
 
 
+
+
+
         public void listarProductos(DataGridView data)
         {
             try
             {
 
-                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-8C15TUM;Initial Catalog=Tienda;Integrated Security=True");
+                SqlConnection conn = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-LN2ROB9J\\SQLEXPRESS01;Initial Catalog=Tienda;Integrated Security=True");
                 conn.Open();
 
                 SqlCommand comando = new SqlCommand("consultarCom", conn);
