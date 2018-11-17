@@ -1,6 +1,6 @@
 ﻿namespace JBTienda
 {
-    partial class FormCarrito
+    partial class Nota
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCarrito));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.dtcarro = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btncomp = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnPdf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtcarro)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(478, 33);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(28, 21);
-            this.btnSalir.TabIndex = 35;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // dtcarro
             // 
@@ -92,7 +75,7 @@
             this.dtcarro.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtcarro.EnableHeadersVisualStyles = false;
             this.dtcarro.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtcarro.Location = new System.Drawing.Point(12, 85);
+            this.dtcarro.Location = new System.Drawing.Point(106, 75);
             this.dtcarro.Name = "dtcarro";
             this.dtcarro.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -106,9 +89,7 @@
             this.dtcarro.RowHeadersVisible = false;
             this.dtcarro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtcarro.Size = new System.Drawing.Size(496, 330);
-            this.dtcarro.TabIndex = 36;
-            this.dtcarro.AllowUserToDeleteRowsChanged += new System.EventHandler(this.btnEliminar_Click);
-            this.dtcarro.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtcarro_MouseClick);
+            this.dtcarro.TabIndex = 37;
             // 
             // Nombre
             // 
@@ -140,70 +121,74 @@
             this.Total.Name = "Total";
             this.Total.Width = 74;
             // 
-            // btncomp
+            // label1
             // 
-            this.btncomp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.btncomp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncomp.FlatAppearance.BorderSize = 0;
-            this.btncomp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btncomp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btncomp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncomp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncomp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btncomp.Location = new System.Drawing.Point(389, 437);
-            this.btncomp.Name = "btncomp";
-            this.btncomp.Size = new System.Drawing.Size(72, 32);
-            this.btncomp.TabIndex = 37;
-            this.btncomp.Text = "Pagar";
-            this.btncomp.UseVisualStyleBackColor = false;
-            this.btncomp.Click += new System.EventHandler(this.btncomp_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(405, 436);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 25);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Total a Pagar:";
             // 
-            // btnEliminar
+            // lblTotal
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminar.Location = new System.Drawing.Point(45, 437);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(169, 32);
-            this.btnEliminar.TabIndex = 38;
-            this.btnEliminar.Text = "Eliminar producto";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(546, 436);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(64, 25);
+            this.lblTotal.TabIndex = 39;
+            this.lblTotal.Text = "label2";
             // 
-            // FormCarrito
+            // btnPdf
+            // 
+            this.btnPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(27)))), ((int)(((byte)(154)))));
+            this.btnPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPdf.FlatAppearance.BorderSize = 0;
+            this.btnPdf.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPdf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPdf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPdf.Location = new System.Drawing.Point(38, 436);
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Size = new System.Drawing.Size(218, 32);
+            this.btnPdf.TabIndex = 40;
+            this.btnPdf.Text = "EXPORTAR A PDF";
+            this.btnPdf.UseVisualStyleBackColor = false;
+            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
+            // 
+            // Nota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 481);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btncomp);
+            this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.btnPdf);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtcarro);
-            this.Controls.Add(this.btnSalir);
-            this.KeyPreview = true;
-            this.Name = "FormCarrito";
-            this.Text = "Productos del carrito";
-            this.Load += new System.EventHandler(this.FormCarrito_Load);
+            this.Name = "Nota";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nota";
+            this.Load += new System.EventHandler(this.Nota_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtcarro)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView dtcarro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.Button btncomp;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnPdf;
     }
 }

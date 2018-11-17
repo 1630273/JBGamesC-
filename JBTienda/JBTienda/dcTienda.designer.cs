@@ -338,6 +338,20 @@ namespace JBTienda
 				}
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Eliminarcarrito")]
+		public int Eliminarcarrito([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(25)")] string nombre)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sumarPrecios")]
+		public ISingleResult<sumarPreciosResult> sumarPrecios([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(25)")] string nombre)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre);
+			return ((ISingleResult<sumarPreciosResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class consultarVideoJuegosResult
@@ -1785,6 +1799,32 @@ namespace JBTienda
 				if ((this._idEstado != value))
 				{
 					this._idEstado = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sumarPreciosResult
+	{
+		
+		private System.Nullable<int> _TOTAL_PAGAR;
+		
+		public sumarPreciosResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TOTAL_PAGAR", DbType="Int")]
+		public System.Nullable<int> TOTAL_PAGAR
+		{
+			get
+			{
+				return this._TOTAL_PAGAR;
+			}
+			set
+			{
+				if ((this._TOTAL_PAGAR != value))
+				{
+					this._TOTAL_PAGAR = value;
 				}
 			}
 		}
